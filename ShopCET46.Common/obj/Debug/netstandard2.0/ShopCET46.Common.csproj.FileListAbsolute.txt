@@ -1,0 +1,17 @@
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.deps.json
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.dll
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.pdb
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.csprojAssemblyReference.cache
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.csproj.CoreCompileInputs.cache
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.AssemblyInfoInputs.cache
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.AssemblyInfo.cs
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.dll
+C:\Users\joana\source\repos\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.pdb
+C:\Projects\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.deps.json
+C:\Projects\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.dll
+C:\Projects\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.pdb
+C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.csproj.CoreCompileInputs.cache
+C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.AssemblyInfoInputs.cache
+C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.AssemblyInfo.cs
+C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.dll
+C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.pdb
