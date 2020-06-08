@@ -26,7 +26,6 @@ namespace ShopCET46.WEB.Data.Entities
         [Display(Name = "Is Avalible?")]
         public bool IsAvalible { get; set; }
 
-
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }//N number
     }
