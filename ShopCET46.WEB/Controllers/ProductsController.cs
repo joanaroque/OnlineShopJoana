@@ -1,28 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShopCET46.WEB.Data;
 using ShopCET46.WEB.Data.Entities;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ShopCET46.WEB.Controllers
 {
     public class ProductsController : Controller  // controlador so serve pras views | vem tudo do IRepository
     {
+<<<<<<< HEAD
         private readonly IRepository _repository;
 
         public ProductsController(IRepository repository)
         {
             this._repository = repository;
+=======
+        private readonly IProductRepository _productRepository;
+
+        public ProductsController(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+>>>>>>> seed_db
         }
 
         // GET: Products
         public IActionResult Index()
         {
+<<<<<<< HEAD
             return View(_repository.GetProducts());
+=======
+            return View(_productRepository.GetAll());
+>>>>>>> seed_db
         }
 
         // GET: Products/Details/5
@@ -33,8 +42,13 @@ namespace ShopCET46.WEB.Controllers
                 return NotFound();
             }
 
+<<<<<<< HEAD
             var product = _repository.GetProduct(id.Value);//precisa o value para conseguir compilar
 
+=======
+            var product = _productRepository.GetByIdAsync(id.Value);
+                
+>>>>>>> seed_db
             if (product == null)
             {
                 return NotFound();
@@ -58,8 +72,13 @@ namespace ShopCET46.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
                 _repository.AddProduct(product);
                 await _repository.SaveAllAsync();
+=======
+                await _productRepository.CreateAsync(product);
+               
+>>>>>>> seed_db
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
@@ -73,8 +92,12 @@ namespace ShopCET46.WEB.Controllers
                 return NotFound();
             }
 
+<<<<<<< HEAD
             var product = _repository.GetProduct(id.Value);
 
+=======
+            var product = await _productRepository.GetByIdAsync(id.Value);
+>>>>>>> seed_db
             if (product == null)
             {
                 return NotFound();
@@ -93,12 +116,21 @@ namespace ShopCET46.WEB.Controllers
             {
                 try
                 {
+<<<<<<< HEAD
                     _repository.UpdateProduct(product);
                     await _repository.SaveAllAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!_repository.ProductExists(product.ProductId))
+=======
+                    await _productRepository.UpdateAsync(product);
+                   
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!await _productRepository.ExistAsync(product.ProductId))
+>>>>>>> seed_db
                     {
                         return NotFound();
                     }
@@ -120,8 +152,13 @@ namespace ShopCET46.WEB.Controllers
                 return NotFound();
             }
 
+<<<<<<< HEAD
             var product = _repository.GetProduct(id.Value); 
 
+=======
+            var product = await _productRepository.GetByIdAsync(id.Value);
+              
+>>>>>>> seed_db
             if (product == null)
             {
                 return NotFound();
@@ -135,10 +172,16 @@ namespace ShopCET46.WEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+<<<<<<< HEAD
             var product = _repository.GetProduct(id);
             _repository.RemoveProduct(product);
 
             await _repository.SaveAllAsync();
+=======
+            var product = await _productRepository.GetByIdAsync(id);
+            await _productRepository.DeleteAsync(product);
+           
+>>>>>>> seed_db
             return RedirectToAction(nameof(Index));
         }
     }

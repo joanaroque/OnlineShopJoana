@@ -208,13 +208,22 @@ using ShopCET46.WEB.Models;
             BeginContext(1409, 38, true);
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
             EndContext();
+<<<<<<< HEAD
             BeginContext(1447, 237, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b486d09e812470b850a0f371008f234", async() => {
+=======
+            BeginContext(1447, 214, false);
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "14fd19a201854866ba831785e1c84747", async() => {
+>>>>>>> seed_db
                 BeginContext(1473, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(1483, 43, false);
+<<<<<<< HEAD
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ccc94b770417462f8ae41c044a03ce5b", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "07674721df7b4268a1f02358bdf768d0", async() => {
+>>>>>>> seed_db
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -238,9 +247,15 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 BeginContext(1526, 83, true);
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Delete\" class=\"btn btn-danger\" /> |\r\n        ");
                 EndContext();
+<<<<<<< HEAD
                 BeginContext(1609, 62, false);
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e35b605c00ed4453836b2dbfe6b032dd", async() => {
                     BeginContext(1655, 12, true);
+=======
+                BeginContext(1610, 38, false);
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "878bf52f763346efae852f7bc974d213", async() => {
+                    BeginContext(1632, 12, true);
+>>>>>>> seed_db
                     WriteLiteral("Back to List");
                     EndContext();
                 }

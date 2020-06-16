@@ -33,6 +33,9 @@ namespace ShopCET46.WEB
             //injeta o interface para quando ele precisar instancia lo
             services.AddScoped<IRepository, IRepository>();
 
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+
             //Outro scope: services.AddSingleton -> depois de usado nunca morre, fica sempre instanciado
 
 
