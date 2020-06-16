@@ -43,7 +43,6 @@ C:\Projects\ShopCET46\ShopCET46.WEB\bin\Debug\netcoreapp2.1\ShopCET46.WEB.dll
 C:\Projects\ShopCET46\ShopCET46.WEB\bin\Debug\netcoreapp2.1\ShopCET46.WEB.pdb
 C:\Projects\ShopCET46\ShopCET46.WEB\bin\Debug\netcoreapp2.1\ShopCET46.WEB.Views.dll
 C:\Projects\ShopCET46\ShopCET46.WEB\bin\Debug\netcoreapp2.1\ShopCET46.WEB.Views.pdb
-C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csprojAssemblyReference.cache
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.RazorAssemblyInfo.cache
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.RazorAssemblyInfo.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.AssemblyInfoInputs.cache

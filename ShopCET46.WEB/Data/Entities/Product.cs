@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ShopCET46.WEB.Data.Entities
 {
-    public class Product
+    public class Product : IEntity
     {
         public int ProductId { get; set; }
 
@@ -29,5 +29,6 @@ namespace ShopCET46.WEB.Data.Entities
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }//N number
+        int IEntity.Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

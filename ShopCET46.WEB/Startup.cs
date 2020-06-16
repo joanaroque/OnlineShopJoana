@@ -31,6 +31,9 @@ namespace ShopCET46.WEB
             //executa aqui/ injeta aqui
             services.AddTransient<SeedDB>(); // depois de usado, morre
 
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+
             //Outro scope: services.AddSingleton -> depois de usado nunca morre, fica sempre instanciado
 
 
