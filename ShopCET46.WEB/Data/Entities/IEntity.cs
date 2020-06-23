@@ -6,11 +6,6 @@ namespace ShopCET46.WEB.Data.Entities
     {
         int Id { get; set; }
 
-        //bool WasDeleted { get; set; }
-
-        //DateTime CreateDate { get; set; }
-
-        //DateTime UpdateDate { get; set; }
 
     }
 }

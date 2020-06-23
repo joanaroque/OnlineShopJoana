@@ -5,7 +5,7 @@ namespace ShopCET46.WEB.Data.Entities
 {
     public class Product : IEntity
     {
-        public int ProductId { get; set; }
+        public int Id { get; set; }
 
         [MaxLength(50, ErrorMessage ="The field {0} only can contains {1} characters length.")]
         [Required]
@@ -28,6 +28,7 @@ namespace ShopCET46.WEB.Data.Entities
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }//N number
-        int IEntity.Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public User User { get; set; }
     }
 }

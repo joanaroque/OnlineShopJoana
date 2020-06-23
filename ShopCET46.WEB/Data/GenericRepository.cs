@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopCET46.WEB.Data.Entities;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,7 +26,7 @@ namespace ShopCET46.WEB.Data
             //vai á BD gravar todas as alteraçoes
             //se este nr for maior que 0 retorna true
             //ou seja se as mudanças foram 0, nao salva nada
-           return await _context.SaveChangesAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
 
         }
 
