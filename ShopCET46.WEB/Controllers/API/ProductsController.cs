@@ -3,7 +3,7 @@ using ShopCET46.WEB.Data;
 
 namespace ShopCET46.WEB.API
 {
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : Controller
     {
