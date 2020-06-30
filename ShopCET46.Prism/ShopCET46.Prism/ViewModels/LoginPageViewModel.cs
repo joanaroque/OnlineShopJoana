@@ -16,7 +16,7 @@ namespace ShopCET46.Prism.ViewModels
             Title = "Login Page";
             IsEnabled = true;
         }
-        
+        // ?? == if else
         public DelegateCommand LoginCommand => _loginCommand ?? (_loginCommand = new DelegateCommand(Login));
 
         public string Email { get; set; }

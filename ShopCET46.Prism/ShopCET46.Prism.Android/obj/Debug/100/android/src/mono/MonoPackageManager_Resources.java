@@ -5,7 +5,12 @@ public class MonoPackageManager_Resources {
 		"ShopCET46.Prism.Android.dll",
 		"DryIoc.dll",
 		"Essential.Interfaces.dll",
+		"FFImageLoading.dll",
+		"FFImageLoading.Forms.dll",
+		"FFImageLoading.Forms.Platform.dll",
+		"FFImageLoading.Platform.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"Prism.dll",
 		"Prism.DryIoc.Forms.dll",
 		"Prism.Forms.dll",
@@ -56,6 +61,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Android.Material.dll",
+		"ShopCET46.Common.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

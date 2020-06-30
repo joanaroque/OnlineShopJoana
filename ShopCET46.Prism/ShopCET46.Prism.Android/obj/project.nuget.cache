@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "x8U1yHXJDtXXnKTH5d2QjWP5roFL9XFqodzqfN00I00g/6By/XR9ouV4FTzC7Bcp/YjGBrNwG31hUUo5sA7u7g==",
+  "dgSpecHash": "CbmgOkkGcD7nM6/7BoKeWFOOhm0cwEE43A2WuKtd3a6P5DuOtl0iBJP4PSgvBSdBul/5tzfORSCgTqQMAdK3xQ==",
   "success": true,
   "projectFilePath": "C:\\Projects\\ShopCET46\\ShopCET46.Prism\\ShopCET46.Prism.Android\\ShopCET46.Prism.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joana\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",
@@ -52,6 +53,8 @@
     "C:\\Users\\joana\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0\\xamarin.androidx.viewpager.1.0.0.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\xamarin.essentials.interfaces\\1.5.2\\xamarin.essentials.interfaces.1.5.2.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\xamarin.ffimageloading\\2.4.11.982\\xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.11.982\\xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\xamarin.google.android.material\\1.0.0\\xamarin.google.android.material.1.0.0.nupkg.sha512"
   ],
