@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "KUBNZGLvgl0BM3p336WF1JS7y6A74sdGp4j/9JXzpvLCXkspuYTn05g39YqcE6NhsVbwwIMod9KpOgiPad+qbA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\ShopCET46\\ShopCET46.Prism\\ShopCET46.Prism.iOS\\ShopCET46.Prism.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joana\\.nuget\\packages\\dryioc.dll\\4.0.7\\dryioc.dll.4.0.7.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\prism.dryioc.forms\\7.2.0.1422\\prism.dryioc.forms.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\xamarin.essentials.interfaces\\1.5.2\\xamarin.essentials.interfaces.1.5.2.nupkg.sha512",
+    "C:\\Users\\joana\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
+  ],
+  "logs": []
+}
