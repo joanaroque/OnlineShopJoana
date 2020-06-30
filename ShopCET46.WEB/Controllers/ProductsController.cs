@@ -6,6 +6,7 @@ using ShopCET46.WEB.Helpers;
 using ShopCET46.WEB.Models;
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ShopCET46.WEB.Controllers
@@ -25,7 +26,7 @@ namespace ShopCET46.WEB.Controllers
         // GET: Products
         public IActionResult Index()
         {
-            return View(_productRepository.GetAll());
+            return View(_productRepository.GetAll().OrderBy(p => p.Name));
         }
 
         // GET: Products/Details/5
@@ -65,11 +66,15 @@ namespace ShopCET46.WEB.Controllers
 
                 if (productViewModel.ImageFile != null && productViewModel.ImageFile.Length > 0)
                 {
+                    //"random" de caratetres, pra nao existirem nomes de imagens iguas
+                    var guid = Guid.NewGuid().ToString();
+                    var file = $"{guid}.jpg";
+
                     //caminho onde vai ficar guardada a imagem
                     path = Path.Combine(
                         Directory.GetCurrentDirectory(), // isto é o caminho anterior ao meu sitio
                         "wwwroot\\images\\Products",
-                        productViewModel.ImageFile.FileName);
+                        file);
 
                     using (var stream = new FileStream(path, FileMode.Create))
                     {
@@ -77,7 +82,7 @@ namespace ShopCET46.WEB.Controllers
                     }
 
                     // é isto que vai pra BD, pra imageURL
-                    path = $"~/images/Products/{productViewModel.ImageFile.FileName}";
+                    path = $"~/images/Products/{file}";
                 }
 
                 var product = this.ToProduct(productViewModel, path);
@@ -158,23 +163,28 @@ namespace ShopCET46.WEB.Controllers
 
                     if (model.ImageFile != null && model.ImageFile.Length > 0)
                     {
+
+                        var guid = Guid.NewGuid().ToString();
+                        var file = $"{guid}.jpg";
+
+
                         path = Path.Combine(
                             Directory.GetCurrentDirectory(),
                             "wwwroot\\images\\Products",
-                            model.ImageFile.FileName);
+                            file);
 
                         using (var stream = new FileStream(path, FileMode.Create))
                         {
                             await model.ImageFile.CopyToAsync(stream);
                         }
 
-                        path = $"~/images/Products/{model.ImageFile.FileName}";
+                        path = $"~/images/Products/{file}";
                     }
 
                     var product = this.ToProduct(model, path);
 
                     //TODO: Change to the logged user
-                    product.User = await _userHelper.GetUserByEmailAsync("rafaasfs@gmail.com");
+                    product.User = await _userHelper.GetUserByEmailAsync("joana.ramos.roque@formandos.cinel.pt");
                     await _productRepository.UpdateAsync(product);
                 }
                 catch (DbUpdateConcurrencyException)

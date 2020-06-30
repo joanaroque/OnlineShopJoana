@@ -30,5 +30,17 @@ namespace ShopCET46.WEB.Data.Entities
         public double Stock { get; set; }//N number
 
         public User User { get; set; }
+
+        public string ImageFullPath 
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.ImageUrl))
+                {
+                    return null;
+                }
+                return $"https://shopcet46joana.azurewebsites.net{this.ImageUrl.Substring(1)}"; //substring para tirar o ~
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace ShopCET46.WEB.API
         [HttpGet]
         public IActionResult GetProduct()
         {
-            return Ok(_productRepository.GetAll());
+            return Ok(_productRepository.GetAllWithUsers());
         }
     }
 }
