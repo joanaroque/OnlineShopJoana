@@ -14,5 +14,9 @@ namespace ShopCET46.WEB.Helpers
         Task<SignInResult> LoginAsync(LoginViewModel model); //Identity
 
         Task LogoutAsync();
+
+        Task<IdentityResult> UpdateUserAsync(User user);
+
+        Task<IdentityResult> ChangePasswordAsync(User user, string oldPassword, string newPassword);
     }
 }

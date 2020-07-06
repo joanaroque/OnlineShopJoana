@@ -41,3 +41,4 @@ C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\ShopCET46.WEB.genr
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\ShopCET46.WEB.csproj.CopyComplete
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs

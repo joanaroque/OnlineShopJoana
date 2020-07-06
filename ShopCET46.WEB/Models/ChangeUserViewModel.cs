@@ -2,7 +2,7 @@
 
 namespace ShopCET46.WEB.Models
 {
-    public class RegisterNewViewModel
+    public class ChangeUserViewModel
     {
         [Required]
         [Display(Name = "First Name")]
@@ -13,15 +13,5 @@ namespace ShopCET46.WEB.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        public string UserName { get; set; }
-
-        [Required]
-        public string Password { get; set; }
-
-        [Required]
-        [Compare("Password")]
-        public string Confirm { get; set; }
     }
 }
