@@ -50,6 +50,8 @@ namespace ShopCET46.WEB
                                              //injeta o interface para quando ele precisar instancia lo
 
             services.AddScoped<IUserHelper, UserHelper>();
+            services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
 
