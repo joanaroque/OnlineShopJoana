@@ -76,3 +76,4 @@ C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.genrun
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csproj.CopyComplete
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csprojAssemblyReference.cache
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
