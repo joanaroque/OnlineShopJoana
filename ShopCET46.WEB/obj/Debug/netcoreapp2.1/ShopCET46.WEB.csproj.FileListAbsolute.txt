@@ -74,3 +74,5 @@ C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.dll
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.pdb
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.genruntimeconfig.cache
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csproj.CopyComplete
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csprojAssemblyReference.cache
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
