@@ -25,6 +25,9 @@ namespace ShopCET46.WEB.Data
         {
             await _context.Database.EnsureCreatedAsync();
 
+            await _userHelper.ChecRoleAsync("Admin");
+            await _userHelper.ChecRoleAsync("Customer");
+
             //criar aqui user
             var user = await _userHelper.GetUserByEmailAsync("joana.ramos.roque@formandos.cinel.pt");
 
@@ -44,6 +47,13 @@ namespace ShopCET46.WEB.Data
                 if (result != IdentityResult.Success)
                 {
                     throw new InvalidOperationException("Could not create the user in seeder.");
+                }
+
+                var isInRole = await _userHelper.IsUserInRoleAsync(user, "Admin");
+
+                if (!isInRole)
+                {
+                    await _userHelper.AddUSerToRoleAsync(user, "Admin");
                 }
             }
 
