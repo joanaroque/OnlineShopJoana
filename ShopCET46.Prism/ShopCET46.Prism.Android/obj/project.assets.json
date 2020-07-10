@@ -14,6 +14,48 @@
           "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
+      "MailKit/2.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "2.8.0",
+          "System.Net.NameResolution": "4.3.0",
+          "System.Net.Security": "4.3.2",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/netstandard2.0/MailKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MailKit.dll": {}
+        }
+      },
+      "MimeKit/2.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.5",
+          "System.Reflection.TypeExtensions": "4.4.0",
+          "System.Security.Cryptography.Cng": "4.4.0",
+          "System.Text.Encoding.CodePages": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/netstandard2.0/MimeKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MimeKit.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -21,6 +63,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Portable.BouncyCastle/1.8.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
       "Prism.Core/7.2.0.1422": {
@@ -61,6 +112,44 @@
           "lib/monoandroid81/Prism.Forms.dll": {}
         }
       },
+      "System.Net.NameResolution/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.NameResolution.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Net.Security/4.3.2": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Security.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Security.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Reflection.Emit.Lightweight/4.3.0": {
         "type": "package",
         "compile": {
@@ -68,6 +157,54 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Reflection.TypeExtensions/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Cng/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.Cng.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "Xamarin.AndroidX.Activity/1.0.0": {
@@ -1000,6 +1137,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MailKit": "2.7.0",
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
@@ -1013,6 +1151,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "MailKit": "2.7.0",
           "Prism.DryIoc.Forms": "7.2.0.1422",
           "ShopCET46.Common": "1.0.0",
           "Xamarin.Essentials.Interfaces": "1.5.2",
@@ -1058,6 +1197,72 @@
         "lib/portable-net45+win8+wp8+wpa81/DryIoc.xml"
       ]
     },
+    "MailKit/2.7.0": {
+      "sha512": "AaUb45NBpKSjl1bTOAwB7nGQm2cLg6yjz4L+2KgU9dhTN3VTmXnJo+enKTjN0LHX3PV4k7DE12IhZqmXnP3v6w==",
+      "type": "package",
+      "path": "mailkit/2.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icons/mailkit-50.png",
+        "lib/net45/MailKit.dll",
+        "lib/net45/MailKit.pdb",
+        "lib/net45/MailKit.xml",
+        "lib/net46/MailKit.dll",
+        "lib/net46/MailKit.pdb",
+        "lib/net46/MailKit.xml",
+        "lib/net47/MailKit.dll",
+        "lib/net47/MailKit.pdb",
+        "lib/net47/MailKit.xml",
+        "lib/net48/MailKit.dll",
+        "lib/net48/MailKit.pdb",
+        "lib/net48/MailKit.xml",
+        "lib/netstandard1.3/MailKit.dll",
+        "lib/netstandard1.3/MailKit.pdb",
+        "lib/netstandard1.3/MailKit.xml",
+        "lib/netstandard1.6/MailKit.dll",
+        "lib/netstandard1.6/MailKit.pdb",
+        "lib/netstandard1.6/MailKit.xml",
+        "lib/netstandard2.0/MailKit.dll",
+        "lib/netstandard2.0/MailKit.pdb",
+        "lib/netstandard2.0/MailKit.xml",
+        "mailkit.2.7.0.nupkg.sha512",
+        "mailkit.nuspec"
+      ]
+    },
+    "MimeKit/2.8.0": {
+      "sha512": "XUWdwag5dcdwJAzMpBLNx+24xgpigk/bhIJBs/sITciX8CIYS2cfc4VkGwQjtuTsrbaJEBl3ZSOtGSOOc2k/pg==",
+      "type": "package",
+      "path": "mimekit/2.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icons/mimekit-50.png",
+        "lib/net45/MimeKit.dll",
+        "lib/net45/MimeKit.pdb",
+        "lib/net45/MimeKit.xml",
+        "lib/net46/MimeKit.dll",
+        "lib/net46/MimeKit.pdb",
+        "lib/net46/MimeKit.xml",
+        "lib/net47/MimeKit.dll",
+        "lib/net47/MimeKit.pdb",
+        "lib/net47/MimeKit.xml",
+        "lib/net48/MimeKit.dll",
+        "lib/net48/MimeKit.pdb",
+        "lib/net48/MimeKit.xml",
+        "lib/netstandard1.3/MimeKit.dll",
+        "lib/netstandard1.3/MimeKit.pdb",
+        "lib/netstandard1.3/MimeKit.xml",
+        "lib/netstandard1.6/MimeKit.dll",
+        "lib/netstandard1.6/MimeKit.pdb",
+        "lib/netstandard1.6/MimeKit.xml",
+        "lib/netstandard2.0/MimeKit.dll",
+        "lib/netstandard2.0/MimeKit.pdb",
+        "lib/netstandard2.0/MimeKit.xml",
+        "mimekit.2.8.0.nupkg.sha512",
+        "mimekit.nuspec"
+      ]
+    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -1087,6 +1292,25 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.5": {
+      "sha512": "EaCgmntbH1sOzemRTqyXSqYjB6pLH7VCYHhhDYZ59guHSD5qPwhIYa7kfy0QUlmTRt9IXhaXdFhNuBUArp70Ng==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard1.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard1.0/BouncyCastle.Crypto.xml",
+        "lib/netstandard1.3/BouncyCastle.Crypto.dll",
+        "lib/netstandard1.3/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.5.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
       ]
     },
     "Prism.Core/7.2.0.1422": {
@@ -1143,6 +1367,80 @@
         "prism.forms.nuspec"
       ]
     },
+    "System.Net.NameResolution/4.3.0": {
+      "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
+      "type": "package",
+      "path": "system.net.nameresolution/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Net.NameResolution.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Net.NameResolution.dll",
+        "ref/netstandard1.3/System.Net.NameResolution.dll",
+        "ref/netstandard1.3/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/de/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/es/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/fr/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/it/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/ja/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/ko/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/ru/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/zh-hans/System.Net.NameResolution.xml",
+        "ref/netstandard1.3/zh-hant/System.Net.NameResolution.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Net.NameResolution.dll",
+        "runtimes/win/lib/net46/System.Net.NameResolution.dll",
+        "runtimes/win/lib/netcore50/System.Net.NameResolution.dll",
+        "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll",
+        "system.net.nameresolution.4.3.0.nupkg.sha512",
+        "system.net.nameresolution.nuspec"
+      ]
+    },
+    "System.Net.Security/4.3.2": {
+      "sha512": "xT2jbYpbBo3ha87rViHoTA6WdvqOAW37drmqyx/6LD8p7HEPT2qgdxoimRzWtPg8Jh4X5G9BV2seeTv4x6FYlA==",
+      "type": "package",
+      "path": "system.net.security/4.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Net.Security.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Net.Security.dll",
+        "ref/netstandard1.3/System.Net.Security.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.6/System.Net.Security.dll",
+        "runtimes/win/lib/net46/System.Net.Security.dll",
+        "runtimes/win/lib/netstandard1.3/System.Net.Security.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.net.security.4.3.2.nupkg.sha512",
+        "system.net.security.nuspec"
+      ]
+    },
     "System.Reflection.Emit.Lightweight/4.3.0": {
       "sha512": "oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
       "type": "package",
@@ -1186,6 +1484,235 @@
         "runtimes/aot/lib/netcore50/_._",
         "system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
         "system.reflection.emit.lightweight.nuspec"
+      ]
+    },
+    "System.Reflection.TypeExtensions/4.4.0": {
+      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+      "type": "package",
+      "path": "system.reflection.typeextensions/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Reflection.TypeExtensions.dll",
+        "lib/net461/System.Reflection.TypeExtensions.dll",
+        "lib/netcore50/System.Reflection.TypeExtensions.dll",
+        "lib/netcoreapp1.0/System.Reflection.TypeExtensions.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/System.Reflection.TypeExtensions.dll",
+        "lib/netstandard1.5/System.Reflection.TypeExtensions.dll",
+        "lib/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Reflection.TypeExtensions.dll",
+        "ref/net461/System.Reflection.TypeExtensions.dll",
+        "ref/net461/System.Reflection.TypeExtensions.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.3/System.Reflection.TypeExtensions.dll",
+        "ref/netstandard1.3/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/de/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/es/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/fr/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/it/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/ja/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/ko/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/ru/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/zh-hans/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.3/zh-hant/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/System.Reflection.TypeExtensions.dll",
+        "ref/netstandard1.5/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/de/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/es/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/fr/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/it/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/ja/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/ko/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/ru/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/zh-hans/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard1.5/zh-hant/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "ref/netstandard2.0/System.Reflection.TypeExtensions.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
+        "system.reflection.typeextensions.4.4.0.nupkg.sha512",
+        "system.reflection.typeextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.Serialization.Primitives/4.3.0": {
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "type": "package",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.Runtime.Serialization.Primitives.dll",
+        "lib/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.Runtime.Serialization.Primitives.dll",
+        "ref/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "ref/netcore50/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
+        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
+        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
+        "system.runtime.serialization.primitives.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Cng/4.4.0": {
+      "sha512": "3d/d+7sdNpfYfqJFzuE/o6Pl/reaMbH7rlUMNvtm4+XVYHY32tdFa45yjB3vhb6q0YY+IV8GUuiBPRsBFP3yaw==",
+      "type": "package",
+      "path": "system.security.cryptography.cng/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Cryptography.Cng.dll",
+        "lib/net461/System.Security.Cryptography.Cng.dll",
+        "lib/net462/System.Security.Cryptography.Cng.dll",
+        "lib/net47/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Cng.dll",
+        "ref/net46/System.Security.Cryptography.Cng.dll",
+        "ref/net461/System.Security.Cryptography.Cng.dll",
+        "ref/net461/System.Security.Cryptography.Cng.xml",
+        "ref/net462/System.Security.Cryptography.Cng.dll",
+        "ref/net462/System.Security.Cryptography.Cng.xml",
+        "ref/net47/System.Security.Cryptography.Cng.dll",
+        "ref/net47/System.Security.Cryptography.Cng.xml",
+        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
+        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.Cng.dll",
+        "ref/netstandard1.4/System.Security.Cryptography.Cng.dll",
+        "ref/netstandard1.6/System.Security.Cryptography.Cng.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Cng.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Cng.xml",
+        "runtimes/win/lib/net46/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/net462/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/net47/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
+        "system.security.cryptography.cng.4.4.0.nupkg.sha512",
+        "system.security.cryptography.cng.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Encoding.CodePages/4.4.0": {
+      "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/de/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/es/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/fr/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/it/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ja/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ko/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ru/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hans/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hant/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.4.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Xamarin.AndroidX.Activity/1.0.0": {
@@ -2439,6 +2966,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v10.0": [
+      "MailKit >= 2.7.0",
       "Prism.DryIoc.Forms >= 7.2.0.1422",
       "ShopCET46.Prism >= 1.0.0",
       "Xamarin.Essentials.Interfaces >= 1.5.2",
@@ -2487,6 +3015,10 @@
     "frameworks": {
       "monoandroid10.0": {
         "dependencies": {
+          "MailKit": {
+            "target": "Package",
+            "version": "[2.7.0, )"
+          },
           "Prism.DryIoc.Forms": {
             "target": "Package",
             "version": "[7.2.0.1422, )"
