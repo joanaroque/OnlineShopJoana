@@ -3,4 +3,7 @@
   <parameter name="IIS Web Application Name" description="" value="shopcet46joana" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Projects\\ShopCET46\\ShopCET46\.WEB\\obj\\Release\\netcoreapp2\.1\\PubTmp\\Out\\$" />
   </parameter>
+  <parameter name="ShopCET46.WEB.Data.DataContext" description="" value="Data Source=tcp:shopcet46joana.database.windows.net,1433;Initial Catalog=ShopCET46joanaWEB_db;User Id=joanaRoque@shopcet46joana;Password=31Joana1988" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Projects\\ShopCET46\\ShopCET46\.WEB\\obj\\Release\\netcoreapp2\.1\\PubTmp\\EFSQLScripts\\ShopCET46\.WEB\.Data\.DataContext\.sql$" />
+  </parameter>
 </parameters>

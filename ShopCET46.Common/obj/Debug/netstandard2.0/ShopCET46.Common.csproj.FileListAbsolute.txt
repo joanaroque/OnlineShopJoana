@@ -6,3 +6,4 @@ C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common
 C:\Projects\ShopCET46\ShopCET46.Common\bin\Debug\netstandard2.0\ShopCET46.Common.pdb
 C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.dll
 C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.pdb
+C:\Projects\ShopCET46\ShopCET46.Common\obj\Debug\netstandard2.0\ShopCET46.Common.csproj.CoreCompileInputs.cache

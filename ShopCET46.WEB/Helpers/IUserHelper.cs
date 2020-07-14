@@ -35,6 +35,6 @@ namespace ShopCET46.WEB.Helpers
 
         Task<string> GeneratePasswordResetTokenAsync(User user);
 
-        Task<IdentityResult> ResetPasswordAsync(User user, string toke, string password);
+        Task<IdentityResult> ResetPasswordAsync(User user, string token, string password);
     }
 }

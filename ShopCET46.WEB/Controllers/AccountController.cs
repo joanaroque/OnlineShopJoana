@@ -325,6 +325,11 @@ namespace ShopCET46.WEB.Controllers
             this.ViewBag.Message = "User not found.";
             return View(model);
         }
+
+        public IActionResult NotAuthorized()
+        {
+            return View();
+        }
     }
 }
 

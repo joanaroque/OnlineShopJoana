@@ -570,3 +570,11 @@ C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\bin\Debug\ShopCET4
 C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\Newtonsoft.Json.dll
 C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\ShopCET46.Common.dll
 C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\ShopCET46.Common.pdb
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\BouncyCastle.Crypto.dll
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\MailKit.dll
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\MailKit.pdb
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\MimeKit.dll
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\MimeKit.pdb
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\System.Security.Cryptography.Cng.dll
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\System.Text.Encoding.CodePages.dll
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism.Android\obj\Debug\100\android\assets\System.Text.Encoding.CodePages.pdb

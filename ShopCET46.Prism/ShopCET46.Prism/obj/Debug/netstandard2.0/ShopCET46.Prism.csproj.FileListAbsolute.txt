@@ -12,3 +12,5 @@ C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism\obj\Debug\netstandard2.0\V
 C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism\bin\Debug\netstandard2.0\ShopCET46.Common.dll
 C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism\bin\Debug\netstandard2.0\ShopCET46.Common.pdb
 C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism\obj\Debug\netstandard2.0\ShopCET46.Prism.csproj.CopyComplete
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism\obj\Debug\netstandard2.0\ShopCET46.Prism.csproj.CoreCompileInputs.cache
+C:\Projects\ShopCET46\ShopCET46.Prism\ShopCET46.Prism\obj\Debug\netstandard2.0\XamlC.stamp

@@ -42,3 +42,8 @@ C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\ShopCET46.WEB.cspr
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\ChangePassword.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\ChangeUser.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\RecoverPassword.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Release\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs

@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "ShopCET46.Prism.Android.dll" comes first in this list. */
 		"ShopCET46.Prism.Android.dll",
+		"BouncyCastle.Crypto.dll",
 		"DryIoc.dll",
 		"Essential.Interfaces.dll",
 		"FFImageLoading.dll",
@@ -10,11 +11,14 @@ public class MonoPackageManager_Resources {
 		"FFImageLoading.Forms.Platform.dll",
 		"FFImageLoading.Platform.dll",
 		"FormsViewGroup.dll",
+		"MailKit.dll",
+		"MimeKit.dll",
 		"Newtonsoft.Json.dll",
 		"Prism.dll",
 		"Prism.DryIoc.Forms.dll",
 		"Prism.Forms.dll",
 		"ShopCET46.Prism.dll",
+		"System.Security.Cryptography.Cng.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.AppCompat.dll",
