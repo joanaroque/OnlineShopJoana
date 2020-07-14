@@ -81,8 +81,11 @@ C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\UserSecretsAssemblyI
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\RecoverPassword.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
-C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csprojAssemblyReference.cache
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Account\NotAuthorized.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Home\Error404.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Products\NotAuthorized.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationCurrencyPartial.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Index.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\bin\Debug\netcoreapp2.1\libman.json
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Orders\AddProduct.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Create.cshtml.g.cs

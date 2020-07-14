@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ShopCET46.WEB.Data;
+using ShopCET46.WEB.Data.Repositories;
 
 namespace ShopCET46.WEB.API
 {

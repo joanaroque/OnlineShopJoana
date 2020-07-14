@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using ShopCET46.WEB.Data;
+using ShopCET46.WEB.Data.Repositories;
 using ShopCET46.WEB.Data.Entities;
 using ShopCET46.WEB.Helpers;
 using System.Text;
+using ShopCET46.WEB.Data;
 
 namespace ShopCET46.WEB
 {
@@ -74,7 +75,7 @@ namespace ShopCET46.WEB
             services.AddScoped<IMailHelper, MailHelper>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
-
+            services.AddScoped<IOrderRepository, OrderRepository>();
             //Outro scope: services.AddSingleton -> depois de usado nunca morre, fica sempre instanciado
 
 
