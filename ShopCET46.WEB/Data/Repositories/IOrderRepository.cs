@@ -22,6 +22,17 @@ namespace ShopCET46.WEB.Data.Repositories
 
         Task DeleteDetailTempAsync(int id);
 
+
         Task<bool> ConfirmOrderAsync(string userName);
+
+
+        Task DeliverOrderAsync(DeliverViewModel model);
+
+
+        Task<Order> GetOrderAsync(int id);
+
+
+
+
     }
 }

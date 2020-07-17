@@ -61,7 +61,7 @@ namespace ShopCET46.WEB.Data.Repositories
 
         public async Task<bool> ConfirmOrderAsync(string userName)
         {
-            var user = await _userHelper.GetUserByIdAsync(userName);
+            var user = await _userHelper.GetUserByEmailAsync(userName);
 
             if (user == null)
             {
@@ -114,6 +114,21 @@ namespace ShopCET46.WEB.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task DeliverOrderAsync(DeliverViewModel model)
+        {
+            var order = await _context.Orders.FindAsync(model.Id);
+
+            if (order == null)
+            {
+                return;
+            }
+
+
+            order.DeliveryDate = model.DeliveryDate;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<IQueryable<OrderDetailTemp>> GetDetailTempsAsync(string userName)
         {
             var user = await _userHelper.GetUserByEmailAsync(userName);
@@ -152,6 +167,12 @@ namespace ShopCET46.WEB.Data.Repositories
                     .ThenInclude(p => p.Product)
                     .Where(o => o.User == user)
                     .OrderByDescending(o => o.OrderDate);
+        }
+
+        public async Task<Order> GetOrderAsync(int id)
+        {
+            return await _context.Orders.FindAsync(id);
+
         }
 
         public async Task ModifyOrderDetailTempQuantityAsync(int id, double quantity)

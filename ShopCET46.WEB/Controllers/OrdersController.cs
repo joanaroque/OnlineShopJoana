@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopCET46.WEB.Data.Repositories;
 using ShopCET46.WEB.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace ShopCET46.WEB.Controllers
@@ -95,7 +96,6 @@ namespace ShopCET46.WEB.Controllers
 
         public async Task<IActionResult> ConfirmOrder()
         {
-
             var response = await _orderRepository.ConfirmOrderAsync(User.Identity.Name);
 
             if (response)
@@ -104,6 +104,42 @@ namespace ShopCET46.WEB.Controllers
             }
 
             return RedirectToAction("Create");
+        }
+
+        public async Task<IActionResult> Deliver(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var order = await _orderRepository.GetOrderAsync(id.Value);
+
+            if (order == null)
+            {
+                return NotFound();
+
+            }
+
+            var model = new DeliverViewModel
+            {
+                Id = order.Id,
+                DeliveryDate = DateTime.Today
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Deliver(DeliverViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _orderRepository.DeliverOrderAsync(model);
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
 
     }

@@ -81,7 +81,7 @@ using ShopCET46.WEB.Models;
                         ");
             EndContext();
             BeginContext(658, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c95f537cfcdf4299abc4a56633b8260e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5de5d4cd054c439e8eba10ff7d6de6c6", async() => {
                 BeginContext(700, 10, true);
                 WriteLiteral("Go to Home");
                 EndContext();
