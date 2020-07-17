@@ -72,7 +72,7 @@ using ShopCET46.WEB.Models;
             WriteLiteral("\r\n<h2>Create</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(139, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "da5677df2d964405b88b992600f9b9e8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cac9b972f52f43da87605e8e5ad63934", async() => {
                 BeginContext(190, 11, true);
                 WriteLiteral("Add Product");
                 EndContext();
@@ -95,7 +95,7 @@ using ShopCET46.WEB.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(211, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f798f9acbce4b6ca9e5b9a9df1e4cd6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa4738ed4ce44b2ab37e28f6fdd00c0f", async() => {
                 BeginContext(264, 13, true);
                 WriteLiteral("Confirm Order");
                 EndContext();
@@ -207,7 +207,7 @@ using ShopCET46.WEB.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1353, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ba862103877489cb5b59cc9d8428923", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "735c3a5dc54745b58c3ce6d092f5e029", async() => {
                 BeginContext(1426, 26, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i>");
                 EndContext();
@@ -243,7 +243,7 @@ using ShopCET46.WEB.Models;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1478, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42e7756258e6416e9e74371674b40074", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f37634f9a3814ce19381507c9fe6c972", async() => {
                 BeginContext(1548, 27, true);
                 WriteLiteral("<i class=\"fa fa-minus\"></i>");
                 EndContext();
@@ -279,7 +279,7 @@ using ShopCET46.WEB.Models;
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1601, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cafdd87bba7a4d63a97d29418043c06e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2787f494189844ffbaad32b7e76a6c9a", async() => {
                 BeginContext(1675, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

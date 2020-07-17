@@ -207,7 +207,7 @@ namespace ShopCET46.WEB.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult NotAuthorized()
+        public IActionResult ProductNotFound()
         {
             return View();
         }

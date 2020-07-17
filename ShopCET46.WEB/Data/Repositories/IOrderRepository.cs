@@ -10,6 +10,7 @@ namespace ShopCET46.WEB.Data.Repositories
         //vai buscar todas as encomendas criadas por um user
         Task<IQueryable<Order>> GetOrdersAsync(string userName);
 
+
         Task<IQueryable<OrderDetailTemp>> GetDetailTempsAsync(string userName);
 
 
@@ -18,5 +19,9 @@ namespace ShopCET46.WEB.Data.Repositories
 
         Task ModifyOrderDetailTempQuantityAsync(int id, double quantity);
 
+
+        Task DeleteDetailTempAsync(int id);
+
+        Task<bool> ConfirmOrderAsync(string userName);
     }
 }
