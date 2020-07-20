@@ -2,6 +2,7 @@
 using ShopCET46.WEB.Data.Entities;
 using ShopCET46.WEB.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -28,7 +29,24 @@ namespace ShopCET46.WEB.Data
             await _userHelper.ChecRoleAsync("Admin");
             await _userHelper.ChecRoleAsync("Customer");
 
-            //criar aqui user
+
+            if (!_context.Cities.Any())
+            {
+                var cities = new List<City>();
+                cities.Add(new City { Name = "Lisboa" });
+                cities.Add(new City { Name = "Porto" });
+                cities.Add(new City { Name = "Coimbra" });
+                cities.Add(new City { Name = "Porto" });
+
+                _context.Countries.Add(new Country
+                {
+                    Cities = cities,
+                    Name = "Portugal"
+                });
+
+                await _context.SaveChangesAsync();
+            }
+
             var user = await _userHelper.GetUserByEmailAsync("joanatpsi@gmail.com");
 
             if (user == null)
@@ -39,7 +57,12 @@ namespace ShopCET46.WEB.Data
                     LastName = "Roque",
                     Email = "joanatpsi@gmail.com",
                     UserName = "joanatpsi@gmail.com",
-                    PhoneNumber = "156456456"
+                    PhoneNumber = "156456456",
+                    Adress = "Rua Jau",
+                    CityId = _context.Countries.FirstOrDefault()
+                    .Cities.FirstOrDefault().Id,
+                    City = _context.Countries.FirstOrDefault()
+                    .Cities.FirstOrDefault()
                 };
 
                 var result = await _userHelper.AddUserAsync(user, "123456");
@@ -78,7 +101,7 @@ namespace ShopCET46.WEB.Data
             {
                 Name = name,
                 Price = _random.Next(500),
-                IsAvalible = true,
+                IsAvailable = true,
                 Stock = _random.Next(1000),
                 User = user
             });

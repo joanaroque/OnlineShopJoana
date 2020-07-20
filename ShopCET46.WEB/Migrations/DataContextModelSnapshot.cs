@@ -129,13 +129,34 @@ namespace ShopCET46.WEB.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("ShopCET46.WEB.Data.Entities.City", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CountryId");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("Cities");
+                });
+
             modelBuilder.Entity("ShopCET46.WEB.Data.Entities.Country", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -217,7 +238,7 @@ namespace ShopCET46.WEB.Migrations
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<bool>("IsAvalible");
+                    b.Property<bool>("IsAvailable");
 
                     b.Property<DateTime?>("LastPurchase");
 
@@ -248,6 +269,11 @@ namespace ShopCET46.WEB.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("Adress")
+                        .HasMaxLength(100);
+
+                    b.Property<int>("CityId");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -256,9 +282,11 @@ namespace ShopCET46.WEB.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .HasMaxLength(50);
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -284,6 +312,8 @@ namespace ShopCET46.WEB.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CityId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -341,6 +371,13 @@ namespace ShopCET46.WEB.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("ShopCET46.WEB.Data.Entities.City", b =>
+                {
+                    b.HasOne("ShopCET46.WEB.Data.Entities.Country")
+                        .WithMany("Cities")
+                        .HasForeignKey("CountryId");
+                });
+
             modelBuilder.Entity("ShopCET46.WEB.Data.Entities.Order", b =>
                 {
                     b.HasOne("ShopCET46.WEB.Data.Entities.User", "User")
@@ -379,6 +416,14 @@ namespace ShopCET46.WEB.Migrations
                     b.HasOne("ShopCET46.WEB.Data.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("ShopCET46.WEB.Data.Entities.User", b =>
+                {
+                    b.HasOne("ShopCET46.WEB.Data.Entities.City", "City")
+                        .WithMany()
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

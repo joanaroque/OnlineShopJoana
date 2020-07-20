@@ -12,7 +12,7 @@ namespace ShopCET46.WEB.Helpers
             {
                 Id = isNew ? 0 : model.Id, //porque pode vir do create ou do edit
                 ImageUrl = path,
-                IsAvalible = model.IsAvalible,
+                IsAvailable = model.IsAvailable,
                 LastPurchase = model.LastPurchase,
                 LastSale = model.LastSale,
                 Name = model.Name,
@@ -28,7 +28,7 @@ namespace ShopCET46.WEB.Helpers
             {
                 Id = model.Id,
                 ImageUrl = model.ImageUrl,
-                IsAvalible = model.IsAvalible,
+                IsAvailable = model.IsAvailable,
                 LastPurchase = model.LastPurchase,
                 LastSale = model.LastSale,
                 Name = model.Name,

@@ -24,7 +24,7 @@ namespace ShopCET46.WEB.Data.Entities
         public DateTime? LastSale { get; set; }
 
         [Display(Name = "Is Avalible?")]
-        public bool IsAvalible { get; set; }
+        public bool IsAvailable { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }//N number

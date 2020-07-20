@@ -91,3 +91,9 @@ C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Orders\A
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Create.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Deliver.cshtml.g.cs
 C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\ShopCET46.WEB.csprojAssemblyReference.cache
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Create.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Details.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Edit.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Index.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Countries\AddCity.cshtml.g.cs
+C:\Projects\ShopCET46\ShopCET46.WEB\obj\Debug\netcoreapp2.1\Razor\Views\Countries\EditCity.cshtml.g.cs

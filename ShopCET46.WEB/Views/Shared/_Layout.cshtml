@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ShopCET46.WEB</title>
+    <title>@ViewData["Title"] - ShopCET46.Web</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Joana Roque</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ShopCET46.Web</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -36,7 +36,6 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
                     <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
-
                     @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
                     {
                         <li class="dropdown">
@@ -44,6 +43,7 @@
                             <ul class="dropdown-menu">
                                 <li><a asp-area="" asp-controller="" asp-action="">Users</a></li>
                                 <li><a asp-area="" asp-controller="" asp-action="">Roles</a></li>
+                                <li><a asp-area="" asp-controller="Countries" asp-action="Index">Countries</a></li>
                             </ul>
                         </li>
                     }
@@ -69,7 +69,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2020 - ShopCET46.WEB</p>
+            <p>&copy; 2020 - ShopCET46.Web</p>
         </footer>
     </div>
 
