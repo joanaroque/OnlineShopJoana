@@ -100,7 +100,7 @@ namespace ShopCET46.WEB.Controllers
                         LastName = model.LastName,
                         Email = model.UserName,
                         UserName = model.UserName,
-                        Adress = model.Address,
+                        Address = model.Address,
                         PhoneNumber = model.PhoneNumber,
                         CityId = model.CityId,
                         City = city
@@ -166,7 +166,7 @@ namespace ShopCET46.WEB.Controllers
             {
                 model.FirstName = user.FirstName;
                 model.LastName = user.LastName;
-                model.Address = user.Adress;
+                model.Address = user.Address;
                 model.PhoneNumber = user.PhoneNumber;
 
                 var city = await _countryRepository.GetCityAsync(user.CityId);
@@ -202,7 +202,7 @@ namespace ShopCET46.WEB.Controllers
 
                     user.FirstName = model.FirstName;
                     user.LastName = model.LastName;
-                    user.Adress = model.Address;
+                    user.Address = model.Address;
                     user.PhoneNumber = model.PhoneNumber;
                     user.CityId = model.CityId;
                     user.City = city;

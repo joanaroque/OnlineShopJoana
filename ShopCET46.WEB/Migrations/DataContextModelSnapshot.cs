@@ -269,7 +269,7 @@ namespace ShopCET46.WEB.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<string>("Adress")
+                    b.Property<string>("Address")
                         .HasMaxLength(100);
 
                     b.Property<int>("CityId");

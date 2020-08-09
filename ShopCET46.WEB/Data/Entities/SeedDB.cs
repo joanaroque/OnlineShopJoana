@@ -58,7 +58,7 @@ namespace ShopCET46.WEB.Data
                     Email = "joanatpsi@gmail.com",
                     UserName = "joanatpsi@gmail.com",
                     PhoneNumber = "156456456",
-                    Adress = "Rua Jau",
+                    Address = "Rua Jau",
                     CityId = _context.Countries.FirstOrDefault()
                     .Cities.FirstOrDefault().Id,
                     City = _context.Countries.FirstOrDefault()
