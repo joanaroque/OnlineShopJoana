@@ -20,6 +20,7 @@
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\Administrator\" />
     <Folder Include="wwwroot\images\Products\" />
+    <Folder Include="wwwroot\login\" />
   </ItemGroup>
 
 </Project>
