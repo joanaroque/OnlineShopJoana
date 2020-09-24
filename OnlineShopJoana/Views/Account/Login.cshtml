@@ -1,0 +1,80 @@
+﻿@model OnlineShopJoana.WEB.Models.LoginViewModel
+
+
+
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+
+
+    <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- online fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <!--  particles  -->
+    <div id="particles-js"></div>
+    <!-- //particles -->
+    <div class="w3ls-pos">
+        <h1>Login</h1>
+        <div class="w3ls-login box">
+
+            <form method="post">
+                <div class="agile-field-txt">
+                    <span asp-validation-for="UserName"></span>
+                    <input asp-for="UserName" type="email" name="email" placeholder="info@example.com" />
+                </div>
+                <div class="agile-field-txt">
+                    <input asp-for="Password" type="password" name="password" placeholder="******" id="myInput" />
+                    <span asp-validation-for="Password"></span>
+                    <div class="agile_label">
+                        <input asp-for="RememberMe" type="checkbox" id="check3" name="check3" value="show password">
+                        <label asp-for="RememberMe" class="check" for="check3">Remember me?</label>
+                    </div>
+                </div>
+                <div class="w3ls-bot">
+                    <input type="submit" value="LOGIN" />
+                </div>
+                <div class="agile_label">
+                    <a asp-action="Register" class="btn btn-primary">Register New User</a>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="agile_label">
+                    <a asp-action="RecoverPassword" class="btn btn-link">Forgot your password?</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- scripts required  for particle effect -->
+    <script src="~/login/js/particles.min.js"></script>
+    <script src="~/login/js/index.js"></script>
+    <!-- //scripts required for particle effect -->
+</body>
+
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+}
+
