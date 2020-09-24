@@ -1,17 +1,13 @@
 ﻿@model OnlineShopJoana.WEB.Models.LoginViewModel
 
 
-
 @{
     Layout = null;
 }
 
-
-
 <!DOCTYPE HTML>
 <html lang="zxx">
 <head>
-
 
     <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
     <!-- online fonts-->
@@ -25,8 +21,8 @@
     <div class="w3ls-pos">
         <h1>Login</h1>
         <div class="w3ls-login box">
-
             <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
                 <div class="agile-field-txt">
                     <span asp-validation-for="UserName"></span>
                     <input asp-for="UserName" type="email" name="email" placeholder="info@example.com" />

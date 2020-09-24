@@ -3,84 +3,159 @@
     ViewData["Title"] = "Register";
 }
 
-<h2>Register New User</h2>
-
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly"></div>
-
-            <div class="form-group">
-                <label asp-for="FirstName">First Name</label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-warning"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="LastName">Last Name</label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-warning"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="UserName">UserName</label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-warning"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address">Address</label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-warning"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="PhoneNumber">Phone Number</label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-warning"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="CountryId" class="control-label"></label>
-                <select asp-for="CountryId" asp-items="Model.Countries" class="form-control"></select>
-                <span asp-validation-for="CountryId" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="CityId" class="control-label"></label>
-                <select asp-for="CityId" asp-items="Model.Cities" class="form-control"></select>
-                <span asp-validation-for="CityId" class="text-danger"></span>
-            </div>
+@{
+    Layout = null;
+}
 
 
-            <div class="form-group">
-                <label asp-for="Password">Password</label>
-                <input asp-for="Password" type="password" class="form-control" />
-                <span asp-validation-for="Password" class="text-warning"></span>
-            </div>
+@*<h2>Register New User</h2>
 
-            <div class="form-group">
-                <label asp-for="Confirm">Confirm</label>
-                <input asp-for="Confirm" type="password" class="form-control" />
-                <span asp-validation-for="Confirm" class="text-warning"></span>
-            </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
 
-            <div class="form-group">
-                <input type="submit" value="Register New User" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group">
+                    <label asp-for="FirstName">First Name</label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LastName">Last Name</label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UserName">UserName</label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-warning"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address">Address</label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PhoneNumber">Phone Number</label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CountryId" class="control-label"></label>
+                    <select asp-for="CountryId" asp-items="Model.Countries" class="form-control"></select>
+                    <span asp-validation-for="CountryId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CityId" class="control-label"></label>
+                    <select asp-for="CityId" asp-items="Model.Cities" class="form-control"></select>
+                    <span asp-validation-for="CityId" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Confirm">Confirm</label>
+                    <input asp-for="Confirm" type="password" class="form-control" />
+                    <span asp-validation-for="Confirm" class="text-warning"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Register New User" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+
+    <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- online fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <!--  particles  -->
+    <div id="particles-js"></div>
+    <!-- //particles -->
+    <div class="w3ls-pos">
+        <h1>Register</h1>
+        <div class="w3ls-login box">
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+
+                <div class="agile-field-txt">
+                    <span asp-validation-for="FirstName"></span>
+                    <input asp-for="FirstName" type="text" name="FirstName" placeholder="First Name" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="LastName"></span>
+                    <input asp-for="LastName" type="text" name="LastName" placeholder="Last Name" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="UserName"></span>
+                    <input asp-for="UserName" type="email" name="Email" placeholder="info@example.com" />
+                </div>
+
+                <div class="agile-field-txt">
+                    <span asp-validation-for="Address"></span>
+                    <input asp-for="Address" type="text" name="Address" placeholder="Address" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="PhoneNumber"></span>
+                    <input asp-for="PhoneNumber" type="tel" name="PhoneNumber" placeholder="Phone Number" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="CountryId"></span>
+                    <select asp-for="CountryId" asp-items="Model.Countries"></select>
+                    <input asp-for="CountryId" type="text" name="CountryId" placeholder="Country" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="CityId"></span>
+                    <select asp-for="CityId" asp-items="Model.Cities"></select>
+                    <input asp-for="CityId" type="text" name="CityId" placeholder="City" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="Password"></span>
+                    <input asp-for="Password" type="Password" name="Password" placeholder="*********" />
+                </div>
+                <div class="agile-field-txt">
+                    <span asp-validation-for="Confirm"></span>
+                    <input asp-for="Confirm" type="Password" name="Confirm" placeholder="*********" />
+                </div>
+                <input type="submit" value="Register Now">
+            </form>
+        </div>
+        <div class="footer-agile">
+            <p>
+                @ViewBag.Message
+            </p>
+        </div>
     </div>
-</div>
+</body>
 
-<div class="text-success">
-    <p>
-        @ViewBag.Message
-    </p>
-</div>
+</html>
+
+<script src="~/login/js/particles.min.js"></script>
+<script src="~/login/js/index.js"></script>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-   
- <script type="text/javascript">
+
+    <script type="text/javascript">
         $(document).ready(function () {
             $("#CountryId").change(function () {
                 $("#CityId").empty();
@@ -105,6 +180,16 @@
                 return false;
             })
         });
+    </script>
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
     </script>
 }
 
