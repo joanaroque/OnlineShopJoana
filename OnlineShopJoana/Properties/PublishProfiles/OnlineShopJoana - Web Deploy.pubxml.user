@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHpb781w43kypYhNkca83dwAAAAACAAAAAAAQZgAAAAEAACAAAACHEwCriZEpBRYM7/GZJXbaFSpAgvkGvrP7Ts/9NVYcRQAAAAAOgAAAAAIAACAAAACpg8RqhMNemlvYNlyGm6b1+Pxx7ZIAD6nm5YyqLyztl4AAAADnjX8SVV3+fQsqeH1DHWU+C/yy4OOifeIPHJa9WhEwFIoY5fl/oCbfr7aiLAkciGocGfHBiXV3DZDpWi5GwYDivLLo3DYeUXw9YkyyMKnS2I9zOYAJnm/vv+6F4/u6gKuvLcIgP/dmw3tA2jRN2YROq73Ngw8RDLGQtWjuBhkNOkAAAAD3c5opokmPSFeMZff7h533lJIxXlsniN/kFHGLltjX9Pz5MvhpTVvpcpRqK8Hc5EYcJmOlO9db/SyDmeBzQ/sK</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>workstation id=petClinicJoana.mssql.somee.com%3bpacket size=4096%3buser id=joanaRoque_SQLLogin_1%3bpwd=1234567a%3bdata source=petClinicJoana.mssql.somee.com%3bpersist security info=False%3binitial catalog=petClinicJoana</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

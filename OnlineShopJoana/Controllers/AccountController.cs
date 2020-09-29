@@ -55,7 +55,7 @@ namespace OnlineShopJoana.WEB.Controllers
                 ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
             };
 
-            return View();
+            return View(model);
         }
 
         [HttpPost]

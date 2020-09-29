@@ -23,6 +23,7 @@
         <div class="w3ls-login box">
             <form method="post">
                 <div asp-validation-summary="ModelOnly"></div>
+
                 <div class="agile-field-txt">
                     <span asp-validation-for="UserName"></span>
                     <input asp-for="UserName" type="email" name="email" placeholder="info@example.com" />
@@ -38,17 +39,51 @@
                 <div class="w3ls-bot">
                     <input type="submit" value="LOGIN" />
                 </div>
-                <div class="agile_label">
-                    <a asp-action="Register" class="btn btn-primary">Register New User</a>
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <div class="agile_label">
-                    <a asp-action="RecoverPassword" class="btn btn-link">Forgot your password?</a>
+            </form>
+
+
+
+         @if (Model.ExternalLogins.Count > 0)
+        {
+            <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
+                <div class="social-auth-links text-center mb-3">
+                    <p>- OR -</p>
+
+                    <div>
+
+                        @foreach (var provider in Model.ExternalLogins)
+                        {
+                        <button type="submit" class="btn btn-block  btn-foursquare"
+                                name="provider" value="@provider.Name"
+                                title="Login using your @provider.DisplayName account">
+                            @provider.DisplayName
+                        </button>
+
+                        @*<a href="#" class="btn btn-block btn-primary">
+                            <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                        </a>
+                        <a href="#" class="btn btn-block btn-danger">
+                            <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                        </a>*@
+                        }
+                    </div>
+
+
                 </div>
             </form>
+        }
+
+            <div class="agile_label">
+                <a asp-action="Register" class="btn btn-primary">Register New User</a>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="agile_label">
+                <a asp-action="RecoverPassword" class="btn btn-link">Forgot your password?</a>
+            </div>
+
         </div>
 
     </div>

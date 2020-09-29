@@ -9,7 +9,6 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\OnlineShopJo
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\OnlineShopJoana.pdb
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\OnlineShopJoana.Views.dll
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\OnlineShopJoana.Views.pdb
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csprojAssemblyReference.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csproj.CoreCompileInputs.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.RazorAssemblyInfo.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.RazorAssemblyInfo.cs
@@ -62,3 +61,4 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJo
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.pdb
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.genruntimeconfig.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csproj.CopyComplete
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csprojAssemblyReference.cache

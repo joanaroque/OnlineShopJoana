@@ -19,9 +19,12 @@ namespace OnlineShopJoana.WEB
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration) // injeçoes!!!
+        private readonly IHostingEnvironment _env;
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -84,12 +87,16 @@ namespace OnlineShopJoana.WEB
 
 
 
-
-
-
             services.AddDbContext<DataContext>(cfg =>
             {
-                cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                if (_env.IsDevelopment())
+                {
+                    cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                }
+                else
+                {
+                    cfg.UseSqlServer(Configuration.GetConnectionString("SomeeConnection"));
+                }
             });
 
             services.AddTransient<SeedDB>(); 
