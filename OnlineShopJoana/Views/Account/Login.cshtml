@@ -1,5 +1,8 @@
 ﻿@model OnlineShopJoana.WEB.Models.LoginViewModel
 
+@{
+    ViewData["Title"] = "Login";
+}
 
 @{
     Layout = null;
@@ -8,7 +11,7 @@
 <!DOCTYPE HTML>
 <html lang="zxx">
 <head>
-    <title>Plants Store - Login</title>
+    
     <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
     <!-- online fonts-->
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
@@ -26,7 +29,7 @@
 
                 <div class="agile-field-txt">
                     <span asp-validation-for="UserName"></span>
-                    <input asp-for="UserName" type="email" name="email" placeholder="info@example.com" />
+                    <input asp-for="UserName" type="email" name="UserName" placeholder="info@example.com" />
                 </div>
                 <div class="agile-field-txt">
                     <input asp-for="Password" type="password" name="password" placeholder="******" id="myInput" />
@@ -43,35 +46,35 @@
 
 
 
-         @if (Model.ExternalLogins.Count > 0)
-        {
-            <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
-                <div class="social-auth-links text-center mb-3">
-                    <p>- OR -</p>
+            @if (Model.ExternalLogins.Count > 0)
+            {
+                <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
+                    <div class="social-auth-links text-center mb-3">
+                        <p>- OR -</p>
 
-                    <div>
+                        <div>
 
-                        @foreach (var provider in Model.ExternalLogins)
-                        {
-                        <button type="submit" class="btn btn-block  btn-foursquare"
-                                name="provider" value="@provider.Name"
-                                title="Login using your @provider.DisplayName account">
-                            @provider.DisplayName
-                        </button>
+                            @foreach (var provider in Model.ExternalLogins)
+                            {
+                                <button type="submit" class="btn btn-block  btn-foursquare"
+                                        name="provider" value="@provider.Name"
+                                        title="Login using your @provider.DisplayName account">
+                                    @provider.DisplayName
+                                </button>
 
-                        @*<a href="#" class="btn btn-block btn-primary">
-                            <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                        </a>
-                        <a href="#" class="btn btn-block btn-danger">
-                            <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                        </a>*@
-                        }
+                                @*<a href="#" class="btn btn-block btn-primary">
+                                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                                    </a>
+                                    <a href="#" class="btn btn-block btn-danger">
+                                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                                    </a>*@
+                            }
+                        </div>
+
+
                     </div>
-
-
-                </div>
-            </form>
-        }
+                </form>
+            }
 
             <div class="agile_label">
                 <a asp-action="Register" class="btn btn-primary">Register New User</a>

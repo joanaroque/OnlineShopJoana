@@ -44,11 +44,6 @@ namespace OnlineShopJoana.WEB.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(string returnUrl)
         {
-            if (User.Identity.IsAuthenticated)
-            {
-                return this.RedirectToAction("Index", "Home");
-            }
-
             LoginViewModel model = new LoginViewModel
             {
                 ReturnUrl = returnUrl,
@@ -59,6 +54,7 @@ namespace OnlineShopJoana.WEB.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
@@ -67,14 +63,41 @@ namespace OnlineShopJoana.WEB.Controllers
 
                 if (result.Succeeded)
                 {
-                    if (Request.Query.Keys.Contains("ReturnUrl"))
+                    if (Request.Query.Keys.Contains("ReturnURL"))
                     {
-                        return Redirect(Request.Query["ReturnUrl"].First());
+                        return Redirect(Request.Query["ReturnURL"].First());
                     }
+
                     return RedirectToAction("Index", "Home");
                 }
+
+                if (result.IsLockedOut)
+                {
+                    var user = await _userHelper.GetUserByEmailAsync(model.UserName);
+                    if (user == null)
+                    {
+                        ModelState.AddModelError(string.Empty, "The email doesn't correspont to a registered user.");
+                        return this.View(model);
+                    }
+
+                    ModelState.AddModelError(string.Empty, "Your account is locked out, to reset your password click on the link sent to your email");
+
+                    var myToken = await _userHelper.GeneratePasswordResetTokenAsync(user);
+
+                    var link = this.Url.Action(
+                        "ResetPassword",
+                        "Account",
+                        new { token = myToken }, protocol: HttpContext.Request.Scheme);
+
+                    _mailHelper.SendMail(model.UserName, "Plants Store Password Reset", $"<h1>Plants Store Password Reset</h1>" +
+                    $"To reset the password click in this link:</br></br>" +
+                    $"<a href = \"{link}\">Reset Password</a>");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Incorrect username or password");
+                }
             }
-            ModelState.AddModelError(string.Empty, "Failed to login");
             return View(model);
         }
 

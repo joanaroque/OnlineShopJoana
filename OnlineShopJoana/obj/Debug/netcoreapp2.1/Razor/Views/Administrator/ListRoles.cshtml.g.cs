@@ -72,7 +72,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n<section class=\"content-header\">\r\n\r\n    <ol class=\"breadcrumb\">\r\n        <li>");
             EndContext();
             BeginContext(190, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4bbdd80180f44b15a5a391d2d0b9eb4b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ced7b8826be40f1a4933fcec09a6448", async() => {
                 BeginContext(215, 32, true);
                 WriteLiteral("<i class=\"fas fa-home\"></i> Home");
                 EndContext();
@@ -165,7 +165,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n                                            </td>\r\n                                            <td>\r\n                                                ");
             EndContext();
             BeginContext(2163, 286, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06f6ee68fa254192b350f4365ba3bb3b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ebf33f7004e24cbeb4c93b11aa904056", async() => {
                 BeginContext(2418, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();
@@ -248,7 +248,7 @@ AddHtmlAttributeValue(" ", 2301, role.Name, 2302, 10, false);
                                 ");
             EndContext();
             BeginContext(3221, 224, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0ecb9d731ee54418a004c7b3a7560a8f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3247cdf58144bccbc1c9eded28ab774", async() => {
                 BeginContext(3358, 83, true);
                 WriteLiteral("\r\n                                    Create Role\r\n                                ");
                 EndContext();
@@ -294,7 +294,7 @@ AddHtmlAttributeValue(" ", 2301, role.Name, 2302, 10, false);
                 WriteLiteral("    ");
                 EndContext();
                 BeginContext(3724, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "72c4291d661346e4a4bb6d160568ff3a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd93327a15314a5285cf682b876ebb02", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
