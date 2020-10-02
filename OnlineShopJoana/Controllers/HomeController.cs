@@ -1,11 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+
+using OnlineShopJoana.Models;
+using OnlineShopJoana.WEB.Helpers;
 using OnlineShopJoana.WEB.Models;
+
+using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace OnlineShopJoana.WEB.Controllers
 {
     public class HomeController : Controller
     {
+
+        private readonly IMailHelper _mailHelper;
+        private readonly IUserHelper _userHelper;
+
+        public HomeController(IMailHelper mailHelper,
+            IUserHelper userHelper)
+        {
+            _mailHelper = mailHelper;
+            _userHelper = userHelper;
+        }
+
+
         public IActionResult Index()
         {
             return View();
@@ -18,15 +37,33 @@ namespace OnlineShopJoana.WEB.Controllers
             return View();
         }
 
+
+        [HttpGet]
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Contact(ContactViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+
+                    _mailHelper.SendMail("joanatpsi@gmail.com", model.Subject, $"Mail from: {model.Name}, {model.Email}</br>" +
+                                        $"</br></br>Message: {model.Message}");
+
+                    ViewBag.Message = String.Format("The message was successfully delivered !!", model, DateTime.Now.ToString());
+
+                }
+                catch (Exception exception)
+                {
+                    ModelState.AddModelError(string.Empty, exception.Message);
+                }
+
+            }
             return View();
         }
 

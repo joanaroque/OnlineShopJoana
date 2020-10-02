@@ -75,7 +75,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("<section class=\"content-header\">\r\n\r\n    <ol class=\"breadcrumb\">\r\n        <li>");
             EndContext();
             BeginContext(180, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ac9d5346c1f489a878c764b13692a65", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e745ec2d74ee4d4bb4e15e585772cf56", async() => {
                 BeginContext(205, 32, true);
                 WriteLiteral("<i class=\"fas fa-home\"></i> Home");
                 EndContext();
@@ -97,7 +97,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("</li>\r\n        <li class=\"active\">Admin</li>\r\n    </ol>\r\n</section>\r\n\r\n<link rel=\"stylesheet\" href=\"https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css\" />\r\n<br />\r\n\r\n");
             EndContext();
             BeginContext(421, 144, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e70673d11b36435894e6b1e82581c0f0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e151b8097aa455596d96709a8922d8a", async() => {
                 BeginContext(495, 66, true);
                 WriteLiteral("\r\n    <i class=\"glyphicon glyphicon-plus\"></i> Register new user\r\n");
                 EndContext();
@@ -220,7 +220,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(2849, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5056e8ff8c640a0a35215dd8316c1cf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd76f40df75b4dd298e047bf2c9b7878", async() => {
                 BeginContext(2950, 28, true);
                 WriteLiteral(" <i class=\"fa fa-edit\"></i> ");
                 EndContext();
@@ -258,7 +258,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(3024, 283, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a9caab56e704fe198febe76f5f45f11", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5fb66f6250fa401f88c329e72e258e14", async() => {
                 BeginContext(3276, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();
@@ -339,7 +339,7 @@ AddHtmlAttributeValue(" ", 3162, user.FirstName, 3163, 15, false);
                             ");
             EndContext();
             BeginContext(3995, 205, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3f8646954fb4c029bcd947fea47bea4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "375211eb688c4aa6b03783d21071bf68", async() => {
                 BeginContext(4120, 76, true);
                 WriteLiteral("\r\n                                Add new user\r\n                            ");
                 EndContext();
@@ -385,7 +385,7 @@ AddHtmlAttributeValue(" ", 3162, user.FirstName, 3163, 15, false);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(4439, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfbab584d9ef45d3a5abfc3d3fc7d397", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8379df2f89af4291ab576699c8033fc8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

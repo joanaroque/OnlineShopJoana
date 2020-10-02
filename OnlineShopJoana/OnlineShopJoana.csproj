@@ -151,18 +151,6 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\images\banner1.svg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\images\banner2.svg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="wwwroot\images\banner3.svg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
     <Content Update="wwwroot\images\tenor.gif">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -204,9 +192,6 @@
     <_ContentIncludedByDefault Remove="Views\Countries\Edit.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Countries\EditCity.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Countries\Index.cshtml" />
-    <_ContentIncludedByDefault Remove="wwwroot\images\Products\1.PNG" />
-    <_ContentIncludedByDefault Remove="wwwroot\images\Products\228a8304-b2cc-4ff1-a08e-7c3ea83b9efe.jpg" />
-    <_ContentIncludedByDefault Remove="wwwroot\images\Products\julho.PNG" />
   </ItemGroup>
 
   <ItemGroup>

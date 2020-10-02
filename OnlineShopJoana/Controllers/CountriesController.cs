@@ -32,7 +32,7 @@ namespace OnlineShopJoana.WEB.Controllers
             }
 
             var countryId = await _countryRepository.DeleteCityAsync(city);
-            return this.RedirectToAction($"Details/{countryId}");
+            return RedirectToAction($"Details/{countryId}");
         }
 
 
@@ -56,16 +56,16 @@ namespace OnlineShopJoana.WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> EditCity(City city)
         {
-            if (this.ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var countryId = await _countryRepository.UpdateCityAsync(city);
                 if (countryId != 0)
                 {
-                    return this.RedirectToAction($"Details/{countryId}");
+                    return RedirectToAction($"Details/{countryId}");
                 }
             }
 
-            return this.View(city);
+            return View(city);
         }
 
 
@@ -90,13 +90,13 @@ namespace OnlineShopJoana.WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCity(CityViewModel model)
         {
-            if (this.ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 await _countryRepository.AddCityAsync(model);
-                return this.RedirectToAction($"Details/{model.CountryId}");
+                return RedirectToAction($"Details/{model.CountryId}");
             }
 
-            return this.View(model);
+            return View(model);
         }
 
 

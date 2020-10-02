@@ -10,7 +10,7 @@ using OnlineShopJoana.WEB.Data;
 namespace OnlineShopJoana.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200929152136_InitialDb")]
+    [Migration("20201002211313_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

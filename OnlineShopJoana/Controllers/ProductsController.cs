@@ -107,22 +107,6 @@ namespace OnlineShopJoana.WEB.Controllers
             return View(view);
         }
 
-        //private ProductViewModel ToProductViewModel(Product product)
-        //{
-        //    return new ProductViewModel
-        //    {
-        //        Id = product.Id,
-        //        ImageUrl = product.ImageUrl,
-        //        IsAvalible = product.IsAvalible,
-        //        LastPurchase = product.LastPurchase,
-        //        LastSale = product.LastSale,
-        //        Name = product.Name,
-        //        Price = product.Price,
-        //        Stock = product.Stock,
-        //        User = product.User
-        //    };
-        //}
-
         // POST: Products/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

@@ -65,3 +65,4 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\EditUser.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListRoles.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListUsers.cshtml.g.cs
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csprojAssemblyReference.cache

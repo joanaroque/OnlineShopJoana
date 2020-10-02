@@ -26,27 +26,99 @@ namespace OnlineShopJoana.WEB.Data
         {
             await _context.Database.EnsureCreatedAsync();
 
-            await _userHelper.CheckRoleAsync("Admin");
-            await _userHelper.CheckRoleAsync("Customer");
+            await CheckOrCreateRoles();
 
+            await FillCityAsync();
+            await FillUserAsync();
+            await FillProductsAsync();
 
-            if (!_context.Cities.Any())
+        }
+
+        private async Task FillProductsAsync()
+        {
+            if (!_context.Products.Any())
             {
-                var cities = new List<City>();
-                cities.Add(new City { Name = "Lisboa" });
-                cities.Add(new City { Name = "Porto" });
-                cities.Add(new City { Name = "Coimbra" });
-                cities.Add(new City { Name = "Porto" });
-
-                _context.Countries.Add(new Country
+                _context.Products.Add(new Product
                 {
-                    Cities = cities,
-                    Name = "Portugal"
+                    Name = "Cato",
+                    Price = _random.Next(500),
+                    ImageUrl = ("~/images/Products/45.png"),
+                    LastPurchase = DateTime.Now.AddDays(-12),
+                    LastSale = DateTime.Now.AddDays(-3),
+                    IsAvailable = true,
+                    Stock = _random.Next(1000),
+                    User = _context.Users.FirstOrDefault(),
+                    CreateDate = DateTime.Now.AddDays(6),
+                    CreatedBy = _context.Users.FirstOrDefault()
+
+                });
+
+                _context.Products.Add(new Product
+                {
+                    Name = "Tulipa",
+                    Price = _random.Next(150),
+                    ImageUrl = ("~/images/Products/46.png"),
+                    LastPurchase = DateTime.Now.AddDays(-3),
+                    LastSale = DateTime.Now.AddDays(-55),
+                    IsAvailable = true,
+                    Stock = _random.Next(999),
+                    User = _context.Users.FirstOrDefault(),
+                    CreateDate = DateTime.Now.AddDays(6),
+                    CreatedBy = _context.Users.FirstOrDefault()
+
+                });
+
+                _context.Products.Add(new Product
+                {
+                    Name = "Margarida",
+                    Price = _random.Next(250),
+                    ImageUrl = ("~/images/Products/47.png"),
+                    LastPurchase = DateTime.Now.AddDays(-2),
+                    LastSale = DateTime.Now.AddDays(-25),
+                    IsAvailable = true,
+                    Stock = _random.Next(857),
+                    User = _context.Users.FirstOrDefault(),
+                    CreateDate = DateTime.Now.AddDays(6),
+                    CreatedBy = _context.Users.FirstOrDefault()
+
+                });
+
+                _context.Products.Add(new Product
+                {
+                    Name = "Aloevera",
+                    Price = _random.Next(154),
+                    ImageUrl = ("~/images/Products/48.png"),
+                    LastPurchase = DateTime.Now.AddDays(-44),
+                    LastSale = DateTime.Now.AddDays(-12),
+                    IsAvailable = true,
+                    Stock = _random.Next(964),
+                    User = _context.Users.FirstOrDefault(),
+                    CreateDate = DateTime.Now.AddDays(6),
+                    CreatedBy = _context.Users.FirstOrDefault()
+
+                });
+
+                _context.Products.Add(new Product
+                {
+                    Name = "Espada de São Jorge",
+                    Price = _random.Next(444),
+                    ImageUrl = ("~/images/Products/49.png"),
+                    LastPurchase = DateTime.Now.AddDays(-4),
+                    LastSale = DateTime.Now.AddDays(-5),
+                    IsAvailable = true,
+                    Stock = _random.Next(787),
+                    User = _context.Users.FirstOrDefault(),
+                    CreateDate = DateTime.Now.AddDays(6),
+                    CreatedBy = _context.Users.FirstOrDefault()
+
                 });
 
                 await _context.SaveChangesAsync();
             }
+        }
 
+        private async Task FillUserAsync()
+        {
             var user = await _userHelper.GetUserByEmailAsync("joanatpsi@gmail.com");
 
             if (user == null)
@@ -72,7 +144,6 @@ namespace OnlineShopJoana.WEB.Data
                     throw new InvalidOperationException("Could not create the user in seeder.");
                 }
 
-                //gerar token e responder
                 var token = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
                 await _userHelper.ConfirmEmailAsync(user, token);
 
@@ -84,28 +155,35 @@ namespace OnlineShopJoana.WEB.Data
                     await _userHelper.AddUSerToRoleAsync(user, "Admin");
                 }
             }
+        }
 
-            if (!_context.Products.Any())
+        private async Task FillCityAsync()
+        {
+            if (!_context.Cities.Any())
             {
-                AddProduct("Meias azuis", user);
-                AddProduct("Camisola Amarela", user);
-                AddProduct("Sapatos verdes", user);
+                var cities = new List<City>();
+                cities.Add(new City { Name = "Lisboa" });
+                cities.Add(new City { Name = "Porto" });
+                cities.Add(new City { Name = "Coimbra" });
+                cities.Add(new City { Name = "Porto" });
+
+                _context.Countries.Add(new Country
+                {
+                    Cities = cities,
+                    Name = "Portugal"
+                });
 
                 await _context.SaveChangesAsync();
             }
         }
 
-        private void AddProduct(string name, User user)
+        private async Task CheckOrCreateRoles()
         {
-            _context.Products.Add(new Product
-            {
-                Name = name,
-                Price = _random.Next(500),
-                IsAvailable = true,
-                Stock = _random.Next(1000),
-                User = user
-            });
-
+            await _userHelper.CheckRoleAsync("Admin");
+            await _userHelper.CheckRoleAsync("NormalCustomer");
+            await _userHelper.CheckRoleAsync("ResaleCustomer");
         }
+
     }
 }
+

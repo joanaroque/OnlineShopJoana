@@ -13,7 +13,7 @@ namespace OnlineShopJoana.WEB.Data.Entities
 
 
         [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
-        public decimal Price { get; set; }//C currency
+        public decimal Price { get; set; }
 
 
         [Display(Name = "Image")]
@@ -33,7 +33,7 @@ namespace OnlineShopJoana.WEB.Data.Entities
 
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
-        public double Stock { get; set; }//N number
+        public double Stock { get; set; }
 
 
         public User User { get; set; }
@@ -47,7 +47,7 @@ namespace OnlineShopJoana.WEB.Data.Entities
                 {
                     return null;
                 }
-                return $"https://shopcet46joana.azurewebsites.net{this.ImageUrl.Substring(1)}"; //substring para tirar o ~
+                return $"https://onlineplantsstore.azurewebsites.net{ImageUrl.Substring(1)}"; //substring para tirar o ~
             }
         }
 

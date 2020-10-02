@@ -1,4 +1,6 @@
-﻿@{
+﻿@model OnlineShopJoana.Models.ContactViewModel
+
+@{
     Layout = null;
 }
 
@@ -207,30 +209,47 @@
                     </div>
                     <!-- Contact Form Area -->
                     <div class="contact-form-area mb-100">
-                        <form action="#" method="post">
+                        <form method="post">
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-name" placeholder="Your Name">
+                                        <span asp-validation-for="Name">
+                                            <input type="text" asp-for="Name" class="form-control" id="contact-name" placeholder="Your Name">
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="contact-email" placeholder="Your Email">
+                                        <span asp-validation-for="Email">
+                                            <input type="email" asp-for="Email" class="form-control" id="contact-email" placeholder="Your Email">
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-subject" placeholder="Subject">
+                                        <span asp-validation-for="Subject">
+                                            <input type="text" asp-for="Subject" class="form-control" id="contact-subject" placeholder="Subject">
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <span asp-validation-for="Message">
+                                            <textarea asp-for="Message" class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn alazea-btn mt-15">Send Message</button>
+                                    @if (ViewBag.Message != null)
+                                    {
+                                        <script type="text/javascript">
+                                             window.onload = function () {
+                                             alert("@ViewBag.Message");
+                                             };
+                                        </script>
+
+                                    }
                                 </div>
                             </div>
                         </form>
@@ -249,36 +268,36 @@
     <!-- ##### Contact Area End ##### -->
 
 
-     <partial name="_CookieConsentPartial" />
+    <partial name="_CookieConsentPartial" />
 
-        <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
-            <!-- Footer Bottom Area -->
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="border-line"></div>
-                        </div>
-                        <!-- Copywrite Text -->
-                        <div class="col-12">
-                            <div class="copywrite-text">
-                                <p>
-                                    <strong>
-                                        &copy;  TPSI CET - 46 &copy; - Online Shop Joana
-                                    </strong>
-                                </p>
-                                <p class="pull-right">
-                                    &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;
-                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
+    <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p>
+                                <strong>
+                                    &copy;  TPSI CET - 46 &copy; - Online Shop Joana
+                                </strong>
+                            </p>
+                            <p class="pull-right">
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
     <!-- ##### About Area End ##### -->
     <script src="~/template/js/jquery/jquery-2.2.4.min.js"></script>
