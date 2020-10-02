@@ -74,7 +74,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n<h2>Create</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(145, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b23cf78d941428fa4e96f33c6a7d91d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19f71ae491c4427e95b1517b2eb0f920", async() => {
                 BeginContext(196, 11, true);
                 WriteLiteral("Add Product");
                 EndContext();
@@ -97,7 +97,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(217, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "639c3e77b9954392a615443909237332", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "847a0a43ae524a4384349c9dd1d4d11f", async() => {
                 BeginContext(286, 13, true);
                 WriteLiteral("Confirm Order");
                 EndContext();
@@ -220,7 +220,7 @@ WriteAttributeValue("", 1357, item.Id, 1357, 8, false);
             WriteLiteral(">\r\n                    ");
             EndContext();
             BeginContext(1389, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "356dd6de426d4bf881fcb28d988ab026", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f74211ab1064838895601832c66aee7", async() => {
                 BeginContext(1462, 26, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i>");
                 EndContext();
@@ -256,7 +256,7 @@ WriteAttributeValue("", 1357, item.Id, 1357, 8, false);
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1514, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d22ea24b61c24623ba62bbc1a018d95e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cdef31acff5249658bb2823eeb0788c2", async() => {
                 BeginContext(1584, 27, true);
                 WriteLiteral("<i class=\"fa fa-minus\"></i>");
                 EndContext();
@@ -292,7 +292,7 @@ WriteAttributeValue("", 1357, item.Id, 1357, 8, false);
             WriteLiteral("\r\n                    ");
             EndContext();
             BeginContext(1637, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6b08527b4a240e48a2e9827d7885d27", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f76980b2001458bb58c67abfd92f220", async() => {
                 BeginContext(1730, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

@@ -36,7 +36,6 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\Error404.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Orders\AddProduct.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Create.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Deliver.cshtml.g.cs
@@ -66,4 +65,3 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\EditUser.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListRoles.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListUsers.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csprojAssemblyReference.cache
