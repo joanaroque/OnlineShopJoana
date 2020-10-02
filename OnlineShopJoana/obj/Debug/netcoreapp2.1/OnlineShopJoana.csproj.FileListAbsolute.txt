@@ -61,4 +61,8 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJo
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.pdb
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.genruntimeconfig.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csproj.CopyComplete
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csprojAssemblyReference.cache
+C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\appsettings.Production.json
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\AdminNotFound.cshtml.g.cs
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\EditUser.cshtml.g.cs
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListRoles.cshtml.g.cs
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListUsers.cshtml.g.cs

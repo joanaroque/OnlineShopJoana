@@ -1,6 +1,6 @@
 ﻿namespace OnlineShopJoana.Models
 {
-    public class UserRolesViewModel
+    public class RoleViewModel
     {
         public string RoleId { get; set; }
 

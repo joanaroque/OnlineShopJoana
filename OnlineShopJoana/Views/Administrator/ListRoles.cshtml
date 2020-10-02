@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+
+@{
+    ViewData["Title"] = "ListRoles";
+}
+
+<section class="content-header">
+
+    <ol class="breadcrumb">
+        <li><a asp-controller="Home"><i class="fas fa-home"></i> Home</a></li>
+        <li class="active">Roles</li>
+    </ol>
+</section>
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<br />
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6 center-block">
+            <div style="text-align:center">
+                <h3 class="card-title">Roles</h3>
+            </div>
+            <div class="box box-info" style="margin-top:10px">
+                <div class="box-header with-border">
+
+                    @if (Model.Any())
+                    {
+
+                        <div class="panel-body">
+                            <table class="table table-hover table-responsive table-striped" id="MyTable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Role
+                                        </th>
+                                        <th>
+                                            Role Id
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var role in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => role.Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => role.Id)
+                                            </td>
+                                            <td>
+                                                <a asp-controller="Administrator" asp-action="DeleteRole" asp-route-id="@role.Id" onclick="return confirm('Are you sure you want to delete @role.Name?')"
+                                                   class="btn btn-danger pull-right" id="btnDelete"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    }
+                    else
+                    {
+                        <div class="card">
+                            <div class="card-header">
+                                No roles created yet
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Use the button below to create a role
+                                </h5>
+                                <a class="btn btn-primary" style="width:auto"
+                                   asp-controller="Administrator" asp-action="CreateRole">
+                                    Create Role
+                                </a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@section Scripts {
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/main.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+}

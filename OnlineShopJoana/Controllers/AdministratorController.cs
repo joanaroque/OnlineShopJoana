@@ -237,11 +237,11 @@ namespace OnlineShopJoana.Controllers
                 return new NotFoundViewResult("UserNotFound");
             }
 
-            var model = new List<UserRolesViewModel>();
+            var model = new List<RoleViewModel>();
 
             foreach (var role in _roleManager.Roles.ToList())
             {
-                var userRoles = new UserRolesViewModel
+                var userRoles = new RoleViewModel
                 {
                     RoleId = role.Id,
                     RoleName = role.Name
@@ -264,7 +264,7 @@ namespace OnlineShopJoana.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ManageUserRoles(List<UserRolesViewModel> model, string userId)
+        public async Task<IActionResult> ManageUserRoles(List<RoleViewModel> model, string userId)
         {
             var user = await _userHelper.GetUserByIdAsync(userId);
 

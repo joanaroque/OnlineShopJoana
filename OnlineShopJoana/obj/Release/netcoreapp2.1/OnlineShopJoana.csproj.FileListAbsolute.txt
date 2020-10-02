@@ -62,3 +62,4 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\OnlineShop
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\OnlineShopJoana.pdb
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\OnlineShopJoana.genruntimeconfig.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\OnlineShopJoana.csproj.CopyComplete
+C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\appsettings.Production.json
