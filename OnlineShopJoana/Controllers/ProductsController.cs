@@ -146,8 +146,7 @@ namespace OnlineShopJoana.WEB.Controllers
             return View(model);
         }
 
-        // GET: Products/Delete/5
-        [Authorize(Roles = "Admin")] //so  os users autentiticados podem apagar produtos
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -162,15 +161,6 @@ namespace OnlineShopJoana.WEB.Controllers
                 return new NotFoundViewResult("ProductNotFound");
             }
 
-            return View(product);
-        }
-
-        // POST: Products/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var product = await _productRepository.GetByIdAsync(id);
             await _productRepository.DeleteAsync(product);
 
             return RedirectToAction(nameof(Index));

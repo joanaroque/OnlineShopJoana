@@ -35,7 +35,7 @@ namespace OnlineShopJoana.WEB.Controllers
             var model = new AddItemViewModel
             {
                 Quantity = 1,
-                Products = _productRepository.GetComboProducts()//alimenta a combo
+                Products = _productRepository.GetComboProducts()
             };
 
             return View(model);

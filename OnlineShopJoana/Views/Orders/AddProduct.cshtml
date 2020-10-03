@@ -1,37 +1,236 @@
 ﻿@model OnlineShopJoana.WEB.Models.AddItemViewModel
 
+
+
 @{
-    ViewData["Title"] = "AddProduct";
+    Layout = null;
 }
 
-<h2>Add Product</h2>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Online Shop Joana</title>
 
-<h4>To Order</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="AddProduct">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <!-- Favicon -->
+    <link rel="icon" href="~/template/img/core-img/favicon.ico">
 
-            <div class="form-group">
-                <label asp-for="ProductId" class="control-label"></label>
-                <select asp-for="ProductId" asp-items="Model.Products" class="form-control"></select>
-                <span asp-validation-for="ProductId" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="~/template/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+</head>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-success">Back to List</a>
-            </div>
-        </form>
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="~/template/img/core-img/leaf.png" alt="">
+        </div>
     </div>
-</div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- ***** Top Header Area ***** -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: infodeercreative@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +1 234 122 122</span></a>
+                            </div>
+
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta d-flex">
+                                <!-- Language Dropdown -->
+                                <div class="language-dropdown">
+                                    <div class="dropdown">
+                                        @if (this.User.Identity.IsAuthenticated)
+                                        {
+                                            <a asp-area="" asp-controller="Account" asp-action="ChangeUser">@this.User.Identity.Name</a>
+                                            <a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                                        }
+                                        else
+                                        {
+                                            <div class="login">
+                                                <a asp-area="" asp-controller="Account" asp-action="Login">
+                                                    <i class="fa fa-user" aria-hidden="true"></i> <span>Login</span>
+                                                </a>
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+                                <!-- Cart -->
+                                <div class="cart">
+                                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <!-- Nav Brand -->
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-brand"><strong>Plants Shop - Joana</strong></a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                                    @if (this.User.Identity.IsAuthenticated)
+                                    {
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
+                                    }
+
+                                    @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
+                                    {
+                                        <li class="dropdown">
+                                            <a href="#">Admin</a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="">Users</a></li>
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="">Roles</a></li>
+                                                <li><a asp-area="" asp-controller="Countries" asp-action="Index">Countries</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div id="searchIcon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+             style="background-image: url('../template/img/bg-img/24.jpg');">
+            <h2>Add product</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 centered">
+                    <nav aria-label="breadcrumb">
+                        <div class="breadcrumb">
+                            <div class="col-md-4">
+                                <form asp-action="AddProduct">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <div class="form-group">
+                                        <label asp-for="ProductId" class="control-label"></label>
+                                        <select asp-for="ProductId" asp-items="Model.Products" class="form-control"></select>
+                                        <span asp-validation-for="ProductId" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="Quantity" class="control-label"></label>
+                                        <input asp-for="Quantity" class="form-control" />
+                                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="Create" class="btn btn-success" />
+                                        <a asp-action="Index" class="btn btn-info pull-right">Back to List</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+    <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p>
+                                <strong>
+                                    &copy;  TPSI CET - 46 &copy; - Online Shop Joana
+                                </strong>
+                            </p>
+                            <p class="pull-right">
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/template/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/template/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/template/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/template/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="~/template/js/active.js"></script>
+
+</body>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

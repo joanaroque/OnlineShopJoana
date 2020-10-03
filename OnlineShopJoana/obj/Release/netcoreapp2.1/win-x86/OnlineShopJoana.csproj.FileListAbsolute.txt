@@ -40,13 +40,11 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Ra
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Home\Error404.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Home\Index.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Orders\AddProduct.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Orders\Create.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Orders\Deliver.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Orders\Index.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Products\Create.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Products\Delete.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Products\Details.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Products\Edit.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Products\Index.cshtml.g.cs

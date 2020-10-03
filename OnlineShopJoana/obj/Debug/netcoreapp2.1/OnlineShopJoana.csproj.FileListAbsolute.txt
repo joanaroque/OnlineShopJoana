@@ -41,7 +41,6 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Deliver.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Orders\Index.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Products\Create.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Products\Delete.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Products\Details.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Products\Edit.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Products\Index.cshtml.g.cs
