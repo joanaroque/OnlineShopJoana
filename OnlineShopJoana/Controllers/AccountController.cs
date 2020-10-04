@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopJoana.WEB.Controllers
 {
+
     public class AccountController : Controller
     {
         private readonly IUserHelper _userHelper;
@@ -154,8 +155,6 @@ namespace OnlineShopJoana.WEB.Controllers
                     {
                         user = new User
                         {
-                            FirstName = _userManager.FindByNameAsync(email).ToString(),
-                            LastName = _userManager.FindByNameAsync(email).ToString(),
                             UserName = info.Principal.FindFirstValue(ClaimTypes.Email),
                             Email = info.Principal.FindFirstValue(ClaimTypes.Email)
                         };

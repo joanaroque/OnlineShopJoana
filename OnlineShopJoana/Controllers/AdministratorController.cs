@@ -1,15 +1,19 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+
 using OnlineShopJoana.Models;
 using OnlineShopJoana.WEB.Data.Entities;
 using OnlineShopJoana.WEB.Helpers;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace OnlineShopJoana.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdministratorController : Controller
     {
         private readonly IUserHelper _userHelper;

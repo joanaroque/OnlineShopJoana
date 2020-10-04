@@ -55,14 +55,16 @@
                             {
                                 @if (provider.Name == "Facebook")
                                 {
-                                    <button class="btn-block btn btn-facebook" type="submit" value="@provider.Name"
+                                    <button data-onsuccess="onSignIn"
+                                            class="btn-block btn btn-facebook" type="submit" value="@provider.Name"
                                             title="Log in using your @provider.DisplayName account" name="provider">
                                         <i class="fa fa-facebook"></i> Facebook
                                     </button>
                                 }
                                 else if (provider.Name == "Google")
                                 {
-                                    <button type="submit" class="btn btn-block btn-google" value="@provider.Name"
+                                    <button data-onsuccess="onSignIn"
+                                            type="submit" class="btn btn-block btn-google" value="@provider.Name"
                                             title="Log in using your @provider.DisplayName account" name="provider">
                                         <i class="fa fa-google"></i> Google
                                     </button>
@@ -90,6 +92,8 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -98,6 +102,16 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
+
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+
     </script>
 }
 
