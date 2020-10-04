@@ -37,7 +37,7 @@
                         <div class="top-header-content d-flex align-items-center justify-content-between">
                             <!-- Top Header Content -->
                             <div class="top-header-meta">
-                              
+
                             </div>
 
                             <!-- Top Header Content -->
@@ -94,11 +94,8 @@
                                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                                    @if (this.User.Identity.IsAuthenticated)
-                                    {
-                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
-                                    }
+                                    <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                    <li><a asp-area="" asp-controller="Orders" asp-action="Index">Shopping Cart <i class="fa fa-shopping-cart"></i></a></li>
 
                                     @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
                                     {
@@ -181,37 +178,37 @@
 
     @RenderBody()
 
-<footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
-    <!-- Footer Bottom Area -->
-    <div class="footer-bottom-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="border-line"></div>
-                </div>
-                <!-- Copywrite Text -->
-                <div class="col-12">
-                    <div class="copywrite-text">
-                        <p>
-                            <strong>
-                                &copy;  TPSI CET - 46 &copy; - Online Shop Joana
-                            </strong>
-                        </p>
-                        <br />
-                        <br />
-                        <br />
-                        <p class="pull-right">
-                            &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
+    <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p>
+                                <strong>
+                                    &copy;  TPSI CET - 46 &copy; - Online Shop Joana
+                                </strong>
+                            </p>
+                            <br />
+                            <br />
+                            <br />
+                            <p class="pull-right">
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
     <script src="~/template/js/jquery/jquery-2.2.4.min.js"></script>

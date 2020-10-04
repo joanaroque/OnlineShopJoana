@@ -53,7 +53,7 @@ namespace OnlineShopJoana.WEB.Controllers
         }
 
         // GET: Products/Create
-        [Authorize(Roles = "Admin")] //so  os users autentiticados podem criar produtos
+        [Authorize(Roles = "Admin")] 
         public IActionResult Create()
         {
             return View();
@@ -64,6 +64,7 @@ namespace OnlineShopJoana.WEB.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(ProductViewModel productViewModel)
         {
             if (ModelState.IsValid)
@@ -88,7 +89,7 @@ namespace OnlineShopJoana.WEB.Controllers
 
 
         // GET: Products/Edit/5
-        [Authorize(Roles = "Admin")] //so  os users autentiticados podem editar produtos
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -112,6 +113,7 @@ namespace OnlineShopJoana.WEB.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(ProductViewModel model)
         {
             if (ModelState.IsValid)
@@ -146,7 +148,7 @@ namespace OnlineShopJoana.WEB.Controllers
             return View(model);
         }
 
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

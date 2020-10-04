@@ -237,7 +237,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CustomValidation\" />
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 

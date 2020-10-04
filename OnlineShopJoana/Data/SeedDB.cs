@@ -155,8 +155,7 @@ namespace OnlineShopJoana.WEB.Data
         private async Task CheckOrCreateRoles()
         {
             await _userHelper.CheckRoleAsync("Admin");
-            await _userHelper.CheckRoleAsync("NormalCustomer");
-            await _userHelper.CheckRoleAsync("ResaleCustomer");
+            await _userHelper.CheckRoleAsync("Customer");
         }
 
     }
