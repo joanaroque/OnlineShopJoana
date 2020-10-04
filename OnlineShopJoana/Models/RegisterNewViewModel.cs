@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace OnlineShopJoana.WEB.Models
 {
@@ -20,6 +18,11 @@ namespace OnlineShopJoana.WEB.Models
         public string Address { get; set; }
 
 
+        [Display(Name = "Phone Number")]
+        [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"\d{9}",
+        ErrorMessage = "Must insert the {0} correct.")]
         [MaxLength(20, ErrorMessage = "The field {0} only can contain {1} characters.")]
         public string PhoneNumber { get; set; }
 

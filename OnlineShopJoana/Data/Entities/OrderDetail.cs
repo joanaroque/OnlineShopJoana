@@ -5,6 +5,7 @@ namespace OnlineShopJoana.WEB.Data.Entities
 {
     public class OrderDetail : IEntity
     {
+
         public int Id { get; set; }
 
 

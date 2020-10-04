@@ -14,6 +14,8 @@ using OnlineShopJoana.WEB.Helpers;
 using System.Text;
 using OnlineShopJoana.WEB.Data;
 using System;
+using DinkToPdf.Contracts;
+using DinkToPdf;
 
 namespace OnlineShopJoana.WEB
 {
@@ -60,6 +62,7 @@ namespace OnlineShopJoana.WEB
                     };
                 });
 
+            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
             services
                .AddAuthentication()

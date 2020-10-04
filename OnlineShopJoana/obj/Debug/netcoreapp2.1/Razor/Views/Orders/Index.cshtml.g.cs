@@ -80,7 +80,7 @@ using OnlineShopJoana.WEB.Models;
     ");
             EndContext();
             BeginContext(451, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f76292a02af4a74aac7627529754c06", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "76fed182e15d4cb381010033ece3e076", async() => {
                 BeginContext(495, 37, true);
                 WriteLiteral("<i class=\"fa-plus fa\"></i> Create New");
                 EndContext();
@@ -266,7 +266,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(2612, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "968a704809864316b5d05a5580bdc644", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4f1bc25be03f48bd95b339cf742d8fc4", async() => {
                 BeginContext(2697, 27, true);
                 WriteLiteral("<i class=\"fa fa-truck\"></i>");
                 EndContext();
@@ -303,7 +303,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(2754, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b67ea971553d42d1b9ee0607971f9e06", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54dd9e67c0194816a20ff07bc0c88305", async() => {
                 BeginContext(2839, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();

@@ -80,7 +80,7 @@ using OnlineShopJoana.WEB.Models;
     ");
             EndContext();
             BeginContext(453, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb38998f5b8b467e957c6a4cb72c49f2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01b1abddb03d42ff92495fc6eff66934", async() => {
                 BeginContext(497, 37, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i> Create New");
                 EndContext();
@@ -280,7 +280,7 @@ WriteAttributeValue("", 2007, Url.Content(item.ImageUrl), 2007, 27, false);
             WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
             EndContext();
             BeginContext(3039, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c24b3fbb58540d79e8405b116dc8ec2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0545c9b2b43e4aed9a28ab3ddefc1527", async() => {
                 BeginContext(3108, 28, true);
                 WriteLiteral("<i class=\"fa fa-pencil\"></i>");
                 EndContext();
@@ -316,7 +316,7 @@ WriteAttributeValue("", 2007, Url.Content(item.ImageUrl), 2007, 27, false);
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(3170, 99, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d72af4da9e6f428f954848dd7d4de710", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d3f8c459f5444f3098099850a033630f", async() => {
                 BeginContext(3239, 26, true);
                 WriteLiteral("<i class=\"fa fa-list\"></i>");
                 EndContext();
@@ -352,7 +352,7 @@ WriteAttributeValue("", 2007, Url.Content(item.ImageUrl), 2007, 27, false);
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(3299, 116, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2721fe3bcb1949dabc14ccb7ebd15bb1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44ad3664e3944bdf97dd461eb9177ded", async() => {
                 BeginContext(3384, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();

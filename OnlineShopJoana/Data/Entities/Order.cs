@@ -8,6 +8,7 @@ namespace OnlineShopJoana.WEB.Data.Entities
 {
     public class Order : IEntity
     {
+
         public int Id { get; set; }
 
 
