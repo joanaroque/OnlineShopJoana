@@ -10,7 +10,7 @@ using OnlineShopJoana.WEB.Data;
 namespace OnlineShopJoana.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201002211313_InitialDb")]
+    [Migration("20201003162721_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,56 +129,6 @@ namespace OnlineShopJoana.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.City", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("CountryId");
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<DateTime>("UpdateDate");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CountryId");
-
-                    b.ToTable("Cities");
-                });
-
-            modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.Country", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreateDate");
-
-                    b.Property<string>("CreatedById");
-
-                    b.Property<string>("ModifiedById");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<DateTime>("UpdateDate");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreatedById");
-
-                    b.HasIndex("ModifiedById");
-
-                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.Order", b =>
@@ -340,8 +290,6 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("Address")
                         .HasMaxLength(100);
 
-                    b.Property<int>("CityId");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -382,9 +330,6 @@ namespace OnlineShopJoana.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CityId")
-                        .IsUnique();
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -440,24 +385,6 @@ namespace OnlineShopJoana.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.City", b =>
-                {
-                    b.HasOne("OnlineShopJoana.WEB.Data.Entities.Country")
-                        .WithMany("Cities")
-                        .HasForeignKey("CountryId");
-                });
-
-            modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.Country", b =>
-                {
-                    b.HasOne("OnlineShopJoana.WEB.Data.Entities.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedById");
-
-                    b.HasOne("OnlineShopJoana.WEB.Data.Entities.User", "ModifiedBy")
-                        .WithMany()
-                        .HasForeignKey("ModifiedById");
                 });
 
             modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.Order", b =>
@@ -530,14 +457,6 @@ namespace OnlineShopJoana.Migrations
                     b.HasOne("OnlineShopJoana.WEB.Data.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("OnlineShopJoana.WEB.Data.Entities.User", b =>
-                {
-                    b.HasOne("OnlineShopJoana.WEB.Data.Entities.City", "City")
-                        .WithOne("ModifiedBy")
-                        .HasForeignKey("OnlineShopJoana.WEB.Data.Entities.User", "CityId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

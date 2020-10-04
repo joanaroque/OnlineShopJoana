@@ -64,18 +64,18 @@ namespace OnlineShopJoana.WEB
             services
                .AddAuthentication()
 
-               //.AddGoogle(options =>
-               //{
-               //    options.ClientId = Configuration["App:GoogleClientId"];
-               //    options.ClientSecret = Configuration["App:GoogleClientSecret"];
-               //    options.SignInScheme = IdentityConstants.ExternalScheme;
-               //})
-               //.AddFacebook(options =>
-               //{
-               //    options.ClientId = Configuration["App:FacebookClientId"];
-               //    options.ClientSecret = Configuration["App:FacebookClientSecret"];
-               //    options.SignInScheme = IdentityConstants.ExternalScheme;
-               //})
+               .AddGoogle(options =>
+               {
+                   options.ClientId = Configuration["App:GoogleClientId"];
+                   options.ClientSecret = Configuration["App:GoogleClientSecret"];
+                   options.SignInScheme = IdentityConstants.ExternalScheme;
+               })
+               .AddFacebook(options =>
+               {
+                   options.ClientId = Configuration["App:FacebookClientId"];
+                   options.ClientSecret = Configuration["App:FacebookClientSecret"];
+                   options.SignInScheme = IdentityConstants.ExternalScheme;
+               })
 
                 .AddCookie(options =>
                 {
@@ -105,7 +105,6 @@ namespace OnlineShopJoana.WEB
             services.AddScoped<IConverterHelper, ConverterHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
 
 

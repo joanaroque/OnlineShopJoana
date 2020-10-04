@@ -13,7 +13,7 @@ namespace OnlineShopJoana.WEB.Models
         public string NewPassword { get; set; }
 
         [Required]
-        [Compare("Password")]
+        [Compare("NewPassword")]
         public string Confirm { get; set; }
     }
 }

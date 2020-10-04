@@ -147,10 +147,6 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="wwwroot\images\tenor.gif">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
     <Content Update="wwwroot\login\css\style.css">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -182,12 +178,6 @@
     <_ContentIncludedByDefault Remove="Views\Account\RecoverPassword.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Account\Register.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Account\ResetPassword.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Countries\AddCity.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Countries\Create.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Countries\Details.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Countries\Edit.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Countries\EditCity.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Countries\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -216,30 +206,6 @@
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Views\Account\ResetPassword.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Countries\AddCity.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Countries\Create.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Countries\Details.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Countries\Edit.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Countries\EditCity.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Countries\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

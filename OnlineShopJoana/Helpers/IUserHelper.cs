@@ -11,7 +11,7 @@ namespace OnlineShopJoana.WEB.Helpers
 
         Task<IdentityResult> AddUserAsync(User user, string password);
 
-        Task<SignInResult> LoginAsync(LoginViewModel model); //Identity
+        Task<SignInResult> LoginAsync(LoginViewModel model); 
 
         Task LogoutAsync();
 
@@ -19,7 +19,7 @@ namespace OnlineShopJoana.WEB.Helpers
 
         Task<IdentityResult> ChangePasswordAsync(User user, string oldPassword, string newPassword);
 
-        Task<SignInResult> ValidatePasswordAsync(User user, string password); // ve se o user ta certo com a pass que ele disse
+        Task<SignInResult> ValidatePasswordAsync(User user, string password); 
        
         Task CheckRoleAsync(string roleName);
 

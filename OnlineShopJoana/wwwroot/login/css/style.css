@@ -7,6 +7,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 /*--reset--*/
 
+
+/*---------------------------------------------------------social buttons-------------------------------------------------------------------*/
+.btn-google:hover {
+    background: #b22222;
+    color: #fff;
+}
+
+.btn-facebook:hover {
+    background: #2b4db1;
+    color: #fff;
+}
+
+.btn-facebook {
+    background: #305c99;
+    color: #fff;
+}
+
+.btn-google {
+    background: #d24228;
+    color: #fff;
+}
+
+/*----------------------------------------------------------social buttons------------------------------------------------------------------*/
+
+
 html,
 body,
 div,
@@ -14,13 +39,11 @@ span,
 applet,
 object,
 iframe,
-h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
 blockquote,
 pre,
 a,
@@ -267,7 +290,7 @@ h1 {
 .w3ls-login form {
     max-width: 500px;
     margin: 0 5vw;
-    padding: 3.5vw;
+    padding: 1vw;
     border-width: 5px 0;
     box-sizing: border-box;
     display: flex;

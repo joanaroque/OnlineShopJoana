@@ -106,7 +106,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(102, 804, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c387e70cc9244eb791d8b3337145c394", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e40fe122dfb4c5da1d79fe1d44cbf75", async() => {
                 BeginContext(108, 537, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"" />
@@ -123,7 +123,7 @@ using OnlineShopJoana.WEB.Models;
     ");
                 EndContext();
                 BeginContext(645, 60, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5fcf7a63d8024a2db2e897ddec581e2d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4b050daec34356a8da3e0431c1597b", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -142,7 +142,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("\r\n\r\n    <!-- Core Stylesheet -->\r\n    ");
                 EndContext();
                 BeginContext(743, 51, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "af610a794b524cdf99dfa4fccd7d40fc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "90be1f28a2884803859cab5b79209a3a", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -176,12 +176,12 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(910, 14231, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "acabdc884d7a4275a3d759ba451c9e00", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "858eac92a0a4416ea5b40363085f3095", async() => {
                 BeginContext(916, 175, true);
                 WriteLiteral("\r\n    <div class=\"preloader d-flex align-items-center justify-content-center\">\r\n        <div class=\"preloader-circle\"></div>\r\n        <div class=\"preloader-img\">\r\n            ");
                 EndContext();
                 BeginContext(1091, 51, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "cb0a5cc9506f460d859d126994a67830", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b5a8d93c87e947559390410ecc875167", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -233,7 +233,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("                                            ");
                 EndContext();
                 BeginContext(2621, 92, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b5fd176a109488689425f5d3e400708", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8a6039c71d94fd78b916cc9cb5aa0cb", async() => {
                     BeginContext(2686, 23, false);
 #line 55 "C:\Projects\OnlineShopJoana\OnlineShopJoana\Views\Orders\Create.cshtml"
                                                                                                        Write(this.User.Identity.Name);
@@ -263,7 +263,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("\r\n                                            ");
                 EndContext();
                 BeginContext(2759, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b2fc4b9e1684778bf41aa5219a5651a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5dc6797ac1bb4244bb4aaef02817349c", async() => {
                     BeginContext(2819, 6, true);
                     WriteLiteral("Logout");
                     EndContext();
@@ -299,7 +299,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("                                            <div class=\"login\">\r\n                                                ");
                 EndContext();
                 BeginContext(3076, 231, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3b24934d44c4bf689c7bbd1d25ef34f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e23786855b74e0daa79c368ba3c259d", async() => {
                     BeginContext(3135, 168, true);
                     WriteLiteral("\r\n                                                    <i class=\"fa fa-user\" aria-hidden=\"true\"></i> <span>Login</span>\r\n                                                ");
                     EndContext();
@@ -354,7 +354,7 @@ using OnlineShopJoana.WEB.Models;
                         ");
                 EndContext();
                 BeginContext(4329, 114, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c18d9a33ca164d6891812db6fa1d0b9c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e8dbd7177f114d979f2b53a4158a5c6d", async() => {
                     BeginContext(4403, 36, true);
                     WriteLiteral("<strong>Plants Shop - Joana</strong>");
                     EndContext();
@@ -397,7 +397,7 @@ using OnlineShopJoana.WEB.Models;
                                     <li>");
                 EndContext();
                 BeginContext(5230, 64, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dccd95b30426447fb1b16e9700b9bf8d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8db783d113ed43cc80aee6692ddeeb4a", async() => {
                     BeginContext(5286, 4, true);
                     WriteLiteral("Home");
                     EndContext();
@@ -423,7 +423,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</li>\r\n                                    <li>");
                 EndContext();
                 BeginContext(5341, 65, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e15d59a4cf494c3e8b79a0d1d2f4d3b4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e6d98e4f53f4fdc96d1e41f6006e981", async() => {
                     BeginContext(5397, 5, true);
                     WriteLiteral("About");
                     EndContext();
@@ -449,7 +449,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</li>\r\n                                    <li>");
                 EndContext();
                 BeginContext(5453, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5642db01816949d1a68e4494d41823a3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33559e93e00e4a19953470b2281f3003", async() => {
                     BeginContext(5511, 7, true);
                     WriteLiteral("Contact");
                     EndContext();
@@ -484,7 +484,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("                                        <li>");
                 EndContext();
                 BeginContext(5690, 72, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5fea224df9854d6c9912be80e358bde5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13c918818c364f5d9fd48d7201faf217", async() => {
                     BeginContext(5750, 8, true);
                     WriteLiteral("Products");
                     EndContext();
@@ -510,7 +510,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</li>\r\n                                        <li>");
                 EndContext();
                 BeginContext(5813, 68, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "35a6a62032a74597b7bbb8e1a2991ca3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3684d23aa10d4cdf80c1cdf712ed2fcb", async() => {
                     BeginContext(5871, 6, true);
                     WriteLiteral("Orders");
                     EndContext();
@@ -553,7 +553,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("                                        <li class=\"dropdown\">\r\n                                            <a href=\"#\">Admin</a>\r\n                                            <ul class=\"dropdown\">\r\n                                                <li>");
                 EndContext();
                 BeginContext(6326, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2eac839c120410cbf25ba17b550fc51", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a1fb0d59ac94128ae16237bec7d7adc", async() => {
                     BeginContext(6386, 5, true);
                     WriteLiteral("Users");
                     EndContext();
@@ -579,7 +579,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</li>\r\n                                                <li>");
                 EndContext();
                 BeginContext(6454, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ffc46d33277f4dd7b3722fdee37379f8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe11fe01e04b4d7cb3f99bec014bf087", async() => {
                     BeginContext(6514, 5, true);
                     WriteLiteral("Roles");
                     EndContext();
@@ -605,7 +605,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</li>\r\n                                                <li>");
                 EndContext();
                 BeginContext(6582, 74, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4b85919382e423bac8d97a0f1a2c5ff", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "945eb2f533b6470ca2a1f2adc12a9164", async() => {
                     BeginContext(6643, 9, true);
                     WriteLiteral("Countries");
                     EndContext();
@@ -653,7 +653,7 @@ using OnlineShopJoana.WEB.Models;
                         ");
                 EndContext();
                 BeginContext(7337, 265, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b8e1583f9e454615a2fd8f7958a64a1c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cca0832704c424fb788110354aa2473", async() => {
                     BeginContext(7367, 228, true);
                     WriteLiteral("\r\n                            <input type=\"search\" name=\"search\" id=\"search\" placeholder=\"Type keywords &amp; press enter...\">\r\n                            <button type=\"submit\" class=\"d-none\"></button>\r\n                        ");
                     EndContext();
@@ -699,7 +699,7 @@ using OnlineShopJoana.WEB.Models;
                             ");
                 EndContext();
                 BeginContext(8405, 63, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62ae778a3994b71a4abe4b2ce329a21", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0cd6aa199e54efaa4d7d215a6f64753", async() => {
                     BeginContext(8453, 11, true);
                     WriteLiteral("Add Product");
                     EndContext();
@@ -722,7 +722,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("\r\n                            ");
                 EndContext();
                 BeginContext(8498, 97, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97d46b7fd3c14ccba0cc458ee25c1b74", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3cd38d5f1bae4c4e8e46a73434a32e24", async() => {
                     BeginContext(8578, 13, true);
                     WriteLiteral("Confirm Order");
                     EndContext();
@@ -845,7 +845,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral(">\r\n                                                ");
                 EndContext();
                 BeginContext(10683, 103, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0385708e3d444f0a9f8f471e3648b421", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab4a85a97b104fb9a23adce41b4e04d9", async() => {
                     BeginContext(10756, 26, true);
                     WriteLiteral("<i class=\"fa fa-plus\"></i>");
                     EndContext();
@@ -881,7 +881,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral("\r\n                                                ");
                 EndContext();
                 BeginContext(10836, 101, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "244287695ddb47adbe8039dc5ea3ad3e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d0632d9477204ba98a16aa8fe1666ec6", async() => {
                     BeginContext(10906, 27, true);
                     WriteLiteral("<i class=\"fa fa-minus\"></i>");
                     EndContext();
@@ -917,7 +917,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral("\r\n                                                ");
                 EndContext();
                 BeginContext(10987, 124, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dd6a19c0d42d4986922ebd4caa7d498f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2fc9fb77de4e4cd39b46253e76bce022", async() => {
                     BeginContext(11080, 27, true);
                     WriteLiteral("<i class=\"fa fa-trash\"></i>");
                     EndContext();
@@ -1041,7 +1041,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
     ");
                 EndContext();
                 BeginContext(14710, 64, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "35162555fbeb4a5c87b09ad8ffee4047", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cdfaefc2f5a64ad4864c0d22ecf0d68a", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1059,7 +1059,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral("\r\n    <!-- Popper js -->\r\n    ");
                 EndContext();
                 BeginContext(14804, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "404533efd838401f905161fc49d26f39", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b7ca85eb2a244e96852f03412a84a333", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1077,7 +1077,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral("\r\n    <!-- Bootstrap js -->\r\n    ");
                 EndContext();
                 BeginContext(14898, 64, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9776b56bcd341e7ad5d45c1674ce66e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "940760248b4b4a20ae511cb8d4821e78", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1095,7 +1095,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral("\r\n    <!-- All Plugins js -->\r\n    ");
                 EndContext();
                 BeginContext(14997, 56, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c20250c49db340d8b77d63922b4a3b6d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b7190b4baab24925ab1215b9a71371be", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1113,7 +1113,7 @@ WriteAttributeValue("", 10623, item.Id, 10623, 8, false);
                 WriteLiteral("\r\n    <!-- Active js -->\r\n    ");
                 EndContext();
                 BeginContext(15083, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36ac5961404249308b7841c0c0a4bd89", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d08af1f6c1349a488d54f8eb6bd5781", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

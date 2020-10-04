@@ -28,7 +28,6 @@ namespace OnlineShopJoana.WEB.Data
 
             await CheckOrCreateRoles();
 
-            await FillCityAsync();
             await FillUserAsync();
             await FillProductsAsync();
 
@@ -130,11 +129,7 @@ namespace OnlineShopJoana.WEB.Data
                     Email = "joanatpsi@gmail.com",
                     UserName = "joanatpsi@gmail.com",
                     PhoneNumber = "156456456",
-                    Address = "Rua Jau",
-                    CityId = _context.Countries.FirstOrDefault()
-                    .Cities.FirstOrDefault().Id,
-                    City = _context.Countries.FirstOrDefault()
-                    .Cities.FirstOrDefault()
+                    Address = "Rua Jau"
                 };
 
                 var result = await _userHelper.AddUserAsync(user, "123456");
@@ -154,26 +149,6 @@ namespace OnlineShopJoana.WEB.Data
                 {
                     await _userHelper.AddUSerToRoleAsync(user, "Admin");
                 }
-            }
-        }
-
-        private async Task FillCityAsync()
-        {
-            if (!_context.Cities.Any())
-            {
-                var cities = new List<City>();
-                cities.Add(new City { Name = "Lisboa" });
-                cities.Add(new City { Name = "Porto" });
-                cities.Add(new City { Name = "Coimbra" });
-                cities.Add(new City { Name = "Porto" });
-
-                _context.Countries.Add(new Country
-                {
-                    Cities = cities,
-                    Name = "Portugal"
-                });
-
-                await _context.SaveChangesAsync();
             }
         }
 

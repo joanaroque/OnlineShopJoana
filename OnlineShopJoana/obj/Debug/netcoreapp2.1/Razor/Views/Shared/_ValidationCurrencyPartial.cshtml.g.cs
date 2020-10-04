@@ -52,7 +52,7 @@ using OnlineShopJoana.WEB.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 240, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3cc832413a5458ba2affd79efa5d8a4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "848ebb20ae674eec8f123b6137f169ea", async() => {
                 BeginContext(35, 191, true);
                 WriteLiteral("\r\n    <script>\r\n        $.validator.methods.number = function (value, element) {\r\n            return this.optional(element) || !isNaN(Globalize.parseFloat(value));\r\n        }\r\n    </script>\r\n");
                 EndContext();
@@ -74,7 +74,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(242, 240, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3eca1c4f89c4e05b092366c4bfbcc08", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b96f45bfc5f4c36a02dd04b65d14223", async() => {
                 BeginContext(277, 191, true);
                 WriteLiteral("\r\n    <script>\r\n        $.validator.methods.number = function (value, element) {\r\n            return this.optional(element) || !isNaN(Globalize.parseFloat(value));\r\n        }\r\n    </script>\r\n");
                 EndContext();

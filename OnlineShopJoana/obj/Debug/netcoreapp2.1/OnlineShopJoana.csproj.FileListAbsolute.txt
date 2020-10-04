@@ -26,12 +26,6 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Account\RecoverPassword.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Countries\AddCity.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Create.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Details.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Edit.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Countries\EditCity.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Countries\Index.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Home\Error404.cshtml.g.cs
@@ -64,4 +58,3 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\EditUser.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListRoles.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Administrator\ListUsers.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csprojAssemblyReference.cache

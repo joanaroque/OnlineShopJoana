@@ -76,65 +76,6 @@ namespace OnlineShopJoana.Controllers
             return View(user);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> EditRole(string id)
-        {
-            var role = await _roleManager.FindByIdAsync(id);
-
-            if (role == null)
-            {
-                return new NotFoundViewResult("UserNotFound");
-            }
-
-            var model = new EditRoleViewModel
-            {
-                Id = role.Id,
-                RoleName = role.Name
-            };
-
-
-            foreach (var user in _userManager.Users)
-            {
-
-                if (await _userHelper.IsUserInRoleAsync(user, role.Name))
-                {
-                    model.Users.Add(user.UserName);
-                }
-            }
-
-            return View(model);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> EditRole(EditRoleViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var role = await _roleManager.FindByIdAsync(model.Id);
-
-                if (role == null)
-                {
-                    return new NotFoundViewResult("AdminNotFound");
-                }
-
-                role.Name = model.RoleName;
-
-                var result = await _roleManager.UpdateAsync(role);
-
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("ListRoles");
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
-
-            }
-            return View(model);
-
-        }
 
         [HttpGet]
         public async Task<IActionResult> EditUsersInRole(string roleId)

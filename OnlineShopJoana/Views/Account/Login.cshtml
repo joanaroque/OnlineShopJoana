@@ -11,10 +11,11 @@
 <!DOCTYPE HTML>
 <html lang="zxx">
 <head>
-    
+
     <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
     <!-- online fonts-->
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="~/template/style.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <div id="particles-js"></div>
     <!-- //particles -->
     <div class="w3ls-pos">
-        <h1>Login</h1>
+        <h1 style="color:#ffffff">Welcome back !</h1>
         <div class="w3ls-login box">
             <form method="post">
                 <div asp-validation-summary="ModelOnly"></div>
@@ -44,51 +45,39 @@
                 </div>
             </form>
 
-
-
             @if (Model.ExternalLogins.Count > 0)
             {
                 <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
                     <div class="social-auth-links text-center mb-3">
-                        <p>- OR -</p>
-
+                        <p style="color:#ffffff">- OR -</p>
                         <div>
-
                             @foreach (var provider in Model.ExternalLogins)
                             {
-                                <button type="submit" class="btn btn-block  btn-foursquare"
-                                        name="provider" value="@provider.Name"
-                                        title="Login using your @provider.DisplayName account">
-                                    @provider.DisplayName
-                                </button>
-
-                                @*<a href="#" class="btn btn-block btn-primary">
-                                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                                    </a>
-                                    <a href="#" class="btn btn-block btn-danger">
-                                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                                    </a>*@
+                                @if (provider.Name == "Facebook")
+                                {
+                                    <button class="btn-block btn btn-facebook" type="submit" value="@provider.Name"
+                                            title="Log in using your @provider.DisplayName account" name="provider">
+                                        <i class="fa fa-facebook"></i> Facebook
+                                    </button>
+                                }
+                                else if (provider.Name == "Google")
+                                {
+                                    <button type="submit" class="btn btn-block btn-google" value="@provider.Name"
+                                            title="Log in using your @provider.DisplayName account" name="provider">
+                                        <i class="fa fa-google"></i> Google
+                                    </button>
+                                }
                             }
                         </div>
-
-
                     </div>
                 </form>
             }
 
             <div class="agile_label">
-                <a asp-action="Register" class="btn btn-primary">Register New User</a>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div class="agile_label">
+                <a asp-action="Register" class="btn btn-warning">Register New User</a>
                 <a asp-action="RecoverPassword" class="btn btn-link">Forgot your password?</a>
             </div>
-
         </div>
-
     </div>
     <!-- scripts required  for particle effect -->
     <script src="~/login/js/particles.min.js"></script>

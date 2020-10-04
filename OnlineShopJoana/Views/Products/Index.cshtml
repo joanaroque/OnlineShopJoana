@@ -153,80 +153,78 @@
              style="background-image: url('../template/img/bg-img/24.jpg');">
             <h2>Products</h2>
         </div>
-
+        <br />
         <div class="container">
             <div class="row">
                 <div class="col-12 centered">
-                    <nav aria-label="breadcrumb">
-                        <div class="breadcrumb">
-                            <a asp-action="Create" class="btn btn-info"><i class="fa fa-plus"></i> Create New</a>
-                            <table class="table table-hover table-responsive table-striped" id="MyTable">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Name)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Price)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.ImageUrl)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.LastPurchase)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.LastSale)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.IsAvailable)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Stock)
-                                        </th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Name)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Price)
-                                            </td>
-                                            <td>
-                                                @if (!string.IsNullOrEmpty(item.ImageUrl))
-                                                {
-                                                    <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto" />
-                                                }
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.LastPurchase)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.LastSale)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.IsAvailable)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Stock)
-                                            </td>
-                                            <td id="@item.Id">
-                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-list"></i></a>
-                                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete"><i class="fa fa-trash"></i></a>
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
-                    </nav>
+
+                    <a asp-action="Create" class="btn btn-info"><i class="fa fa-plus"></i> Create New</a>
+                    <table class="table table-hover table-responsive table-striped" id="MyTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Price)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ImageUrl)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LastPurchase)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LastSale)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IsAvailable)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Stock)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price)
+                                    </td>
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                        {
+                                            <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto" />
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LastPurchase)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LastSale)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IsAvailable)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Stock)
+                                    </td>
+                                    <td id="@item.Id">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-list"></i></a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
+
             </div>
         </div>
     </div>

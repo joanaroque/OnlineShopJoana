@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+
 using OnlineShopJoana.WEB.Data.Entities;
-using OnlineShopJoana.WEB.Data.Repositories;
 using OnlineShopJoana.WEB.Helpers;
 using OnlineShopJoana.WEB.Models;
+
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -21,21 +22,18 @@ namespace OnlineShopJoana.WEB.Controllers
         private readonly IUserHelper _userHelper;
         private readonly IConfiguration _configuration;
         private readonly IMailHelper _mailHelper;
-        private readonly ICountryRepository _countryRepository;
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
 
         public AccountController(IUserHelper userHelper,
             IConfiguration configuration,
             IMailHelper mailHelper,
-            ICountryRepository countryRepository,
             SignInManager<User> signInManager,
               UserManager<User> userManager)
         {
             _userHelper = userHelper;
             _configuration = configuration;
             _mailHelper = mailHelper;
-            _countryRepository = countryRepository;
             _signInManager = signInManager;
             _userManager = userManager;
         }
@@ -47,7 +45,8 @@ namespace OnlineShopJoana.WEB.Controllers
             LoginViewModel model = new LoginViewModel
             {
                 ReturnUrl = returnUrl,
-                ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+                ExternalLogins =
+                (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
             };
 
             return View(model);
@@ -55,49 +54,39 @@ namespace OnlineShopJoana.WEB.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            model.ExternalLogins =
+                (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
+
+                var user = await _userHelper.GetUserByEmailAsync(model.UserName);
+
+                if (user != null && !user.EmailConfirmed &&
+                             (await _userManager.CheckPasswordAsync(user, model.Password)))
+                {
+                    ModelState.AddModelError(string.Empty, "Email not confirmed yet");
+                    return View(model);
+                }
                 var result = await _userHelper.LoginAsync(model);
 
                 if (result.Succeeded)
                 {
-                    if (Request.Query.Keys.Contains("ReturnURL"))
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                     {
-                        return Redirect(Request.Query["ReturnURL"].First());
+                        return Redirect(returnUrl);
                     }
-
-                    return RedirectToAction("Index", "Home");
-                }
-
-                if (result.IsLockedOut)
-                {
-                    var user = await _userHelper.GetUserByEmailAsync(model.UserName);
-                    if (user == null)
+                    else
                     {
-                        ModelState.AddModelError(string.Empty, "The email doesn't correspont to a registered user.");
-                        return this.View(model);
+                        return RedirectToAction("index", "home");
                     }
-
-                    ModelState.AddModelError(string.Empty, "Your account is locked out, to reset your password click on the link sent to your email");
-
-                    var myToken = await _userHelper.GeneratePasswordResetTokenAsync(user);
-
-                    var link = this.Url.Action(
-                        "ResetPassword",
-                        "Account",
-                        new { token = myToken }, protocol: HttpContext.Request.Scheme);
-
-                    _mailHelper.SendMail(model.UserName, "Plants Store Password Reset", $"<h1>Plants Store Password Reset</h1>" +
-                    $"To reset the password click in this link:</br></br>" +
-                    $"<a href = \"{link}\">Reset Password</a>");
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Incorrect username or password");
-                }
+
+                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
             }
+
             return View(model);
         }
 
@@ -109,7 +98,8 @@ namespace OnlineShopJoana.WEB.Controllers
             var redirectUrl = Url.Action("ExternalLoginCallback", "Account",
                 new { ReturnUrl = returnUrl });
 
-            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl, _userManager.GetUserId(User));
+            var properties = 
+                _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl, _userManager.GetUserId(User));
 
             return new ChallengeResult(provider, properties);
         }
@@ -122,12 +112,15 @@ namespace OnlineShopJoana.WEB.Controllers
             LoginViewModel loginViewModel = new LoginViewModel
             {
                 ReturnUrl = returnUrl,
-                ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
+                ExternalLogins = 
+                (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
             };
 
             if (remoteError != null)
             {
-                ModelState.AddModelError(string.Empty, $"Error from external provider: {remoteError}");
+                ModelState.AddModelError(string.Empty,
+                    $"Error from external provider: {remoteError}");
+
                 return View("Login", loginViewModel);
             }
 
@@ -191,13 +184,7 @@ namespace OnlineShopJoana.WEB.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            var model = new RegisterNewViewModel
-            {
-                Countries = _countryRepository.GetComboCountries(),
-                Cities = _countryRepository.GetComboCities(0)
-            };
-
-            return View(model);
+            return View();
         }
 
         [HttpPost]
@@ -209,7 +196,6 @@ namespace OnlineShopJoana.WEB.Controllers
 
                 if (user == null)
                 {
-                    var city = await _countryRepository.GetCityAsync(model.CityId);
 
                     user = new User
                     {
@@ -218,9 +204,7 @@ namespace OnlineShopJoana.WEB.Controllers
                         Email = model.UserName,
                         UserName = model.UserName,
                         Address = model.Address,
-                        PhoneNumber = model.PhoneNumber,
-                        CityId = model.CityId,
-                        City = city
+                        PhoneNumber = model.PhoneNumber
                     };
 
                     var result = await _userHelper.AddUserAsync(user, model.Password);
@@ -238,9 +222,23 @@ namespace OnlineShopJoana.WEB.Controllers
                         token = myToken
                     }, protocol: HttpContext.Request.Scheme);
 
-                    _mailHelper.SendMail(model.UserName, "Email confirmation", $"<h1>Email Confirmation</h1>" +
-                        $"To allow the user, " +
-                        $"please click in this link:</br></br><a href = \"{tokenLink}\">Confirm Email</a>");
+                    _mailHelper.SendMail(model.UserName, "Email confirmation",
+                        $" <td style = 'background-color: #ecf0f1'>" +
+                        $"      <div style = 'color: #34495e; margin: 4% 10% 2%; text-align: justify;font-family: sans-serif'>" +
+                        $"            <h1 style = 'color: #e67e22; margin: 0 0 7px' > Hello, welcome </h1>" +
+                        $"                    <p style = 'margin: 2px; font-size: 15px'>" +
+                        $"                      The best specialized Plants Store in Lisbon focused on providing various and beautiful plants!<br>" +
+                        $"  <div style = 'width: 100%;margin:20px 0; display: inline-block;text-align: center'>" +
+                        $"  </div>" +
+                        $"  <div style = 'width: 100%; text-align: center'>" +
+                        $"    <h2 style = 'color: #e67e22; margin: 0 0 7px' >Email Confirmation </h2>" +
+                        $"    To allow the user, please click in this link:</br></br> " +
+                        $"    <a style ='text-decoration: none; border-radius: 5px; padding: 11px 23px; color: white; background-color: #3498db' href = \"{tokenLink}\">Confirm Email</a>" +
+                        $"    <p style = 'color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0'> Online Plants Store 2020 </p>" +
+                        $"  </div>" +
+                        $" </td >" +
+                        $"</tr>" +
+                        $"</table>");
 
                     ViewBag.Message = "The instructions to allow your user has been sent to email.";
 
@@ -284,7 +282,7 @@ namespace OnlineShopJoana.WEB.Controllers
 
         public async Task<IActionResult> ChangeUser()
         {
-            var user = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
+            var user = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
             var model = new ChangeUserViewModel();
 
             if (user != null)
@@ -293,26 +291,10 @@ namespace OnlineShopJoana.WEB.Controllers
                 model.LastName = user.LastName;
                 model.Address = user.Address;
                 model.PhoneNumber = user.PhoneNumber;
-
-                var city = await _countryRepository.GetCityAsync(user.CityId);
-                if (city != null)
-                {
-                    var country = await _countryRepository.GetCountryAsync(city);
-                    if (country != null)
-                    {
-                        model.CountryId = country.Id;
-                        model.Cities = _countryRepository.GetComboCities(country.Id);
-                        model.Countries = _countryRepository.GetComboCountries();
-                        model.CityId = user.CityId;
-                    }
-                }
             }
 
-            model.Cities = _countryRepository.GetComboCities(model.CountryId);
-            model.Countries = _countryRepository.GetComboCountries();
             return View(model);
         }
-
 
 
         [HttpPost]
@@ -323,16 +305,13 @@ namespace OnlineShopJoana.WEB.Controllers
                 var user = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
                 if (user != null)
                 {
-                    var city = await _countryRepository.GetCityAsync(model.CityId);
-
                     user.FirstName = model.FirstName;
                     user.LastName = model.LastName;
                     user.Address = model.Address;
                     user.PhoneNumber = model.PhoneNumber;
-                    user.CityId = model.CityId;
-                    user.City = city;
 
                     var respose = await _userHelper.UpdateUserAsync(user);
+
                     if (respose.Succeeded)
                     {
                         ViewBag.UserMessage = "User updated!";
@@ -457,9 +436,9 @@ namespace OnlineShopJoana.WEB.Controllers
                 _mailHelper.SendMail(model.Email, "Online Shop Password Reset", $"<h1>Online Shop Password Reset</h1>" +
                 $"To reset the password click in this link:</br></br>" +
                 $"<a href = \"{link}\">Reset Password</a>");
-                
+
                 ViewBag.Message = "The instructions to recover your password has been sent to email.";
-               
+
                 return View();
 
             }
@@ -498,12 +477,6 @@ namespace OnlineShopJoana.WEB.Controllers
         public IActionResult NotAuthorized()
         {
             return View();
-        }
-
-        public async Task<JsonResult> GetCitiesAsync(int countryId)
-        {
-            var country = await _countryRepository.GetCountryWithCitiesAsync(countryId);
-            return Json(country.Cities.OrderBy(c => c.Name));
         }
     }
 }
