@@ -427,12 +427,12 @@ namespace OnlineShopJoana.WEB.Controllers
 
                 var myToken = await _userHelper.GeneratePasswordResetTokenAsync(user);
 
-                var link = this.Url.Action(
+                var link = Url.Action(
                     "ResetPassword",
                     "Account",
                     new { token = myToken }, protocol: HttpContext.Request.Scheme);
 
-                _mailHelper.SendMail(model.Email, "Online Shop Password Reset", $"<h1>Online Shop Password Reset</h1>" +
+                _mailHelper.SendMail(model.Email, "Plants Store Password Reset", $"<h1>Plants Store Password Reset</h1>" +
                 $"To reset the password click in this link:</br></br>" +
                 $"<a href = \"{link}\">Reset Password</a>");
 

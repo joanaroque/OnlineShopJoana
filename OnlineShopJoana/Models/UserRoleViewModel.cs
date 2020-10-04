@@ -1,4 +1,6 @@
-﻿namespace OnlineShopJoana.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace OnlineShopJoana.Models
 {
     public class UserRoleViewModel
     {
@@ -10,7 +12,7 @@
         public string Name { get; set; }
 
 
-
+        [Display(Name = "Email")]
         public string UserName { get; set; }
 
 

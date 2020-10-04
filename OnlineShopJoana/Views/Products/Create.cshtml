@@ -4,54 +4,63 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+     style="background-image: url('../template/img/bg-img/18.jpg');">
+    <h2 style="color:#ffffff">Create Product</h2>
+</div>
 
-<h4>Product</h4>
-<hr />
+<br />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12 offset-md-12">
         <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+
+            <div class="col-md-4 pull-right">
+                <img id="imgprw" alt="Image" width="150" height="300" />
             </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ImageFile" class="control-label"></label>
-                <input asp-for="ImageFile" class="form-control" type="file" />
-                <span asp-validation-for="ImageFile" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastPurchase" class="control-label"></label>
-                <input asp-for="LastPurchase" class="form-control" />
-                <span asp-validation-for="LastPurchase" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastSale" class="control-label"></label>
-                <input asp-for="LastSale" class="form-control" />
-                <span asp-validation-for="LastSale" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="IsAvailable" /> @Html.DisplayNameFor(model => model.IsAvailable)
-                    </label>
+
+            <div class="col-md-4 offset-md-4">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="Stock" class="control-label"></label>
-                <input asp-for="Stock" class="form-control" />
-                <span asp-validation-for="Stock" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-success">Back to List</a>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageFile" class="control-label"></label>
+                    <input asp-for="ImageFile" class="form-control" type="file" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastPurchase" class="control-label"></label>
+                    <input asp-for="LastPurchase" class="form-control" />
+                    <span asp-validation-for="LastPurchase" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastSale" class="control-label"></label>
+                    <input asp-for="LastSale" class="form-control" />
+                    <span asp-validation-for="LastSale" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="IsAvailable" /> @Html.DisplayNameFor(model => model.IsAvailable)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Stock" class="control-label"></label>
+                    <input asp-for="Stock" class="form-control" />
+                    <span asp-validation-for="Stock" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                    <a asp-action="Index" class="btn btn-warning pull-right"><i class="fa fa-backward"></i> To List</a>
+                </div>
             </div>
         </form>
     </div>
@@ -62,4 +71,15 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     @{await Html.RenderPartialAsync("_ValidationCurrencyPartial");}
 
+    <script type="text/javascript">
+        function imagePreview(input) {
+            if (input.files && input.files[0]) {
+                let fildr = new FileReader();
+                fildr.onload = function (e) {
+                    $('#imgprw').attr('src', e.target.result);
+                }
+                fildr.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 }

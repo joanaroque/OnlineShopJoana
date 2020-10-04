@@ -8,7 +8,7 @@ namespace OnlineShopJoana.WEB.Data.Repositories
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
-        IQueryable GetAllWithUsers(); //todos os produtos + users
+        IQueryable GetAllWithUsers(); 
 
         IEnumerable<SelectListItem> GetComboProducts();
     }

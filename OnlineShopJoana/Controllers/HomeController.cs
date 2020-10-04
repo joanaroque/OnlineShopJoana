@@ -55,7 +55,8 @@ namespace OnlineShopJoana.WEB.Controllers
                     _mailHelper.SendMail("joanatpsi@gmail.com", model.Subject, $"Mail from: {model.Name}, {model.Email}</br>" +
                                         $"</br></br>Message: {model.Message}");
 
-                    ViewBag.Message = String.Format("The message was successfully delivered !!", model, DateTime.Now.ToString());
+                    ModelState.Clear();
+                    ViewBag.Message = "Thank you for Contacting us ";
 
                 }
                 catch (Exception exception)

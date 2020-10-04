@@ -7,7 +7,6 @@ namespace OnlineShopJoana.WEB.Data.Repositories
 {
     public interface IOrderRepository : IGenericRepository<Order>
     {
-        //vai buscar todas as encomendas criadas por um user
         Task<IQueryable<Order>> GetOrdersAsync(string userName);
 
 
