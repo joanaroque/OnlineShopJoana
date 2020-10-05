@@ -38,5 +38,10 @@ namespace OnlineShopJoana.WEB.Models
         [Required]
         [Compare("Password")]
         public string Confirm { get; set; }
+
+
+
+        [Display(Name = "Resale customer?")]
+        public bool IsResale { get; set; }
     }
 }

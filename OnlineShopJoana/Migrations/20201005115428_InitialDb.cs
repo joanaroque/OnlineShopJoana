@@ -44,7 +44,8 @@ namespace OnlineShopJoana.Migrations
                     FirstName = table.Column<string>(maxLength: 50, nullable: true),
                     LastName = table.Column<string>(maxLength: 50, nullable: true),
                     Address = table.Column<string>(maxLength: 100, nullable: true),
-                    Phone = table.Column<string>(nullable: true)
+                    Phone = table.Column<string>(nullable: true),
+                    IsResale = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

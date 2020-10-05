@@ -145,7 +145,7 @@ WriteAttributeValue("", 1257, role.Id, 1257, 8, false);
             WriteLiteral(">\r\n                            ");
             EndContext();
             BeginContext(1297, 194, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d86b7f7cb3b64365925810ac001e38d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "596e74001d9240718622fc6d5f03360a", async() => {
                 BeginContext(1460, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();
@@ -210,7 +210,7 @@ WriteAttributeValue("", 1257, role.Id, 1257, 8, false);
                 ");
             EndContext();
             BeginContext(1935, 176, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80e9fe4643b74c0693dd76c5ed452a9e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9bbe783f8d0e4750a71b93fa39288f5e", async() => {
                 BeginContext(2056, 51, true);
                 WriteLiteral("\r\n                    Create Role\r\n                ");
                 EndContext();

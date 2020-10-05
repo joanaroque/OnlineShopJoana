@@ -32,6 +32,6 @@ namespace OnlineShopJoana.WEB.Data.Repositories
 
 
 
-
+        Task AddProductToOrderAsync(int productId, User user);
     }
 }

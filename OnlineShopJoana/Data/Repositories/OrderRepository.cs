@@ -193,5 +193,39 @@ namespace OnlineShopJoana.WEB.Data.Repositories
             }
 
         }
+
+        public async Task AddProductToOrderAsync(int productId, User user)
+        {
+
+            var product = await _context.Products.FindAsync(productId);
+            if (product == null)
+            {
+                return;
+            }
+
+            var orderDetailTemp = await _context.OrderDetailTemps
+                .Where(odt => odt.User == user && odt.Product == product)
+                .FirstOrDefaultAsync();
+
+            if (orderDetailTemp == null)
+            {
+                orderDetailTemp = new OrderDetailTemp
+                {
+                    Price = product.Price,
+                    Product = product,
+                    Quantity = 1,
+                    User = user,
+                };
+
+                _context.OrderDetailTemps.Add(orderDetailTemp);
+            }
+            else
+            {
+                orderDetailTemp.Quantity += 1;
+                _context.OrderDetailTemps.Update(orderDetailTemp);
+            }
+
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -15,17 +15,20 @@ namespace OnlineShopJoana.WEB.Controllers
         private readonly IUserHelper _userHelper;
         private readonly IImageHelper _imageHelper;
         private readonly IConverterHelper _converterHelper;
+        private readonly IOrderRepository _orderRepository;
 
         public ProductsController(
             IProductRepository productRepository,
             IUserHelper userHelper,
             IImageHelper imageHelper,
-            IConverterHelper converterHelper)
+            IConverterHelper converterHelper,
+            IOrderRepository orderRepository)
         {
             _productRepository = productRepository;
             _userHelper = userHelper;
             _imageHelper = imageHelper;
             _converterHelper = converterHelper;
+            _orderRepository = orderRepository;
         }
 
         // GET: Products
@@ -53,7 +56,7 @@ namespace OnlineShopJoana.WEB.Controllers
         }
 
         // GET: Products/Create
-        [Authorize(Roles = "Admin")] 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -166,6 +169,19 @@ namespace OnlineShopJoana.WEB.Controllers
             await _productRepository.DeleteAsync(product);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        //todo
+        public async Task<IActionResult> AddToOrder(int id)
+        {
+
+            var user = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+
+             await _orderRepository.AddProductToOrderAsync(id, user);
+            //avaliar se a order foi bem sucedida
+
+
+            return RedirectToAction("Create","Orders");
         }
 
         public IActionResult ProductNotFound()

@@ -305,6 +305,8 @@ h1 {
 }
 
 .w3ls-login input[type="email"],
+.w3ls-login input[type="text"],
+.w3ls-login input[type="tel"],
 .w3ls-login input[type="password"] {
     width: 100%;
     color: #fff;

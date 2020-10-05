@@ -299,6 +299,8 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("FirstName")
                         .HasMaxLength(50);
 
+                    b.Property<bool>("IsResale");
+
                     b.Property<string>("LastName")
                         .HasMaxLength(50);
 

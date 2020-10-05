@@ -28,7 +28,7 @@ namespace OnlineShopJoana.WEB.Data.Entities
         public DateTime? LastSale { get; set; }
 
 
-        [Display(Name = "Is Avalible?")]
+        [Display(Name = "Is Available?")]
         public bool IsAvailable { get; set; }
 
 

@@ -86,7 +86,7 @@ using OnlineShopJoana.WEB.Models;
     ");
             EndContext();
             BeginContext(453, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b5f011566714054a4eb9cd281349669", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dcf1ed3398cf4ad4be259b161f9fe366", async() => {
                 BeginContext(524, 45, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i> Register new user ");
                 EndContext();
@@ -208,7 +208,7 @@ WriteAttributeValue("", 2015, user.Id, 2015, 8, false);
             WriteLiteral(">\r\n                            ");
             EndContext();
             BeginContext(2055, 136, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf1aa8235c224915822bffb69e680816", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c63006fd21bb43128ab83d8fc4b89753", async() => {
                 BeginContext(2159, 28, true);
                 WriteLiteral(" <i class=\"fa fa-edit\"></i> ");
                 EndContext();
@@ -246,7 +246,7 @@ WriteAttributeValue("", 2015, user.Id, 2015, 8, false);
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(2221, 183, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01793bb8780847918aa5fb3385ebe660", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a99d9112e5a4a03a6400666811431be", async() => {
                 BeginContext(2373, 27, true);
                 WriteLiteral("<i class=\"fa fa-trash\"></i>");
                 EndContext();
@@ -311,7 +311,7 @@ WriteAttributeValue("", 2015, user.Id, 2015, 8, false);
                 ");
             EndContext();
             BeginContext(2848, 169, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e1c62fdf5c44aaf926e3788215ffe92", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5999fff51fb24e2ca81f88b951510870", async() => {
                 BeginContext(2961, 52, true);
                 WriteLiteral("\r\n                    Add new user\r\n                ");
                 EndContext();

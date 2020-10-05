@@ -1,92 +1,219 @@
 ﻿@model IEnumerable<OnlineShopJoana.WEB.Data.Entities.Product>
 
+
 @{
-    ViewData["Title"] = "Index";
+    Layout = null;
 }
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Online Shop Joana</title>
 
-<div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
-     style="background-image: url('../template/img/bg-img/18.jpg');">
-    <h2 style="color:#ffffff">Products</h2>
-</div>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <!-- Favicon -->
+    <link rel="icon" href="~/template/img/core-img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
 
-<br />
-<p>
-    <a asp-action="Create" class="btn btn-info"><i class="fa fa-plus"></i> Create New</a>
-</p>
-<br />
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="~/template/style.css">
+</head>
 
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="~/template/img/core-img/leaf.png" alt="">
+        </div>
+    </div>
 
-<div class="col-sm-14 col-md-12" style="display: inline-flex; text-align: center;">
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+             style="background-image: url('../template/img/bg-img/24.jpg');">
+            <h2>Products</h2>
+        </div>
 
-    <table class="table table-hover table-responsive table-striped" id="MyTable">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ImageUrl)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Price)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastPurchase)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.LastSale)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.IsAvailable)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Stock)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @if (!string.IsNullOrEmpty(item.ImageUrl))
-                        {
-                            <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto" />
-                        }
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LastPurchase)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LastSale)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsAvailable)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Stock)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-list"></i></a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete"><i class="fa fa-trash"></i></a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Products</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
     <br />
-</div>
+    @if (this.User.IsInRole("Admin"))
+    {
+        <p>
+            <a asp-action="Create" class="btn btn-info"><i class="fa fa-plus"></i> Create New</a>
+        </p>
+        <br />
+    }
 
+
+        <div class="col-md-6 offset-md-4">
+
+            <table class="table table-hover table-responsive table-striped" id="MyTable">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ImageUrl)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </th>
+
+                        @if (this.User.IsInRole("Admin"))
+                        {
+                            <th>
+                                @Html.DisplayNameFor(model => model.LastPurchase)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.LastSale)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Stock)
+                            </th>
+                        }
+                        <th>
+                            @Html.DisplayNameFor(model => model.IsAvailable)
+                        </th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img src="@Url.Content(item.ImageUrl)" alt="Image" style="width:100px;height:150px;max-width:100%;height:auto" />
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            @if (this.User.IsInRole("Admin"))
+                            {
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastPurchase)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastSale)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Stock)
+                                </td>
+                            }
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsAvailable)
+                            </td>
+                            @if (this.User.IsInRole("Admin"))
+                            {
+                                <td id="@item.Id">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="fa fa-list"></i></a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete"><i class="fa fa-trash"></i></a>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <a asp-action="AddToOrder" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-shopping-cart"></i></a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+        </div>
+
+    <br />
+
+
+    <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p>
+                                <strong>
+                                    &copy;  TPSI CET - 46 &copy; - Online Shop Joana
+                                </strong>
+                            </p>
+                            <br />
+                            <br />
+                            <br />
+                            <p class="pull-right">
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="deleteDialog" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-window-close"></i></button>
+                    <h4 class="modal-title">Delete</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to delete the order?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="btnYesDelete">Delete</button>
+                    <button type="button" class="btn btn-success" id="btnNoDelete">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### About Area End ##### -->
+    <script src="~/template/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/template/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/template/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/template/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="~/template/js/active.js"></script>
+</body>
 
 @section Scripts{
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -95,6 +222,27 @@
             $('#MyTable').DataTable();
         });
 
+        $(document).ready(function () {
+
+            let id = 0;
+
+            $('a[id*=btnDelete]').click(function () {
+                //debugger;
+                id = $(this).parent()[0].id;
+                $("#deleteDialog").modal('show');
+                return false;
+            });
+
+            $("#btnNoDelete").click(function () {
+                $("#deleteDialog").modal('hide');
+                return false;
+            });
+
+            $("#btnYesDelete").click(function () {
+                window.location.href = '/Products/Delete/' + id;
+            });
+
+        });
     </script>
 }
 

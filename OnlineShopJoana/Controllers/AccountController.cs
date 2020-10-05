@@ -313,7 +313,7 @@ namespace OnlineShopJoana.WEB.Controllers
                             expiration = token.ValidTo
                         };
 
-                        return this.Created(string.Empty, results);
+                        return Created(string.Empty, results);
                     }
                 }
             }
@@ -345,11 +345,22 @@ namespace OnlineShopJoana.WEB.Controllers
                     "Account",
                     new { token = myToken }, protocol: HttpContext.Request.Scheme);
 
-                _mailHelper.SendMail(model.Email, "Plants Store Password Reset", $"<h1>Plants Store Password Reset</h1>" +
-                $"To reset the password click in this link:</br></br>" +
-                $"<a href = \"{link}\">Reset Password</a>");
+                try
+                {
+                    _mailHelper.SendMail(model.Email, "Plants Store Password Reset", $"<h1>Plants Store Password Reset</h1>" +
+               $"To reset the password click in this link:</br></br>" +
+               $"<a href = \"{link}\">Reset Password</a>");
 
-                ViewBag.Message = "The instructions to recover your password has been sent to email.";
+                    ModelState.Clear();
+                    ViewBag.Message = "The instructions to recover your password has been sent to email.";
+
+                }
+                catch (Exception exception)
+                {
+                    ModelState.AddModelError(string.Empty, exception.Message);
+
+                }
+
 
                 return View();
 
@@ -361,6 +372,28 @@ namespace OnlineShopJoana.WEB.Controllers
         public IActionResult ResetPassword(string token)
         {
             return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            var user = await _userHelper.GetUserByEmailAsync(model.UserName);
+            if (user != null)
+            {
+                var result = await _userHelper.ResetPasswordAsync(user, model.Token, model.Password);
+                if (result.Succeeded)
+                {
+                    ViewBag.Message = "Password reset successful.";
+                    return View();
+                }
+
+                ViewBag.Message = "Error while resetting the password.";
+                return View(model);
+            }
+
+            ViewBag.Message = "User not found.";
+            return View(model);
         }
 
         public IActionResult NotAuthorized()

@@ -1,17 +1,13 @@
 ﻿@model OnlineShopJoana.WEB.Models.LoginViewModel
 
 @{
-    ViewData["Title"] = "Login";
-}
-
-@{
     Layout = null;
 }
 
 <!DOCTYPE HTML>
 <html lang="zxx">
 <head>
-
+    <title>Online plants shop - Login</title>
     <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
     <!-- online fonts-->
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i" rel="stylesheet">
@@ -23,18 +19,18 @@
     <div id="particles-js"></div>
     <!-- //particles -->
     <div class="w3ls-pos">
-        <h1 style="color:#ffffff">Welcome back !</h1>
+        <h1 style="color:#ffffff">Welcome back <i class="fa fa-leaf"></i></h1>
         <div class="w3ls-login box">
             <form method="post">
                 <div asp-validation-summary="ModelOnly"></div>
 
                 <div class="agile-field-txt">
-                    <span asp-validation-for="UserName"></span>
+                    <span asp-validation-for="UserName" class="text-warning"></span>
                     <input asp-for="UserName" type="email" name="UserName" placeholder="info@example.com" />
                 </div>
                 <div class="agile-field-txt">
                     <input asp-for="Password" type="password" name="password" placeholder="******" id="myInput" />
-                    <span asp-validation-for="Password"></span>
+                    <span asp-validation-for="Password" class="text-warning"></span>
                     <div class="agile_label">
                         <input asp-for="RememberMe" type="checkbox" id="check3" name="check3" value="show password">
                         <label asp-for="RememberMe" class="check" for="check3">Remember me?</label>
@@ -50,7 +46,7 @@
                 <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
                     <div class="social-auth-links text-center mb-3">
                         <p style="color:#ffffff">- OR -</p>
-                        <div>
+                      
                             @foreach (var provider in Model.ExternalLogins)
                             {
                                 @if (provider.Name == "Facebook")
@@ -70,7 +66,7 @@
                                     </button>
                                 }
                             }
-                        </div>
+                       
                     </div>
                 </form>
             }

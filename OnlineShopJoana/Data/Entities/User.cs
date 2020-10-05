@@ -30,5 +30,9 @@ namespace OnlineShopJoana.WEB.Data.Entities
 
         [Display(Name = "Full Name")]
         public string FullName { get { return $"{FirstName} {LastName}"; } }
+
+
+        [Display(Name = "Resale customer?")]
+        public bool IsResale { get; set; }
     }
 }
