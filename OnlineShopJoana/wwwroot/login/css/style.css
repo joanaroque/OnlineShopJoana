@@ -321,6 +321,20 @@ h1 {
     background: rgba(0, 0, 0, 0.53);
 }
 
+.w3ls-login select[name="SelectedRole"] {
+    width: 98%;
+    color: #fff;
+    outline: none;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    padding: 5px;
+    box-sizing: unset;
+    border: none;
+    -webkit-appearance: none;
+    font-family: 'Amiri', serif;
+    background: rgba(0, 0, 0, 0.53);
+}
+
 .w3ls-login ::-webkit-input-placeholder {
     color: #fff;
 }

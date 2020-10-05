@@ -101,9 +101,10 @@
                                         <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
 
                                         <li class="dropdown">
-                                            <a href="#">Orders <i class="fa fa-shopping-cart"></i></a>
+                                            <a href="#">My Orders <i class="fa fa-shopping-basket"></i></a>
                                             <ul class="dropdown">
-                                                <li><a asp-area="" asp-controller="Orders" asp-action="Create">Shopping Cart <i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Create"><i class="fa fa-shopping-cart"></i> Shopping Cart</a></li>
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa fa-list-alt"></i> My List</a></li>
                                             </ul>
                                         </li>
                                     }
