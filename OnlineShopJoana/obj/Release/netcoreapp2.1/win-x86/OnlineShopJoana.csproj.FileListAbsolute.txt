@@ -22,8 +22,6 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\On
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\OnlineShopJoana.TagHelpers.input.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\OnlineShopJoana.TagHelpers.output.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\OnlineShopJoana.RazorCoreGenerate.cache
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Account\ChangePassword.cshtml.g.cs
-C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Account\ChangeUser.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Account\Login.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Account\NotAuthorized.cshtml.g.cs

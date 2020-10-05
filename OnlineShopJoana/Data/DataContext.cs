@@ -36,6 +36,9 @@ namespace OnlineShopJoana.WEB.Data
               .Property(p => p.Price)
               .HasColumnType("decimal(18,2)");
 
+            modelBuilder.Entity<Order>()
+              .Property(o => o.Value)
+              .HasColumnType("decimal(18,2)");
 
             var cascadeFKs = modelBuilder.Model.GetEntityTypes()
                 .SelectMany(t => t.GetForeignKeys().Where(fk => fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade));

@@ -150,6 +150,9 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("UserId")
                         .IsRequired();
 
+                    b.Property<decimal>("Value")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedById");

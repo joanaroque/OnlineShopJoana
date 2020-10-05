@@ -1,39 +1,130 @@
 ﻿@model OnlineShopJoana.WEB.Models.AddItemViewModel
 
 @{
-    ViewData["Title"] = "AddProduct";
+    Layout = null;
 }
 
-<div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
-     style="background-image: url('../template/img/bg-img/18.jpg');">
-    <h2 style="color:#ffffff">Add Product</h2>
-</div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Online Shop Joana</title>
 
-<br />
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-        <form asp-action="AddProduct">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <!-- Favicon -->
+    <link rel="icon" href="~/template/img/core-img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
 
-            <div class="form-group">
-                <label asp-for="ProductId" class="control-label"></label>
-                <select asp-for="ProductId" asp-items="Model.Products" class="form-control"></select>
-                <span asp-validation-for="ProductId" class="text-danger"></span>
-            </div>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="~/template/style.css">
+</head>
 
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-success"/>
-                <a asp-action="Index" class="btn btn-warning pull-right"><i class="fa fa-backward"> To list</i></a>
-            </div>
-        </form>
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="~/template/img/bg-img/18.jpg" alt="">
+        </div>
     </div>
-</div>
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+             style="background-image: url('../template/img/bg-img/21.jpg');">
+            <h2>Add Product</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Orders</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+    <br />
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form asp-action="AddProduct">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="ProductId" class="control-label"></label>
+                    <select asp-for="ProductId" asp-items="Model.Products" class="form-control"></select>
+                    <span asp-validation-for="ProductId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Quantity" class="control-label"></label>
+                    <input asp-for="Quantity" class="form-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                    <a asp-action="Index" class="btn btn-warning pull-right"><i class="fa fa-backward"> To list</i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br />
+
+
+    <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p>
+                                <strong>
+                                    &copy;  TPSI CET - 46 &copy; - Online Shop Joana
+                                </strong>
+                            </p>
+                            <br />
+                            <br />
+                            <br />
+                            <p class="pull-right">
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ##### About Area End ##### -->
+    <script src="~/template/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/template/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/template/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/template/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="~/template/js/active.js"></script>
+</body>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

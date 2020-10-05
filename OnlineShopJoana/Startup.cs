@@ -14,8 +14,6 @@ using OnlineShopJoana.WEB.Helpers;
 using System.Text;
 using OnlineShopJoana.WEB.Data;
 using System;
-using DinkToPdf.Contracts;
-using DinkToPdf;
 
 namespace OnlineShopJoana.WEB
 {
@@ -62,9 +60,12 @@ namespace OnlineShopJoana.WEB
                     };
                 });
 
-            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+          //  services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
-            services
+            if (_env.IsDevelopment())
+            {
+
+                services
                .AddAuthentication()
 
                .AddGoogle(options =>
@@ -88,7 +89,7 @@ namespace OnlineShopJoana.WEB
                     options.LogoutPath = new PathString("/Account/Logout");
                 });
 
-
+            }
 
             services.AddDbContext<DataContext>(cfg =>
             {

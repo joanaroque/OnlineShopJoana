@@ -41,7 +41,7 @@ namespace OnlineShopJoana.WEB.Models
 
 
 
-        [Display(Name = "Resale customer?")]
+        [Display(Name = "Retail customer?")]
         public bool IsResale { get; set; }
     }
 }

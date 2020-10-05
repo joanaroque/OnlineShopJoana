@@ -1,22 +1,38 @@
 ﻿@{
+    Layout = null;
+}
+
+@{
     ViewData["Title"] = "Confirm email";
 }
 
-<section>
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+    <title>Online plants shop - Login</title>
+    <link href="~/login/css/style.css" rel='stylesheet' type='text/css' />
 
-    <div>
-        <h2>Email Confirmation</h2>
-        <br />
-        <p>
-            <strong>Welcome, you are our customer now!</strong>
+</head>
+
+<body>
+
+    <!--  particles  -->
+    <div id="particles-js"></div>
+    <!-- //particles -->
+
+    <div class="w3ls-pos">
+        <h2 style="color:#ffffff">Email Confirmation</h2>
+        <p style="color:#ffffff">
+            <strong>Thank you for confirming your email. Now you can login into system.</strong>
         </p>
 
-        <p>
-            Thank you for confirming your email. Now you can login into system.
-        </p>
         <div>
-            <img src="~/images/plantsConfirm.gif" style="margin-left:200px;" />
+            <img src="~/images/plantsConfirm.gif" />
         </div>
     </div>
-
-</section>
+    <!-- scripts required  for particle effect -->
+    <script src="~/login/js/particles.min.js"></script>
+    <script src="~/login/js/index.js"></script>
+    <!-- //scripts required for particle effect -->
+</body>
+</html>

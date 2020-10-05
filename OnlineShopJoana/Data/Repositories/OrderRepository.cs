@@ -86,12 +86,14 @@ namespace OnlineShopJoana.WEB.Data.Repositories
                 Quantity = o.Quantity
             }).ToList();
 
+            decimal orderTotalValue = details.Sum(i => i.Value);
 
             var order = new Order
             {
                 OrderDate = DateTime.UtcNow,
                 User = user,
-                Items = details
+                Items = details,
+                Value = user.IsResale ? orderTotalValue * (decimal)0.8 : orderTotalValue
             };
 
             _context.Orders.Add(order);

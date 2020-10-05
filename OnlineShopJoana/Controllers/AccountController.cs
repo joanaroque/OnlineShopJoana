@@ -221,25 +221,35 @@ namespace OnlineShopJoana.WEB.Controllers
                         token = myToken
                     }, protocol: HttpContext.Request.Scheme);
 
-                    _mailHelper.SendMail(model.UserName, "Email confirmation",
-                        $" <td style = 'background-color: #ecf0f1'>" +
-                        $"      <div style = 'color: #34495e; margin: 4% 10% 2%; text-align: justify;font-family: sans-serif'>" +
-                        $"            <h1 style = 'color: #e67e22; margin: 0 0 7px' > Hello, welcome </h1>" +
-                        $"                    <p style = 'margin: 2px; font-size: 15px'>" +
-                        $"                      The best specialized Plants Store in Lisbon focused on providing various and beautiful plants!<br>" +
-                        $"  <div style = 'width: 100%;margin:20px 0; display: inline-block;text-align: center'>" +
-                        $"  </div>" +
-                        $"  <div style = 'width: 100%; text-align: center'>" +
-                        $"    <h2 style = 'color: #e67e22; margin: 0 0 7px' >Email Confirmation </h2>" +
-                        $"    To allow the user, please click in this link:</br></br> " +
-                        $"    <a style ='text-decoration: none; border-radius: 5px; padding: 11px 23px; color: white; background-color: #3498db' href = \"{tokenLink}\">Confirm Email</a>" +
-                        $"    <p style = 'color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0'> Online Plants Store 2020 </p>" +
-                        $"  </div>" +
-                        $" </td >" +
-                        $"</tr>" +
-                        $"</table>");
+                    try
+                    {
+                        _mailHelper.SendMail(model.UserName, "Email confirmation",
+                       $" <td style = 'background-color: #ecf0f1'>" +
+                       $"      <div style = 'color: #34495e; margin: 4% 10% 2%; text-align: justify;font-family: sans-serif'>" +
+                       $"            <h1 style = 'color: #e67e22; margin: 0 0 7px' > Hello, welcome </h1>" +
+                       $"                    <p style = 'margin: 2px; font-size: 15px'>" +
+                       $"                      The best specialized Plants Store in Lisbon focused on providing various and beautiful plants!<br>" +
+                       $"  <div style = 'width: 100%;margin:20px 0; display: inline-block;text-align: center'>" +
+                       $"  </div>" +
+                       $"  <div style = 'width: 100%; text-align: center'>" +
+                       $"    <h2 style = 'color: #e67e22; margin: 0 0 7px' >Email Confirmation </h2>" +
+                       $"    To allow the user, please click in this link:</br></br> " +
+                       $"    <a style ='text-decoration: none; border-radius: 5px; padding: 11px 23px; color: white; background-color: #3498db' href = \"{tokenLink}\">Confirm Email</a>" +
+                       $"    <p style = 'color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0'> Online Plants Store 2020 </p>" +
+                       $"  </div>" +
+                       $" </td >" +
+                       $"</tr>" +
+                       $"</table>");
 
-                    ViewBag.Message = "The instructions to allow your user has been sent to email.";
+                        ModelState.Clear();
+                        ViewBag.Message = "The instructions to allow your user has been sent to email.";
+
+                    }
+                    catch (Exception exception)
+                    {
+                        ModelState.AddModelError(string.Empty, exception.Message);
+                    }
+
 
                     return View(model);
                 }
