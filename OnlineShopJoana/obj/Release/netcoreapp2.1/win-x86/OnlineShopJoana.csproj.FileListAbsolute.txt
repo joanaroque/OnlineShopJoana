@@ -60,3 +60,7 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Ra
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Administrator\EditUser.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Administrator\ListRoles.cshtml.g.cs
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Administrator\ListUsers.cshtml.g.cs
+C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.dll
+C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.pdfa.dll
+C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.xtra.dll
+C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.xml

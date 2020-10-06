@@ -90,7 +90,7 @@ using OnlineShopJoana.WEB.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(2, 17044, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09055ac10ac2406fa1b87f9fda6a8417", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b342f760d7ce4ed89991120711cfcb6d", async() => {
                 BeginContext(8, 1000, true);
                 WriteLiteral(@"
     <!-- ##### Service Area Start ##### -->
@@ -117,7 +117,7 @@ using OnlineShopJoana.WEB.Models;
                                 ");
                 EndContext();
                 BeginContext(1008, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8b6b76274b2541338f59cb4e535c9b39", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0ad6fbe000fb489e8a19202695f485da", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -149,7 +149,7 @@ using OnlineShopJoana.WEB.Models;
                                 ");
                 EndContext();
                 BeginContext(1782, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "87e2a8565f564635917626c6bb79bb1e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "046a467759c94564b52d7779a08ec527", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -181,7 +181,7 @@ using OnlineShopJoana.WEB.Models;
                                 ");
                 EndContext();
                 BeginContext(2561, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f50c78020dd44482828dc4037146df9b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8202e5157d16488ea2015270229ea7b8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -214,7 +214,7 @@ using OnlineShopJoana.WEB.Models;
                         ");
                 EndContext();
                 BeginContext(3235, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "066bf6a15bc64df288516d359fdef353", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b1dffec0acc1468d92f053898d3dd72c", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -279,7 +279,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(5325, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b9693b3d992340c690540d7b6ec5889e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d3be5945f5264fc2b8ed7dbb5f9d56ce", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -297,7 +297,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(5511, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3caf001464f84d6f94f3365217433ce7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5da3318422f348229209d08cd114a443", async() => {
                     BeginContext(5641, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -327,7 +327,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(6220, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "49db517c96a24a9eb40ff07c1f6b4163", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "eb829934dcc14e639a6587378f06c8fd", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -345,7 +345,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(6404, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf175cd3cb7647d6a4415bdf46af96f8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "661081aef8844407b5d2e69904e42ed4", async() => {
                     BeginContext(6534, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -375,7 +375,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(7120, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d1cdbe66930f4d8bbca9f3ad889f201e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3bc1bd013f6546e9b12acf5ac8ddf2a8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -393,7 +393,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(7304, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6ca706533234323911a62682e66baa9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "77ea2df3273f4e35aee83419c1632d85", async() => {
                     BeginContext(7434, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -423,7 +423,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(8027, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1ad33f21abde498a98ed9b42eb90cf35", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c8f8efc204034f1cb4641990633ecc5e", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -441,7 +441,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(8211, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a5eaffe47984673a3364f8e94f01534", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60409e309dde46fc9c0f036df0fd921d", async() => {
                     BeginContext(8341, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -471,7 +471,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(8934, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d72c18c5efbd4594af75e0d593ecb2f8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d5b0ae52728a4c82a09ebc2c6c4578bb", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -489,7 +489,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(9118, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f30e13165ef24cf7a75cb2d8dbe34ccf", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83dcc089a7894d7da0ecc47ca9e2d595", async() => {
                     BeginContext(9248, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -519,7 +519,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(9827, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2e4a3ab065b642f8bc0fa3b848e4c2f0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "60a07572e2e44433a7635ed577ad3963", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -537,7 +537,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(10011, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a30ddaa7232841a29778dcb892c212d4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a8bc69230c446b7b474f41c0a28e0d7", async() => {
                     BeginContext(10141, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -567,7 +567,7 @@ using OnlineShopJoana.WEB.Models;
                     <div class=""portfolio-thumbnail bg-img"">");
                 EndContext();
                 BeginContext(10716, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "22087dc6b9f14e35aa5dd9ad77d374dc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c282798580344b79bb2f920020912a48", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -585,7 +585,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("</div>\r\n                    <!-- Portfolio Hover Text -->\r\n                    <div class=\"portfolio-hover-overlay\">\r\n                        ");
                 EndContext();
                 BeginContext(10900, 374, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed3d528a8c034e8686162d2a8f9b7a5f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9c935e387ea4dd2ba357a39d4d5f4c9", async() => {
                     BeginContext(11030, 240, true);
                     WriteLiteral("\r\n                            <div class=\"port-hover-text\">\r\n                                <h3>Minimal Flower Store</h3>\r\n                                <h5>Office Plants</h5>\r\n                            </div>\r\n                        ");
                     EndContext();
@@ -636,7 +636,7 @@ using OnlineShopJoana.WEB.Models;
                             <a href=""#"">");
                 EndContext();
                 BeginContext(12271, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6c0faa883f73498cb71e779d6cdde789", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "cbfde105379a471d9e8291f3bb2099cc", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -673,7 +673,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("mb-100\">\r\n                        <div class=\"post-thumbnail mb-30\">\r\n                            <a href=\"#\">");
                 EndContext();
                 BeginContext(13451, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "894c842348fb4b46b1ad2fbb4c579b78", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e1eb9bdb79f143ac8da68ceb06c294eb", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -710,7 +710,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("mb-100\">\r\n                        <div class=\"post-thumbnail mb-30\">\r\n                            <a href=\"#\">");
                 EndContext();
                 BeginContext(14631, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b1b38be095244e4dab996eb886053553", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e3389f6a81c344119439ac39825466f7", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -762,7 +762,7 @@ using OnlineShopJoana.WEB.Models;
                         ");
                 EndContext();
                 BeginContext(16384, 280, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f061026f0f43422386e1de3e72242f5e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68ef31368668410cb6edf2a6e9ca9ca0", async() => {
                     BeginContext(16414, 243, true);
                     WriteLiteral("\r\n                            <input type=\"email\" name=\"subscribe-email\" id=\"subscribeEmail\" placeholder=\"Enter your email\">\r\n                            <button type=\"submit\" class=\"btn alazea-btn\">SUBSCRIBE</button>\r\n                        ");
                     EndContext();
@@ -787,7 +787,7 @@ using OnlineShopJoana.WEB.Models;
                 WriteLiteral("\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <!-- Subscribe Side Thumbnail -->\r\n        <div class=\"subscribe-side-thumb wow fadeInUp\" data-wow-delay=\"500ms\">\r\n            ");
                 EndContext();
                 BeginContext(16891, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0beaac5bd8d844228b12ddaa012be716", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e2103de75b064e7aa68cbd6ee07e6cce", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

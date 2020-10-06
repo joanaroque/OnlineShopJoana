@@ -239,4 +239,16 @@
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\Users\joana\Documents\Pacheco_Sistemas_Integração\PDF_exercicios\PDF_exercicios\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\Users\joana\Documents\Pacheco_Sistemas_Integração\PDF_exercicios\PDF_exercicios\bin\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\Users\joana\Documents\Pacheco_Sistemas_Integração\PDF_exercicios\PDF_exercicios\bin\itextsharp.xtra.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

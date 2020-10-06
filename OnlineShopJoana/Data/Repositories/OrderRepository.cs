@@ -59,13 +59,13 @@ namespace OnlineShopJoana.WEB.Data.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> ConfirmOrderAsync(string userName)
+        public async Task<Order> ConfirmOrderAsync(string userName)
         {
             var user = await _userHelper.GetUserByEmailAsync(userName);
 
             if (user == null)
             {
-                return false;
+                return null;
 
             }
 
@@ -76,7 +76,7 @@ namespace OnlineShopJoana.WEB.Data.Repositories
 
             if (orderTmps == null || orderTmps.Count == 0)
             {
-                return false;
+                return null;
             }
 
             var details = orderTmps.Select(o => new OrderDetail
@@ -99,7 +99,7 @@ namespace OnlineShopJoana.WEB.Data.Repositories
             _context.Orders.Add(order);
             _context.OrderDetailTemps.RemoveRange(orderTmps);
             await _context.SaveChangesAsync();
-            return true;
+            return order;
         }
 
         public async Task DeleteDetailTempAsync(int id)

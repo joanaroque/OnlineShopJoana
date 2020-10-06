@@ -22,7 +22,7 @@ namespace OnlineShopJoana.WEB.Data.Repositories
         Task DeleteDetailTempAsync(int id);
 
 
-        Task<bool> ConfirmOrderAsync(string userName);
+        Task<Order> ConfirmOrderAsync(string userName);
 
 
         Task DeliverOrderAsync(DeliverViewModel model);

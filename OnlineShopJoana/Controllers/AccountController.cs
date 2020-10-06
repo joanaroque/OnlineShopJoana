@@ -215,7 +215,7 @@ namespace OnlineShopJoana.WEB.Controllers
                     }
 
                     var myToken = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
-                    var tokenLink = this.Url.Action("ConfirmEmail", "Account", new
+                    var tokenLink = Url.Action("ConfirmEmail", "Account", new
                     {
                         userid = user.Id,
                         token = myToken
@@ -292,7 +292,7 @@ namespace OnlineShopJoana.WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateToken([FromBody] LoginViewModel model)
         {
-            if (this.ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var user = await _userHelper.GetUserByEmailAsync(model.UserName);
                 if (user != null)

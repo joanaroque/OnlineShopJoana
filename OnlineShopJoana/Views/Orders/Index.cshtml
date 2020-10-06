@@ -117,8 +117,12 @@
                             @Html.DisplayFor(modelItem => item.Value)
                         </td>
                         <td id="@item.Id">
-                            <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver"><i class="fa fa-truck"></i></a>
+                            @if (this.User.IsInRole("Admin"))
+                            {
+                                <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver"><i class="fa fa-truck"></i></a>
+                            }
                             <a asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete"><i class="fa fa-trash"></i></a>
+
                         </td>
                     </tr>
                 }

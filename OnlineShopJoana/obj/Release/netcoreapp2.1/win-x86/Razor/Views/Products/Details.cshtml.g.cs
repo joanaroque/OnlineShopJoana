@@ -225,7 +225,7 @@ WriteAttributeValue("", 543, Url.Content(Model.ImageUrl), 543, 28, false);
             WriteLiteral("\r\n            </dd>\r\n        </dl>\r\n\r\n        <div>\r\n            ");
             EndContext();
             BeginContext(1934, 111, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac3fb14de5dd48108f5a8066008c496a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3ebc58a665042e4ace37cd4a34096bc", async() => {
                 BeginContext(2013, 28, true);
                 WriteLiteral("<i class=\"fa fa-pencil\"></i>");
                 EndContext();
@@ -261,7 +261,7 @@ WriteAttributeValue("", 543, Url.Content(Model.ImageUrl), 543, 28, false);
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(2059, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4c00f08e3a744f6a55a30dcc1dc73c1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cdcc2cc23a0c44c7870bdf1ed0cefd9f", async() => {
                 BeginContext(2105, 38, true);
                 WriteLiteral("<i class=\"fa fa-backward\"></i> To List");
                 EndContext();

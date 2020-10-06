@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnlineShopJoana.Helpers;
 using OnlineShopJoana.WEB.Data.Repositories;
+using OnlineShopJoana.WEB.Helpers;
 using OnlineShopJoana.WEB.Models;
+
 using System;
 using System.Threading.Tasks;
 
@@ -10,12 +13,18 @@ namespace OnlineShopJoana.WEB.Controllers
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IProductRepository _productRepository;
+        private readonly IUserHelper _userHelper;
+        private readonly IMailHelper _mailHelper;
 
         public OrdersController(IOrderRepository orderRepository,
-            IProductRepository productRepository)
+            IProductRepository productRepository,
+            IUserHelper userHelper,
+            IMailHelper mailHelper)
         {
             _orderRepository = orderRepository;
             _productRepository = productRepository;
+            _userHelper = userHelper;
+            _mailHelper = mailHelper;
         }
 
         public async Task<IActionResult> Index()
@@ -96,18 +105,24 @@ namespace OnlineShopJoana.WEB.Controllers
 
         public async Task<IActionResult> ConfirmOrder()
         {
-            var response = await _orderRepository.ConfirmOrderAsync(User.Identity.Name);
+            var createdOrder = await _orderRepository.ConfirmOrderAsync(User.Identity.Name);
 
-            if (response)
+            if (createdOrder!=null)
             {
-                return RedirectToAction("Index");
+                PdfGenerator generator = new PdfGenerator();
+                var pdfByteArray = generator.CreatePdf(createdOrder, User.Identity.Name);
+                _mailHelper.SendMailWithAttachment(User.Identity.Name, "Order", "Thank you for your order", pdfByteArray);
+
+
             }
+            // todo try catch modelstate etc
+
 
             return RedirectToAction("Create");
         }
 
         public async Task<IActionResult> Deliver(int? id)
-        {
+        { //otdo imagem nao se ve
             if (id == null)
             {
                 return NotFound();

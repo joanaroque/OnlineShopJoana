@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "FIyTCmdxaDfxi/WgLp46KK15TDWdZNxJmvwScqHooQ3NNKgfOFTdIYm13Fk6Us7UnfMxnYQXgW7A/hZS4rgibQ==",
+  "dgSpecHash": "0RdBKZjbG3WfYtFAwzochJVC2z58TCIz2JsXDLA8o6MUTBzXl3ZEuMcCg2c0s4jsjYTfOW2ISi0LgOyIw8v+FA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\OnlineShopJoana\\OnlineShopJoana\\OnlineShopJoana.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\joana\\.nuget\\packages\\dinktopdf\\1.0.8\\dinktopdf.1.0.8.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\mailkit\\2.7.0\\mailkit.2.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\joana\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",
