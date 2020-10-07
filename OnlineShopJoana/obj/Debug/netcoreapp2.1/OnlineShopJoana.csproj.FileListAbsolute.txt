@@ -61,3 +61,4 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\itextsharp.x
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Debug\netcoreapp2.1\itextsharp.xml
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\OnlineShopJoana.csproj.CoreCompileInputs.cache
 C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Debug\netcoreapp2.1\Razor\Views\Orders\ConfirmOrder.cshtml.g.cs

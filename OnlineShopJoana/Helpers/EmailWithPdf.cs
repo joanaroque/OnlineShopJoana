@@ -39,33 +39,6 @@ namespace OnlineShopJoana.Helpers
         protected StringBuilder BuildEmailContent(Order order, string email)
         {
             StringBuilder sb = new StringBuilder();
-            //  sb.Append($" <td style = 'background-color: #ccffe6;'>" +
-            //      $" <header class='clearfix'>" +
-            //  $" <h1>INVOICE</h1> </br></br>" +
-            //  $" <div id='company' class='clearfix'>" +
-            // $" <div><h2>Online Shop Joana</h2></div></br>" +
-            //  $" <div>1800-280 Lisboa</div>" +
-            //  $" <div>21 125 124 8</div>" +
-            //  $" <div><a href='mailto:joanatpsi@gmail.com'>joanatpsi@gmail.com</a></div>" +
-            // $" </div></br>" +
-            //  $" <div id='project'>" +
-            //  $"<div><span>Client:</span>{order.User.FullName}</div>" +
-            //  $"<div><span>Address:</span>{order.User.Address}</div>" +
-            //  $" <div><span>Date:</span> {DateTime.UtcNow.ToLocalTime().ToLongDateString()}</div>" +
-            //  $" </div>" +
-            //  $" </header>" +
-            //  $" <main>" +
-            //   $" <table>" +
-            // $"<thead>" +
-            // $"<tr>" +
-            //$"<th class='service'>Product</th>" +
-            //$" <th>Price</th>" +
-            // $" <th>Quantity</th>" +
-            //  $" <th>Total</th>" +
-            //  $" </tr>" +
-            // $" </thead>" +
-            // $" <tbody>");
-
             sb.Append("<header class='clearfix'>");
             sb.Append("<h1>INVOICE</h1>");
             sb.Append("<div id='company' class='clearfix'>");

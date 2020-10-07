@@ -139,11 +139,11 @@ namespace OnlineShopJoana.WEB.Controllers
                 }
             }
 
-            return RedirectToAction("Create");
+            return View();
         }
 
         public async Task<IActionResult> Deliver(int? id)
-        { //otdo imagem nao se ve
+        {
             if (id == null)
             {
                 return NotFound();

@@ -70,9 +70,9 @@
               "version": "[2.1.0, )",
               "autoReferenced": true
             },
-            "Syncfusion.PdfViewer.Windows": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[18.3.0.35, )"
+              "version": "[2.1.10, )"
             }
           },
           "imports": [

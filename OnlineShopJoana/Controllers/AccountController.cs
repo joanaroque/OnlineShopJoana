@@ -203,7 +203,8 @@ namespace OnlineShopJoana.WEB.Controllers
                         Email = model.UserName,
                         UserName = model.UserName,
                         Address = model.Address,
-                        PhoneNumber = model.PhoneNumber
+                        PhoneNumber = model.PhoneNumber,
+                        IsResale = model.IsResale
                     };
 
                     var result = await _userHelper.AddUserAsync(user, model.Password);
@@ -283,7 +284,7 @@ namespace OnlineShopJoana.WEB.Controllers
 
             if (!isInRole)
             {
-                await _userHelper.AddUSerToRoleAsync(user, "Customer");
+              await _userHelper.AddUSerToRoleAsync(user, "Customer");
             }
 
             return View();

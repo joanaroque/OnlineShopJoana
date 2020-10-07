@@ -27,7 +27,7 @@ namespace OnlineShopJoana.WEB.Helpers
 
         public async Task<IdentityResult> AddUSerToRoleAsync(User user, string roleName)
         {
-           return await _userManager.AddToRoleAsync(user, "Admin");
+           return await _userManager.AddToRoleAsync(user, roleName);
         }
 
         public async Task<IdentityResult> ChangePasswordAsync(User user, string oldPassword, string newPassword)

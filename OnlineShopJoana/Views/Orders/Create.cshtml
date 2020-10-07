@@ -56,8 +56,20 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                    @if (this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
 
-                                    @if (!this.User.IsInRole("Admin"))
+                                        <li class="dropdown">
+                                            <a href="#">Admin</a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    else
                                     {
                                         <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
@@ -73,19 +85,7 @@
                                         </li>
                                     }
 
-                                    @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
-                                    {
-                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
 
-                                        <li class="dropdown">
-                                            <a href="#">Admin</a>
-                                            <ul class="dropdown">
-                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
-                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
-                                            </ul>
-                                        </li>
-                                    }
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -117,7 +117,7 @@
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
              style="background-image: url('../template/img/bg-img/18.jpg');">
-            <h2>New Order</h2>
+            <h2>Checkout <i class="fa fa-shopping-cart"></i></h2>
         </div>
 
         <div class="container">
@@ -150,7 +150,7 @@
 
             <br />
 
-            @if (!this.User.IsInRole("Admin") || ViewBag.Message == null)
+            @if (!this.User.IsInRole("Admin"))
             {
                 <table class="table table-hover table-responsive table-striped" id="MyTable">
                     <thead>
@@ -195,13 +195,7 @@
                         }
                     </tbody>
                 </table>
-
-            }
-            @if (ViewBag.Message != null)
-            {
-                <div class="section-heading">
-                    <h2>@ViewBag.Message</h2>
-                </div>
+              
             }
 
         </div>

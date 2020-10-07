@@ -56,8 +56,20 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                    @if (this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
 
-                                    @if (!this.User.IsInRole("Admin"))
+                                        <li class="dropdown">
+                                            <a href="#">Admin</a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    else
                                     {
                                         <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
@@ -73,19 +85,6 @@
                                         </li>
                                     }
 
-                                    @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
-                                    {
-                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
-
-                                        <li class="dropdown">
-                                            <a href="#">Admin</a>
-                                            <ul class="dropdown">
-                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
-                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
-                                            </ul>
-                                        </li>
-                                    }
                                 </ul>
 
                                 <!-- Search Icon -->
