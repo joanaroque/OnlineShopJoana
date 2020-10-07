@@ -46,9 +46,9 @@ namespace OnlineShopJoana.WEB.Data.Entities
 
 
 
-        //public decimal Value => Items == null ? 0 : Items.Sum(i => i.Value);
-
         public decimal Value { get; set; }
+
+
 
         [DisplayName("Order date")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd hh:mm tt}", ApplyFormatInEditMode = false)]

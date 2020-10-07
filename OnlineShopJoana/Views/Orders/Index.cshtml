@@ -31,6 +31,87 @@
         </div>
     </div>
 
+    <header class="header-area">
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <!-- Nav Brand -->
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-brand"><strong>Plants Shop - Joana</strong></a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+                                    @if (!this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#">My Orders <i class="fa fa-shopping-basket"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Create"><i class="fa fa-shopping-cart"></i> Shopping Cart</a></li>
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa fa-list-alt"></i> My List</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+
+                                    @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#">Admin</a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div id="searchIcon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
@@ -62,73 +143,73 @@
         <br />
 
 
+        <div class="col-md-12 col-md-8" style="display: inline-flex; text-align: center;">
 
-
-        <table class="table table-hover table-responsive table-striped" id="MyTable">
-            <thead>
-                <tr>
-                    @if (this.User.IsInRole("Admin"))
-                    {
-                        <th>
-                            @Html.DisplayNameFor(model => model.User.FullName)
-                        </th>
-                    }
-                    <th>
-                        @Html.DisplayNameFor(model => model.OrderDateLocal)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.DeliveryDate)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Lines)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Quantity)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Value)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+            <table class="table table-hover table-responsive table-striped" id="MyTable">
+                <thead>
                     <tr>
                         @if (this.User.IsInRole("Admin"))
                         {
                             <th>
-                                @Html.DisplayFor(modelItem => item.User.FullName)
+                                @Html.DisplayNameFor(model => model.User.FullName)
                             </th>
                         }
-                        <td>
-                            @Html.DisplayFor(modelItem => item.OrderDateLocal)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DeliveryDate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Lines)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Quantity)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Value)
-                        </td>
-                        <td id="@item.Id">
+                        <th>
+                            @Html.DisplayNameFor(model => model.OrderDateLocal)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeliveryDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Lines)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Quantity)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Value)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
                             @if (this.User.IsInRole("Admin"))
                             {
-                                <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver"><i class="fa fa-truck"></i></a>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.User.FullName)
+                                </th>
                             }
-                            <a asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger" id="btnDelete"><i class="fa fa-trash"></i></a>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.OrderDateLocal)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DeliveryDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Lines)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantity)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Value)
+                            </td>
+                            <td id="@item.Id">
+                                @if (this.User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Deliver" asp-route-id="@item.Id" class="btn btn-info" id="btnDeliver"><i class="fa fa-truck"></i></a>
+                                }
+                                <a asp-action="DeleteItem" asp-route-id="@item.Id" class="btn btn-danger pull-right" id="btnDelete"><i class="fa fa-trash"></i></a>
 
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
     <br />
 

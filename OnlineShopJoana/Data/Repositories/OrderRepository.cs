@@ -154,7 +154,6 @@ namespace OnlineShopJoana.WEB.Data.Repositories
             {
                 return null;
             }
-            // se é admin ve as encomendas todas, se nao for, ve so as orders dele
             if (await _userHelper.IsUserInRoleAsync(user, "Admin"))
             {
                 return _context.Orders

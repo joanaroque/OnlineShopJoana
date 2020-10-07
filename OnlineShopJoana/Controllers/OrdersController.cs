@@ -29,12 +29,22 @@ namespace OnlineShopJoana.WEB.Controllers
 
         public async Task<IActionResult> Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var model = await _orderRepository.GetOrdersAsync(User.Identity.Name);
             return View(model);
         }
 
         public async Task<IActionResult> Create()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var model = await _orderRepository.GetDetailTempsAsync(User.Identity.Name);
             return View(model);
         }
@@ -107,16 +117,27 @@ namespace OnlineShopJoana.WEB.Controllers
         {
             var createdOrder = await _orderRepository.ConfirmOrderAsync(User.Identity.Name);
 
-            if (createdOrder!=null)
+            if (createdOrder != null)
             {
-                PdfGenerator generator = new PdfGenerator();
-                var pdfByteArray = generator.CreatePdf(createdOrder, User.Identity.Name);
-                _mailHelper.SendMailWithAttachment(User.Identity.Name, "Order", "Thank you for your order", pdfByteArray);
+                try
+                {
+                    EmailWithPdf generator = new EmailWithPdf();
+
+                    var pdfByteArray = generator.CreatePdf(createdOrder, User.Identity.Name);
+
+                    _mailHelper.SendMailWithAttachment(User.Identity.Name, "Order - Plants Store",
+                        "Thank you very much for choosing us!\n The invoice is attached", pdfByteArray);
 
 
+                    ModelState.Clear();
+                    ViewBag.Message = "Thank you very much for choosing us!\n\n\nSee your email box.";
+
+                }
+                catch (Exception exception)
+                {
+                    ModelState.AddModelError(string.Empty, exception.Message);
+                }
             }
-            // todo try catch modelstate etc
-
 
             return RedirectToAction("Create");
         }

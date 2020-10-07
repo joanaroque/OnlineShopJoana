@@ -73,7 +73,6 @@ namespace OnlineShopJoana.WEB.Helpers
                 client.Disconnect(true);
             }
         }
-
     }
 }
 

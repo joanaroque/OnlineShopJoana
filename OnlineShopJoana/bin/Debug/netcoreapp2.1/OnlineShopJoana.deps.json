@@ -29,6 +29,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.14",
           "Microsoft.NETCore.App": "2.1.0",
+          "Syncfusion.PdfViewer.Windows": "18.3.0.35",
           "itextsharp": "5.5.3.0",
           "itextsharp.pdfa": "5.5.3.0",
           "itextsharp.xtra": "5.5.3.0"
@@ -216,6 +217,74 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
+      "Syncfusion.Compression.Base/18.3.0.35": {
+        "runtime": {
+          "lib/net46/Syncfusion.Compression.Base.dll": {
+            "assemblyVersion": "18.3460.0.35",
+            "fileVersion": "18.3460.0.35"
+          }
+        },
+        "compile": {
+          "lib/net46/Syncfusion.Compression.Base.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/18.3.0.35": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "18.3.0.35",
+            "fileVersion": "18.3.0.35"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Pdf.WinForms/18.3.0.35": {
+        "dependencies": {
+          "Syncfusion.Compression.Base": "18.3.0.35",
+          "Syncfusion.Licensing": "18.3.0.35"
+        },
+        "runtime": {
+          "lib/net46/Syncfusion.Pdf.Base.dll": {
+            "assemblyVersion": "18.3460.0.35",
+            "fileVersion": "18.3460.0.35"
+          }
+        },
+        "compile": {
+          "lib/net46/Syncfusion.Pdf.Base.dll": {}
+        }
+      },
+      "Syncfusion.PdfViewer.Windows/18.3.0.35": {
+        "dependencies": {
+          "Syncfusion.Compression.Base": "18.3.0.35",
+          "Syncfusion.Licensing": "18.3.0.35",
+          "Syncfusion.Pdf.WinForms": "18.3.0.35",
+          "Syncfusion.Shared.Base": "18.3.0.35"
+        },
+        "runtime": {
+          "lib/net46/Syncfusion.PdfViewer.Windows.dll": {
+            "assemblyVersion": "18.3460.0.35",
+            "fileVersion": "18.3460.0.35"
+          }
+        },
+        "compile": {
+          "lib/net46/Syncfusion.PdfViewer.Windows.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/18.3.0.35": {
+        "dependencies": {
+          "Syncfusion.Licensing": "18.3.0.35"
+        },
+        "runtime": {
+          "lib/net46/Syncfusion.Shared.Base.dll": {
+            "assemblyVersion": "18.3460.0.35",
+            "fileVersion": "18.3460.0.35"
+          }
+        },
+        "compile": {
+          "lib/net46/Syncfusion.Shared.Base.dll": {}
+        }
+      },
       "System.Collections.Immutable/1.5.0": {},
       "System.Diagnostics.DiagnosticSource/4.5.1": {
         "runtime": {
@@ -3491,6 +3560,41 @@
       "sha512": "sha512-leXiwfiIkW7Gmn7cgnNcdtNAU70SjmKW3jxGj1iKHOvdn0zRWsgv/l2OJUO5zdGdiv2VRFnAsxxhDgMzofPdWg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "Syncfusion.Compression.Base/18.3.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K2rcyJoetTjuiIZ9WhSXD7gC8FRUKeIFYI1k8aIvH4aCaroLADCRFBaBIvqeGzApusUCFfWvdkxp8uPhO0U9JQ==",
+      "path": "syncfusion.compression.base/18.3.0.35",
+      "hashPath": "syncfusion.compression.base.18.3.0.35.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/18.3.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kdDvMRwDokblGzus/HxTo6FtTNgBdy5nG1iEFHQEy2JGIC5iJG/Wj9+lYljpRKgHcgPxEccZqX38ugf2aYt3dQ==",
+      "path": "syncfusion.licensing/18.3.0.35",
+      "hashPath": "syncfusion.licensing.18.3.0.35.nupkg.sha512"
+    },
+    "Syncfusion.Pdf.WinForms/18.3.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lfUfvYMyXhCYg5l30m0kqdoNmIjhMWRz1RbXBGHk4JfNL3qV4Zne04RH9fQQQieyODUPMO+RgNSAa34Ex/BBoA==",
+      "path": "syncfusion.pdf.winforms/18.3.0.35",
+      "hashPath": "syncfusion.pdf.winforms.18.3.0.35.nupkg.sha512"
+    },
+    "Syncfusion.PdfViewer.Windows/18.3.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8EAPvFIe5uVxrfNmUYRk7vEtn5BHRZ0DViZQlU5gNp/WBqEY6/aRF1ciTpsE9xcf5hIJFuhKA6540bKh8B2u7g==",
+      "path": "syncfusion.pdfviewer.windows/18.3.0.35",
+      "hashPath": "syncfusion.pdfviewer.windows.18.3.0.35.nupkg.sha512"
+    },
+    "Syncfusion.Shared.Base/18.3.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RdoylxFAADCm7Ppli0bTB2m8bKxbicfdCwvaHAWuBHwwh6jReOWfhMi+fSfnrW/4u0yrqIgd63waFQ65jlL9/A==",
+      "path": "syncfusion.shared.base/18.3.0.35",
+      "hashPath": "syncfusion.shared.base.18.3.0.35.nupkg.sha512"
     },
     "System.Collections.Immutable/1.5.0": {
       "type": "package",

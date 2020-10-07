@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Syncfusion.PdfViewer.Windows": {
+              "target": "Package",
+              "version": "[18.3.0.35, )"
             }
           },
           "imports": [

@@ -60,7 +60,7 @@ namespace OnlineShopJoana.WEB
                     };
                 });
 
-          //  services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+       
 
             if (_env.IsDevelopment())
             {

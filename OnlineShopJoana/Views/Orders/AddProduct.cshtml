@@ -31,6 +31,88 @@
         </div>
     </div>
 
+     <header class="header-area">
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <!-- Nav Brand -->
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-brand"><strong>Plants Shop - Joana</strong></a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+                                    @if (!this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#">My Orders <i class="fa fa-shopping-basket"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Create"><i class="fa fa-shopping-cart"></i> Shopping Cart</a></li>
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa fa-list-alt"></i> My List</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+
+                                    @if (this.User.Identity.IsAuthenticated && this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#">Admin</a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div id="searchIcon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Breadcrumb Area Start ##### -->
+
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->

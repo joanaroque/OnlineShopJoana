@@ -7,7 +7,7 @@ using System.Linq;
 namespace OnlineShopJoana.WEB.Data.Repositories
 {
     public class ProductRepository : GenericRepository<Product>, IProductRepository
-    { //tem que herdar á mesma aqui o interface, 
+    { 
         private readonly DataContext _context;
 
         public ProductRepository(DataContext context) : base(context)
@@ -17,20 +17,18 @@ namespace OnlineShopJoana.WEB.Data.Repositories
 
         public IQueryable GetAllWithUsers()
         {
-            //buscar os users dos produtos
             return _context.Products.Include(p => p.User);
         }
 
         public IEnumerable<SelectListItem> GetComboProducts()
         {
-            //criar a lista com os produtos todos
             var list = _context.Products.Select(p => new SelectListItem
             {
                 Text = p.Name,
                 Value = p.Id.ToString()
             }).ToList();
 
-            //criar outro item decorativo
+           
             list.Insert(0, new SelectListItem
             {
                 Text = "(Select a product...)",
