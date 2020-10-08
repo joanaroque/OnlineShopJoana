@@ -33,6 +33,9 @@ namespace OnlineShopJoana.WEB.Data.Entities
 
 
         [Display(Name = "Retail customer?")]
-        public bool IsResale { get; set; }
+        public bool IsRetail { get; set; }
+
+
+        public string Role { get; set; }
     }
 }

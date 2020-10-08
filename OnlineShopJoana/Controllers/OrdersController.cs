@@ -137,6 +137,7 @@ namespace OnlineShopJoana.WEB.Controllers
                 {
                     ModelState.AddModelError(string.Empty, exception.Message);
                 }
+
             }
 
             return View();

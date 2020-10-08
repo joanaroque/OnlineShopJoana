@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using OnlineShopJoana.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineShopJoana.WEB.Models
 {
@@ -42,6 +43,9 @@ namespace OnlineShopJoana.WEB.Models
 
 
         [Display(Name = "Retail customer?")]
-        public bool IsResale { get; set; }
+        public bool IsRetail { get; set; }
+
+
+        public RoleViewModel Roles { get; set; }
     }
 }

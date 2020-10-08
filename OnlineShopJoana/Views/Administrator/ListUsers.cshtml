@@ -148,6 +148,9 @@
                 <thead>
                     <tr>
                         <th>
+                            Role
+                        </th>
+                        <th>
                             Name
                         </th>
                         <th>
@@ -159,7 +162,6 @@
                         <th>
                             Telephone
                         </th>
-        
                         <th></th>
                     </tr>
                 </thead>
@@ -167,6 +169,9 @@
                     @foreach (var user in Model)
                     {
                     <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => user.Role)
+                        </td>
                         <td>
                             @Html.DisplayFor(modelItem => user.FirstName)
                             @Html.DisplayFor(modelItem => user.LastName)
@@ -180,7 +185,7 @@
                         <td>
                             @Html.DisplayFor(modelItem => user.PhoneNumber)
                         </td>
-           
+
                         <td id="@user.Id">
                             <a asp-controller="Administrator" asp-action="EditUser" asp-route-id="@user.Id" class="btn btn-warning"> <i class="fa fa-edit"></i> </a>
                             <a asp-controller="Administrator" asp-action="DeleteUser" asp-route-id="@user.Id"

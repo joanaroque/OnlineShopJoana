@@ -63,11 +63,6 @@ namespace OnlineShopJoana.WEB.Data.Repositories
         {
             var user = await _userHelper.GetUserByEmailAsync(userName);
 
-            if (user == null)
-            {
-                return null;
-
-            }
 
             var orderTmps = await _context.OrderDetailTemps
                 .Include(o => o.Product)
@@ -93,7 +88,7 @@ namespace OnlineShopJoana.WEB.Data.Repositories
                 OrderDate = DateTime.UtcNow,
                 User = user,
                 Items = details,
-                Value = user.IsResale ? orderTotalValue * (decimal)0.8 : orderTotalValue
+                Value = user.IsRetail ? orderTotalValue * (decimal)0.8 : orderTotalValue
             };
 
             _context.Orders.Add(order);

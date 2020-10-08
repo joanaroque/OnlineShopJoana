@@ -133,14 +133,25 @@
         </div>
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
-    <br />
+
 
     <div class="col-md-6 offset-md-4">
-        <p>
-            <a asp-action="Create" class="btn btn-info"><i class="fa-plus fa"></i> Create New</a>
-        </p>
-        <br />
+        @if (this.User.IsInRole("Admin"))
+        {
+            <p>
+                <a asp-action="Create" class="btn btn-info"><i class="fa-plus fa"></i> Create New</a>
+            </p>
+        }
 
+        @if (ViewBag.Message != null)
+        {
+            <div class="breadcrumb">
+                <h2 style="color:#ffffff">
+                    Thank you,<br />
+                    @ViewBag.Message
+                </h2>
+            </div>
+        }
 
         <div class="col-md-12 col-md-8" style="display: inline-flex; text-align: center;">
 
@@ -156,11 +167,13 @@
                         <th>
                             @Html.DisplayNameFor(model => model.OrderDateLocal)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.DeliveryDate)
-                        </th>
+
                         <th>
                             @Html.DisplayNameFor(model => model.Lines)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.DeliveryDate)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Quantity)
@@ -184,11 +197,13 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.OrderDateLocal)
                             </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.DeliveryDate)
-                            </td>
+
                             <td>
                                 @Html.DisplayFor(modelItem => item.Lines)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DeliveryDate)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Quantity)

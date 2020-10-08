@@ -302,7 +302,7 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("FirstName")
                         .HasMaxLength(50);
 
-                    b.Property<bool>("IsResale");
+                    b.Property<bool>("IsRetail");
 
                     b.Property<string>("LastName")
                         .HasMaxLength(50);
@@ -324,6 +324,8 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("Role");
 
                     b.Property<string>("SecurityStamp");
 

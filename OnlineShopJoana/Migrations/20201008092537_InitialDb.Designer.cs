@@ -10,7 +10,7 @@ using OnlineShopJoana.WEB.Data;
 namespace OnlineShopJoana.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201005160446_InitialDb")]
+    [Migration("20201008092537_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -304,7 +304,7 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("FirstName")
                         .HasMaxLength(50);
 
-                    b.Property<bool>("IsResale");
+                    b.Property<bool>("IsRetail");
 
                     b.Property<string>("LastName")
                         .HasMaxLength(50);
@@ -326,6 +326,8 @@ namespace OnlineShopJoana.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("Role");
 
                     b.Property<string>("SecurityStamp");
 

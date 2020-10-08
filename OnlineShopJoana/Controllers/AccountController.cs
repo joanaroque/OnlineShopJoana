@@ -204,7 +204,8 @@ namespace OnlineShopJoana.WEB.Controllers
                         UserName = model.UserName,
                         Address = model.Address,
                         PhoneNumber = model.PhoneNumber,
-                        IsResale = model.IsResale
+                        IsRetail = model.IsRetail
+                       
                     };
 
                     var result = await _userHelper.AddUserAsync(user, model.Password);

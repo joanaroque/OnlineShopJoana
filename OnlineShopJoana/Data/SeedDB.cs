@@ -101,7 +101,7 @@ namespace OnlineShopJoana.WEB.Data
                 {
                     Name = "Espada de São Jorge",
                     Price = _random.Next(444),
-                    ImageUrl = ("~/images/Products/49.png"),
+                    ImageUrl = ("~/images/Products/49.jpg"),
                     LastPurchase = DateTime.Now.AddDays(-4),
                     LastSale = DateTime.Now.AddDays(-5),
                     IsAvailable = true,
@@ -129,7 +129,8 @@ namespace OnlineShopJoana.WEB.Data
                     Email = "joanatpsi@gmail.com",
                     UserName = "joanatpsi@gmail.com",
                     PhoneNumber = "156456456",
-                    Address = "Rua Jau"
+                    Address = "Rua Jau",
+                    Role = "Customer"
                 };
 
                 var result = await _userHelper.AddUserAsync(user, "123456");

@@ -17,9 +17,9 @@ namespace OnlineShopJoana.WEB
 
         private static void RunSeeding(IWebHost host)
         {
-            //Design Pattern / serviço 
+           
            var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
-            using (var scope = scopeFactory.CreateScope())// precisamos de criar um IOC pro seedDB
+            using (var scope = scopeFactory.CreateScope())
             {
                
                 var seeder = scope.ServiceProvider.GetService<SeedDB>();
@@ -29,7 +29,6 @@ namespace OnlineShopJoana.WEB
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>(); // Ioc a trabalhar
-        // este startup vai buscar a injeçao ao startup aqui: ( services.AddTransient<SeedDB>();  )
+                .UseStartup<Startup>(); 
     }
 }
