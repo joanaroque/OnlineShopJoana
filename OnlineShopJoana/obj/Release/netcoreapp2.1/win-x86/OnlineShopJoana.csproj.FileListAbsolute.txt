@@ -64,3 +64,4 @@ C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\it
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.pdfa.dll
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.xtra.dll
 C:\Projects\OnlineShopJoana\OnlineShopJoana\bin\Release\netcoreapp2.1\win-x86\itextsharp.xml
+C:\Projects\OnlineShopJoana\OnlineShopJoana\obj\Release\netcoreapp2.1\win-x86\Razor\Views\Orders\ConfirmOrder.cshtml.g.cs

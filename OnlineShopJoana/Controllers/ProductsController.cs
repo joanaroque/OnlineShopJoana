@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OnlineShopJoana.WEB.Data.Repositories;
 using OnlineShopJoana.WEB.Helpers;
 using OnlineShopJoana.WEB.Models;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -158,27 +159,38 @@ namespace OnlineShopJoana.WEB.Controllers
             {
                 return new NotFoundViewResult("ProductNotFound");
             }
-
             var product = await _productRepository.GetByIdAsync(id.Value);
 
             if (product == null)
             {
                 return new NotFoundViewResult("ProductNotFound");
             }
+            var order = await _orderRepository.GetOrderByProductAsync(id.Value);
 
-            await _productRepository.DeleteAsync(product);
-
-            return RedirectToAction(nameof(Index));
+            if (order.Count > 0)
+            {
+               
+                return RedirectToAction(nameof(Index));
+            }
+            try
+            {
+                await _productRepository.DeleteAsync(product);
+            }
+            catch (Exception exception)
+            {
+                ModelState.AddModelError(string.Empty, exception.Message);
+            }
+            return RedirectToAction(nameof(Index));        
         }
 
-        //todo
+
         public async Task<IActionResult> AddToOrder(int id)
         {
 
             var user = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
 
              await _orderRepository.AddProductToOrderAsync(id, user);
-            //avaliar se a order foi bem sucedida
+
 
 
             return RedirectToAction("Create","Orders");

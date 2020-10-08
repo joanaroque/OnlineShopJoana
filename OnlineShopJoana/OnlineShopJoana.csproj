@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+      <EnableMSDeployAppOffline>true</EnableMSDeployAppOffline>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>020a39d8-5465-4e2b-950b-a6e46dbe6062</UserSecretsId>
   </PropertyGroup>

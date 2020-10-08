@@ -1,69 +1,238 @@
 ﻿@model OnlineShopJoana.WEB.Data.Entities.Product
 
 @{
-    ViewData["Title"] = "Details";
+    Layout = null;
 }
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Online Shop Joana</title>
 
-<div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
-     style="background-image: url('../template/img/bg-img/18.jpg');">
-    <h2 style="color:#ffffff">Product Details</h2>
-</div>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <!-- Favicon -->
+    <link rel="icon" href="~/template/img/core-img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
 
-<br />
-<div class="row">
-    <div class="col-md-4 offset-md-4">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="~/template/style.css">
+</head>
 
-        <div class="col-md-8 pull-right">
-            @if (!string.IsNullOrEmpty(Model.ImageUrl))
-            {
-                <img src="@Url.Content(Model.ImageUrl)" alt="Image" style="width:300px;height:300px;max-height: 100%; width: auto;" />
-            }
-        </div>
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Name)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Price)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Price)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.LastPurchase)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.LastPurchase)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.LastSale)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.LastSale)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.IsAvailable)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.IsAvailable)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Stock)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Stock)
-            </dd>
-        </dl>
-
-        <div>
-            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info  pull-right"><i class="fa fa-pencil"></i></a>
-            <a asp-action="Index" class="btn btn-warning"><i class="fa fa-backward"></i> To List</a>
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="~/template/img/core-img/leaf.png" alt="">
         </div>
     </div>
-</div>
-<br />
 
+
+    <header class="header-area">
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <!-- Nav Brand -->
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-brand"><strong>Plants Shop - Joana</strong></a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                    @if (this.User.IsInRole("Admin"))
+                                    {
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+                                        <li><a asp-area="" asp-controller="Orders" asp-action="Index">Orders</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#">Admin</a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListUsers">Users</a></li>
+                                                <li><a asp-area="" asp-controller="Administrator" asp-action="ListRoles">Roles</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+                                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#">My Orders <i class="fa fa-shopping-basket"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Create"><i class="fa fa-shopping-cart"></i> Shopping Cart</a></li>
+                                                <li><a asp-area="" asp-controller="Orders" asp-action="Index"><i class="fa fa-list-alt"></i> My List</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+
+
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div id="searchIcon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <!-- Close Icon -->
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
+             style="background-image: url('../template/img/bg-img/24.jpg');">
+            <h2>DETAILS</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Products</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <br />
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+
+            <div class="col-md-8 pull-right">
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <img src="@Url.Content(Model.ImageUrl)" alt="Image" style="width:300px;height:300px;max-height: 100%; width: auto;" />
+                }
+            </div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastPurchase)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastPurchase)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastSale)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastSale)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsAvailable)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.IsAvailable)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Stock)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Stock)
+                </dd>
+            </dl>
+
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info  pull-right"><i class="fa fa-pencil"></i></a>
+                <a asp-action="Index" class="btn btn-warning"><i class="fa fa-backward"></i> To List</a>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <footer class="footer-area bg-img" style="background-image: url('../template/img/bg-img/3.jpg');">
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12">
+                        <div class="copywrite-text">
+                            <p>
+                                <strong>
+                                    &copy;  TPSI CET - 46 &copy; - Online Shop Joana
+                                </strong>
+                            </p>
+                            <br />
+                            <br />
+                            <br />
+                            <p class="pull-right">
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ##### About Area End ##### -->
+    <script src="~/template/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/template/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/template/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/template/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="~/template/js/active.js"></script>
+</body>

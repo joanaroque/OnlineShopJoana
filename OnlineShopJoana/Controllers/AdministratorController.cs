@@ -126,8 +126,7 @@ namespace OnlineShopJoana.Controllers
         }
 
         // POST: Administrator/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+    
         public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await _userHelper.GetUserByIdAsync(id);
@@ -154,7 +153,7 @@ namespace OnlineShopJoana.Controllers
             }
         }
 
-        [HttpPost]
+    
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await _roleManager.FindByIdAsync(id);

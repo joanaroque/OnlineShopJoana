@@ -56,14 +56,11 @@ namespace OnlineShopJoana.WEB
                         ValidIssuer = Configuration["Tokens:Issuer"],
                         ValidAudience = Configuration["Tokens:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(this.Configuration["Tokens:Key"]))
+                            Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
                     };
                 });
 
-       
-
-            if (_env.IsDevelopment())
-            {
+      
 
                 services
                .AddAuthentication()
@@ -89,7 +86,7 @@ namespace OnlineShopJoana.WEB
                     options.LogoutPath = new PathString("/Account/Logout");
                 });
 
-            }
+
 
             services.AddDbContext<DataContext>(cfg =>
             {

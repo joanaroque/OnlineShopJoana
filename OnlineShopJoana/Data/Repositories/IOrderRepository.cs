@@ -1,5 +1,6 @@
 ﻿using OnlineShopJoana.WEB.Data.Entities;
 using OnlineShopJoana.WEB.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -33,5 +34,9 @@ namespace OnlineShopJoana.WEB.Data.Repositories
 
 
         Task AddProductToOrderAsync(int productId, User user);
+
+
+         Task<List<OrderDetailTemp>> GetOrderByProductAsync(int productId);
+     
     }
 }

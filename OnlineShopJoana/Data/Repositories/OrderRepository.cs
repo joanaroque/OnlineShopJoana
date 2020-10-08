@@ -3,6 +3,7 @@ using OnlineShopJoana.WEB.Data.Entities;
 using OnlineShopJoana.WEB.Helpers;
 using OnlineShopJoana.WEB.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -222,6 +223,15 @@ namespace OnlineShopJoana.WEB.Data.Repositories
             }
 
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<OrderDetailTemp>> GetOrderByProductAsync(int productId)
+        {
+            var order = await _context.OrderDetailTemps
+                .Include(p => p.Product)
+                .Where(p => p.Product.Id == productId).ToListAsync();
+
+            return order;
         }
     }
 }
