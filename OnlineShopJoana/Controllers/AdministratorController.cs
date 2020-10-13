@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 using OnlineShopJoana.Models;
 using OnlineShopJoana.WEB.Data.Entities;
+using OnlineShopJoana.WEB.Data.Repositories;
 using OnlineShopJoana.WEB.Helpers;
 
 using System.Collections.Generic;
@@ -19,14 +20,17 @@ namespace OnlineShopJoana.Controllers
         private readonly IUserHelper _userHelper;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<User> _userManager;
+        private readonly IOrderRepository _orderRepository;
 
         public AdministratorController(IUserHelper userHelper,
             RoleManager<IdentityRole> roleManager,
-            UserManager<User> userManager)
+            UserManager<User> userManager,
+            IOrderRepository orderRepository)
         {
             _userHelper = userHelper;
             _roleManager = roleManager;
             _userManager = userManager;
+            _orderRepository = orderRepository;
         }
 
         [HttpGet]

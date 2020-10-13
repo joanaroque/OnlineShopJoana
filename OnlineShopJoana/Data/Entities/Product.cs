@@ -43,11 +43,11 @@ namespace OnlineShopJoana.WEB.Data.Entities
         {
             get
             {
-                if (string.IsNullOrEmpty(this.ImageUrl))
+                if (string.IsNullOrEmpty(ImageUrl))
                 {
                     return null;
                 }
-                return $"https://onlineplantsstore.azurewebsites.net{ImageUrl.Substring(1)}"; //substring para tirar o ~
+                return $"https://onlineplantsstore.azurewebsites.net{ImageUrl.Substring(1)}";
             }
         }
 
